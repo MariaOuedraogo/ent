@@ -1,0 +1,86 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+
+
+body{
+margin: 0;
+overflow-x: hidden;
+padding: 10px;
+background-color: #D2E5E3;
+font-family: sans-serif;
+}
+
+h1{
+  text-align: center;
+}
+
+.png{
+  font-size: .8rem;
+}
+.image_profil img{
+width: 100%;
+height: 25vh;
+object-fit: cover;
+}
+#photo_profil{
+  font-style: italic;
+}
+input::file-selector-button {
+    font-weight: bold;
+    color: inherit;
+border: solid 1px #656563;
+    font-weight: normal;
+    background-color: transparent;
+    cursor: pointer;
+    /* padding: 10px 10px;
+    border-radius: 8px; */
+    text-decoration: underline;
+    
+  }
+
+
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 50px;
+}
+
+#submit{
+    width: fit-content;
+    border-radius: 8px;
+    padding: 7px 20px;
+    border: none;
+    background-color: #484F53;
+    color: white;
+    margin-top: 20px;
+transition: background-color .2s ease-in ;
+}
+
+#submit:hover{
+  cursor: pointer;
+  color: #D2E5E3;
+  background-color:  #1E5FC7;
+}
+
+main{
+  max-width: 500px;
+  border: solid #656563 1px;
+  border-radius: 22px;
+  margin: auto;
+  
+}
+
+main img{
+  border-radius:22px 22px 0 0;
+}
+
+
+.success{
+  font-style: italic;
+}

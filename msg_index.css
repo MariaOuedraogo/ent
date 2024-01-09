@@ -1,0 +1,108 @@
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+
+body{
+    margin: 0;
+    font-family: sans-serif;
+    background-color: #DADADA;
+
+}
+
+h1{
+    font-size: 16px;
+    margin: 0;
+    text-transform: uppercase;
+padding: 60px 25px 20px;
+}
+
+.mails{
+    padding: 0 7px;
+}
+.mail{
+    display: flex;
+    gap: 10px;
+    align-items: flex-end;
+    margin-bottom: 15px;
+    width: 100%;
+
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+.mail h2{
+    margin: 0;
+    text-transform: capitalize;
+    white-space: nowrap; /* Empêcher le texte de passer à la ligne */
+    overflow: hidden; /* Masquer le texte qui dépasse */
+    text-overflow: ellipsis; /* Ajouter des points de suspension (...) pour indiquer du texte masqué */
+    font-size: 0.9rem;
+    font-weight: normal;
+    margin-bottom: 5px;
+
+
+}
+
+.mail .texte_mail {
+    flex: 1; /* Occupe tout l'espace disponible pour le texte, permet de gérer le débordement */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-wrap: break-word; /* Ajoutez cette ligne pour permettre aux mots longs de se casser */
+    width: 100%; /* Faites en sorte que le texte occupe toute la largeur disponible */
+
+}
+
+.mail .texte_mail p{
+    /* font-size: 20px; */
+    margin: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 0.875rem;
+
+   
+}
+
+.date{
+    font-size: 0.75rem;
+
+}
+
+.texte_mail{
+    margin-right: auto;
+}
+/* photo mail */
+.image_mail img{
+width: 40px;
+height: 40px;
+border-radius:50% ;
+}
+
+
+.create_msg{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 10px;
+    border: solid black 1px;
+    width: fit-content;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    margin-right: 7px;
+}
+
+
+@media(min-width:900px){
+    .create_msg{
+        position: unset;
+        margin-left: auto;
+        margin-right: 50px;
+    }
+}

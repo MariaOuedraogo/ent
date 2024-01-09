@@ -1,0 +1,41 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+
+body{
+    margin: 0;
+    overflow-x: hidden;
+    background-color: #DADADA;
+}
+
+
+form{
+    display: flex;
+    flex-direction: column;
+}
+
+#submit{
+    width: fit-content;
+}
+
+textarea{
+    background-color: transparent;
+    /* border: none;
+    border-bottom: solid 1px black; */
+}
+
+label{
+    margin-top: 50px;
+}
+
+#messages{
+    margin-bottom: 100px;
+}
+
+
+input{
+    width: 100%;
+}

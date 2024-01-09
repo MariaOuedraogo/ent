@@ -1,0 +1,78 @@
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    font-family: sans-serif;
+    background-color: #DADADA;
+}
+
+a{
+    text-decoration: none;
+
+}
+
+.header_message_detail{
+    display: flex;
+    gap: 10px;
+    border-bottom: solid #BCBCBC 1px;
+    padding: 0 20px 30px;
+    font-size: 1.45rem;
+    align-items: center;
+
+    
+}
+
+.header_message_detail p{
+    margin: 10px 0 0;
+    text-transform: capitalize;
+    font-size: 0.875rem;
+
+}
+
+.header_message_detail img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.msg{
+    padding:0 20px 0 ;
+}
+
+.objet{
+    font-size: 1.375rem;
+}
+
+.before_after{
+    display: flex;
+    justify-content: space-around;
+    padding: 0 20px;    
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+}
+
+.before a{
+    background-color: #CDE66A;
+    color: black;
+    padding: 10px 25px;
+    border: 1px solid #A9A8A8;
+}
+
+.after a{
+    padding: 10px 25px;
+
+    border: 1px solid #A9A8A8; 
+    color: #CDE66A;
+    background-color: black;
+
+}
+
+.attachment_path a{
+    color: black;
+text-decoration: underline;
+}
