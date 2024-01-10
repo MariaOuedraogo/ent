@@ -6,6 +6,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Visualiser les Absences</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+
+
     <link rel="stylesheet" href="eleve_abs_detail.css">
 
     <!-- Ajoutez vos liens CSS ici -->
@@ -14,8 +22,10 @@
 <body>
     <a href="index.php">Accueil</a>
 
+
     <a href="index.php"> retour</a>
     <h2>Visualiser vos Absences</h2>
+    
 
     <form action="" method="get" id="filterForm">
         <label for="dateFilter">Filtrer par date :</label>
@@ -104,7 +114,7 @@
         echo "<script>
             var absenceCount = $absenceCount;
             if (absenceCount > 0) {
-                document.write('<p > Vous avez ' + absenceCount + ' absences</p>');
+                document.write('<h2> Vous avez <br> ' + absenceCount + ' absences</h2>');
                 
                 // Si le nombre d'absences est supérieur ou égal à 10, changer le texte
                 if (absenceCount >= 10) {

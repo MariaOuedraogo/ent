@@ -51,14 +51,21 @@ try {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Visualiser les Absences</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="eleve_abs_index.css">
 </head>
 
 <body>
 
     <a href="index.php">accueil</a>
-    <h2>Tes absences</h2>
-
+    <h1>Absences</h1>
+    <hr>
     <main>
     <?php
     if (count($absences) > 0) {
@@ -74,6 +81,7 @@ try {
 
             <div class='footer_abs'>
             <p> {$absence['heure']}</p>
+            
 
             <p>{$formattedDate}</p>
             </div>
@@ -86,7 +94,7 @@ try {
         echo "<script>
             var absenceCount = $absenceCount;
             if (absenceCount > 0) {
-                document.write('<p>Vous avez <br> ' + absenceCount + ' absence(s)</p>');
+                document.write('<h2>Vous avez <br> ' + absenceCount + ' absence(s)</h2>');
                 
                 // Si le nombre d'absences est supérieur ou égal à 10, changer le texte
                 if (absenceCount >= 10) {
@@ -104,7 +112,7 @@ try {
     echo"</section>";
     ?>
 </main>
-    <a href="eleve_abs_detail.php" class="detail">voir le detail</a>
+    <a href="eleve_abs_detail.php" class="detail">voir le détail</a>
 
 
   

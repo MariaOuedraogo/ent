@@ -21,8 +21,9 @@ padding: 60px 25px 20px;
 }
 
 .mails{
-    padding: 0 7px;
+    padding: 20px 20px 0 60px;
 }
+
 .mail{
     display: flex;
     gap: 10px;
@@ -98,6 +99,12 @@ border-radius:50% ;
     margin-right: 7px;
 }
 
+@media(max-width:500px){
+    .mails{
+        padding: 20px 20px 0 20px;
+    }   
+}
+
 
 @media(min-width:900px){
     .create_msg{
@@ -105,4 +112,9 @@ border-radius:50% ;
         margin-left: auto;
         margin-right: 50px;
     }
+
+    .mails{
+        padding: 20px 20px 0 60px;
+    }
+   
 }

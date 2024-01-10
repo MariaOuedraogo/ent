@@ -84,12 +84,15 @@
             unset($_SESSION['update_message']); // Supprime le message de la session après l'affichage
         }
         ?>
-
     </form>
+
+    <div class='icon_container'>
+    <a href="profil.php"><iconify-icon icon="iwwa:arrow-left" class="icon"></a></iconify-icon>
+    </div>
 </main>
 
 
-
+<script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
 
 </body>
 
