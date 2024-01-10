@@ -36,12 +36,14 @@ session_start();
             <div id='main'>
             <h1 class='hello'>Bonjour " . $_SESSION['nom'] . " ✌️</h1>
             <h2 class='title_page'> Bienvenu sur ton tableau de bord</h2>
+            
             <div class='angry-grid-prof'>
-            <div id='grid_0'>&nbsp;</div>
-            <div id='grid_1'>&nbsp;</div>
-            <div id='grid_2'>&nbsp;</div>
-            <div id='grid_3'>&nbsp;</div>
+            <div id='box-1' class='box-item'>&nbsp;</div>
+            <div id='box-2' class='box-item'>&nbsp;</div>
+            <div id='box-3' class='box-item'>&nbsp;</div>
+            <div id='box-4' class='box-item'>&nbsp;</div>
           </div>
+          
           </main>
             ";
 
