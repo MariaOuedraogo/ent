@@ -19,7 +19,7 @@ nav{
     gap: 12px;
 
 }
-a{
+nav a{
     text-decoration: none;
     padding: 3px 10px;
     border-radius: 8px;     

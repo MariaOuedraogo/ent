@@ -8,7 +8,7 @@ session_start();
 <head>
     <meta charset='UTF-8'>
     <meta name='viewport' content='width=device-width, initial-scale=1.0'>
-    <title>connexion</title>
+    <title>ENT MMI CHAMPS</title>
     <link rel='stylesheet' href='style.css'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
@@ -91,7 +91,7 @@ session_start();
     <li><a href='eleve_abs_index.php'>absences</a></li>
     <li><a href='#'>notes </a></li>
     <li><a href='cours.php'> ressources pédagogiques</a></li>
-    <li><a href='#'> mes outils</a></li>
+    <li><a href='outil.php'> mes outils</a></li>
 
 
 
