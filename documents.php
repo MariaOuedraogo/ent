@@ -15,6 +15,13 @@ if (!isset($_SESSION['nom']) || $_SESSION['type'] !== 'eleve') {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="documents.css">
     <script src="script.js" defer></script>
 </head>
@@ -22,13 +29,15 @@ if (!isset($_SESSION['nom']) || $_SESSION['type'] !== 'eleve') {
     
 
 <a href="index.php">accueil</a>
-<style>
+<p>accueil/ Mes documents</p>
 
-</style>
+<h1>voici tes documents <br> indispensable pour l'année</h1>
+
+<hr>
 
 <div class="container">
 <section>
-<p class="in">2021/2023</p>
+<p class="in">2022/2023</p>
   <p class="will">2023/2024</p>
 </section>
 
