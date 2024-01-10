@@ -1,0 +1,19 @@
+body {
+    margin: 0;
+    background-color: #DADADA;
+    overflow-x: hidden;
+  }
+  
+  main{
+      display: flex;
+      flex-direction: column;
+      justify-content: center; /* Centre les éléments horizontalement */
+      
+  }
+
+
+  .flex-item {
+ width: 100%;
+ aspect-ratio: 309/148;
+ border: solid 1px black;
+  }

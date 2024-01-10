@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Visualiser les Absences</title>
-    <link rel="stylesheet" href="eleve_abs_index.css">
+    <link rel="stylesheet" href="eleve_abs_detail.css">
 
     <!-- Ajoutez vos liens CSS ici -->
 </head>
