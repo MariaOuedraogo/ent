@@ -110,7 +110,7 @@ main p{
 }
 
 
-@media (min-width:700px){
+@media (min-width:970px){
   main{
     flex-direction: row;
   }
