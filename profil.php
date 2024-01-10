@@ -4,6 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mon Profil</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="profil.css">
 
 </head>
@@ -36,7 +44,7 @@ try {
     // Fetch the user data
     $row = $result->fetch(PDO::FETCH_ASSOC);
 
-    echo "  <h1>Salut {$row['nom']} , bienvenu dans ton profil </h1>";
+    echo "  <h1>Bienvenue dans ton profil, </h1>";
 
 
     echo "
@@ -46,6 +54,10 @@ try {
     // Afficher le nom
     echo "<main>
     <a href='update_photo.php' class='photo'><img src='" . $_SESSION['photo_profil'] . "' alt='' class='out'></a>
+
+    <div class='modifier'>
+    <a href='update_photo.php'>Modifier</a>
+    </div>
 
     <section>
 
@@ -78,7 +90,7 @@ try {
 
 
 
-    echo "<h2>Changer le mot de passe</h2>";
+    echo "<h2>Changer votre mot de passe</h2>";
 
     echo "<form action='changer_mdp.php' method='post'>
     <label for='nouveau_mdp'>Nouveau mot de passe:</label> <br>

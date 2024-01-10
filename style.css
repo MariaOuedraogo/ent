@@ -7,14 +7,14 @@
 body {
     margin: 0;
     padding: 0;
-    background: #DADADA;
+    background: #F5F5F7;
     /* display: flex;
     align-items: center;
     justify-content: center;
     min-height: 100vh; */
     font-family: sans-serif;
   }
-  
+
   a{
     text-decoration: none;
     color: black;
@@ -28,6 +28,8 @@ body {
   }
   
   .login-card {
+    font-family:'Montserrat', sans-serif;
+    font-weight: 300;
     background: #ffffff;
     border-radius: 8px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
@@ -42,6 +44,10 @@ body {
     color: #343a40;
     margin-bottom: 30px;
   }
+
+  .login-card p:first-child {
+    font-weight: 500;
+  }
   
   .login-form {
     display: flex;
@@ -53,8 +59,9 @@ body {
     padding: 12px;
     margin-bottom: 20px;
     box-sizing: border-box;
+    background-color:#F4F4F4;
     border: 1px solid #dee2e6;
-    border-radius: 4px;
+    border-radius: 5px;
   }
   
   .login-buttons {
@@ -67,21 +74,25 @@ body {
   .register-button {
     flex: 48%;
     padding: 12px;
+    border-radius: 20px;
     border: none;
-    border-radius: 4px;
     cursor: pointer;
     transition: background 0.3s ease-in-out, border 0.3s ease-in-out;
   }
   
   .login-button {
-    background: red;
+    margin-left: 80px;
+    margin-right: 80px;
+    background: rgb(0, 0, 0);
+    border-radius: 20px;
     color: #fff;
-    margin-right: 5px; /* margin kiri untuk tombol login */
   }
   
  
   .login-button:hover {
-    background: rgb(121, 1, 1);
+    background: rgb(255, 255, 255);
+    color: black;
+    border: solid black 0.5px;
   }
 
   .image_header{
@@ -92,8 +103,15 @@ body {
     box-shadow: -6px 17px 28.4px 0px rgba(0, 0, 0, 0.25);
 
   }
+
+  h1 {
+    font-family: 'Familjen Grotesk', sans-serif;
+  }
+  
   
   h2{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
     font-size: 0.813rem;
   }
 
@@ -105,6 +123,10 @@ body {
 
   label{
     width: fit-content;
+  }
+
+  label::first-letter {
+    text-transform: uppercase;
   }
 
 
@@ -135,8 +157,7 @@ body {
   }
   
   @media screen and (min-width:900px){
-   body{
-   }
+   
 main{
   display: flex;
   justify-content: space-evenly;
@@ -149,7 +170,7 @@ main{
  }
  .header{
   margin: unset;
-  max-width: 30%;
+  max-width: 40%;
  }
 
  .header h1{
