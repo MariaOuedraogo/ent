@@ -109,10 +109,33 @@ main p{
   color: white;
 }
 
+.actions{
+  display: flex;
+  justify-content: space-between;
+}
+.suppr, .mod{
+  text-decoration: none;
+  color: black;
+}
+
+.suppr{
+  background-color: red;
+
+}
+
+.mod{
+  background-color: greenyellow;
+}
+
 
 @media (min-width:970px){
   main{
     flex-direction: row;
+  }
+  .prof{
+  flex-direction: column;
+  max-width: 700px !important;
+  margin: auto;
   }
 }
 

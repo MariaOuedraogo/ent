@@ -64,9 +64,6 @@ try {
 }
 ?>
 
-<!-- ... (rest of your HTML) ... -->
-
-
 
 <!DOCTYPE html>
 <html lang="fr">
@@ -74,7 +71,9 @@ try {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Visualiser les Absences</title>
+    <title>Visualiser les Absences prof</title>
+    <link rel="stylesheet" href="eleve_abs_index.css">
+
 </head>
 
 <body>
@@ -130,13 +129,13 @@ try {
     <form method="post">
         <button type="submit" name="showAll">Voir toutes les absences</button>
     </form>
-
+    <main class="prof">
     <?php
     $currentDate = null;
     foreach ($absences as $absence) :
         // Convertir la date au format jour mois année
         setlocale(LC_TIME, 'fr_FR.utf8'); // Définir la locale pour le français
-        $formattedDate = strftime('%A %e %B %Y', strtotime($absence['date']));
+        $formattedDate = date('d/m/Y', strtotime($absence['date']));
 
         // Vérifier si la date a changé
         if ($formattedDate !== $currentDate) {
@@ -145,13 +144,17 @@ try {
             $currentDate = $formattedDate;
         }
     ?>
-        <div>
+   
+            <section class='flex-item'>
             <p>Élève: <?php echo $absence['nom_eleve']; ?></p>
             <p>Heure: <?php echo $absence['heure']; ?></p>
 
             <!-- Ajouter des liens pour la suppression et la modification -->
-            <a href='#' onclick='confirmDelete(<?php echo $absence['id']; ?>)'>Supprimer</a>
-<a href='modifier_absence.php?id=<?php echo $absence['id']; ?>'>Modifier</a>
+           <div class="actions">
+           <a class='mod'  href='modifier_absence.php?id=<?php echo $absence['id']; ?>'>Modifier</a>
+           <a href='#'  class='suppr' onclick='confirmDelete(<?php echo $absence['id']; ?>)'>Supprimer</a>
+
+           </div>
 
 <!-- Popup de confirmation -->
 <div id="deletePopup" class="popup">
@@ -199,10 +202,11 @@ try {
 </script>
 
 
-        </div>
-        <hr>
-    <?php endforeach; ?>
+</section>
 
+
+    <?php endforeach; ?>
+    </main>
 </body>
 
 </html>

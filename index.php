@@ -33,15 +33,19 @@ session_start();
             echo "
            
             <a href='prof_msg_index.php'>boite mail</a>
+            <div id='main'>
+            <h1 class='hello'>Bonjour " . $_SESSION['nom'] . " ✌️</h1>
+            <h2 class='title_page'> Bienvenu sur ton tableau de bord</h2>
+            <div class='angry-grid-prof'>
+            <div id='grid_0'>&nbsp;</div>
+            <div id='grid_1'>&nbsp;</div>
+            <div id='grid_2'>&nbsp;</div>
+            <div id='grid_3'>&nbsp;</div>
+          </div>
+          </main>
             ";
 
-            var_dump($_SESSION);
-            echo "Session ID: " . $_SESSION['id'] . "<br>";
-            echo "Session nom " . $_SESSION['nom'] . "<br>";
-            echo "Session type " . $_SESSION['type'] . "<br>";
-            echo "Session profil: " . $_SESSION['photo_profil'] . "<br>";
-
-            echo "<img src='" . $_SESSION['photo_profil'] . "' alt=''>";
+          
         }
 
 
@@ -92,10 +96,6 @@ session_start();
     <li><a href='#'>notes </a></li>
     <li><a href='cours.php'> ressources pédagogiques</a></li>
     <li><a href='outil.php'> mes outils</a></li>
-
-
-
-
     </ul>
 </div>
                                <a href='documents.php'>mes documents</a>
@@ -119,22 +119,22 @@ session_start();
 </div>
 
 
-  
-  </div>
+<style>
 
-  
-<div class='test_parent'>
-<div class='test'>
-<div class='test_child'><p>hey </p></div>
-<div class='test_child'><p>hey </p></div>
-<div class='test_child'><p>hey </p></div>
-<div class='test_child'><p>hey </p></div>
-<div class='test_child'><p>hey </p></div>
-<div class='test_child'><p>hey </p></div>
+</style>
 
+<div class='angry-grid-desk'>
+  <div id='item-0'>&nbsp;</div>
+  <div id='item-1'>&nbsp;</div>
+  <div id='item-2'>&nbsp;</div>
+  <div id='item-3'>&nbsp;</div>
+  <div id='item-4'>&nbsp;</div>
 </div>
-
+  
   </div>
+
+  
+
 
 
 
@@ -144,6 +144,8 @@ session_start();
             echo "hey admin
             <a href='matiereprof.php'>matiere prof</a>
             <a href='admin.php'>admin</a>
+
+        
             ";
         }
         // echo "<a href='logout.php'>Déconnexion</a>";
