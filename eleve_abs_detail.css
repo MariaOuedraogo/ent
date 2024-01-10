@@ -80,7 +80,7 @@ form#filterForm input, button {
     flex-direction: column;
     justify-content: space-between;
     width: fit-content;
-    border: solid 1px black;
+    border: solid 0.5px black;
     border-radius: 22px;
     padding-top: 0;
   }
