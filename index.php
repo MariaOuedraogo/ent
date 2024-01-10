@@ -91,7 +91,7 @@ session_start();
     <li><a href='#'> ade</a></li>
     <li><a href='eleve_abs_index.php'>absences</a></li>
     <li><a href='#'>notes </a></li>
-    <li><a href='#'> ressources pédagogiques</a></li>
+    <li><a href='cours.php'> ressources pédagogiques</a></li>
 
 
 

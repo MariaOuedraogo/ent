@@ -15,21 +15,23 @@ if (!isset($_SESSION['nom']) || $_SESSION['type'] !== 'eleve') {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="documents.css">
+    <link rel="stylesheet" href="cours.css">
     <script src="script.js" defer></script>
 </head>
 <body>
     
 
 <a href="index.php">accueil</a>
-<style>
 
-</style>
+<nav>
+    <a href="#">ressources pédagogies↘︎</a>
+    <a href="#">mes outils ↘ </a>
+</nav>
 
 <div class="container">
 <section>
-<p class="in">2021/2023</p>
-  <p class="will">2023/2024</p>
+<p class="in">semestre 3</p>
+  <p class="will">semestre 4</p>
 </section>
 
 <div class="angry-grid">

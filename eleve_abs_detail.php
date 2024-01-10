@@ -1,5 +1,6 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
     <meta charset="UTF-8">
@@ -11,8 +12,9 @@
 </head>
 
 <body>
+    <a href="index.php">Accueil</a>
 
-    <a href="eleve_abs_index.php"> retour</a>
+    <a href="index.php"> retour</a>
     <h2>Visualiser vos Absences</h2>
 
     <form action="" method="get" id="filterForm">

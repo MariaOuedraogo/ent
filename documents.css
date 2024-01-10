@@ -1,3 +1,18 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body{
+   margin:0;
+   }
+
+   a{
+      text-decoration: none;
+      
+   }
+
 .item{
    border-radius: 22px;
     background-color: #97BAFE;
