@@ -26,7 +26,8 @@ session_start();
     <?php
     if (isset($_SESSION['nom'])) {
         echo "Vous êtes connecté en tant que " . $_SESSION['nom'];
-      
+        echo "<a href='logout.php'>Déconnexion</a>";
+
 
         if ($_SESSION['type'] == 'prof') {
             echo "
@@ -35,21 +36,19 @@ session_start();
             ";
 
             var_dump($_SESSION);
-       echo "Session ID: " . $_SESSION['id'] . "<br>";
-       echo "Session nom " . $_SESSION['nom'] . "<br>";
-       echo "Session type " . $_SESSION['type'] . "<br>";
-       echo "Session profil: " . $_SESSION['photo_profil'] . "<br>";
+            echo "Session ID: " . $_SESSION['id'] . "<br>";
+            echo "Session nom " . $_SESSION['nom'] . "<br>";
+            echo "Session type " . $_SESSION['type'] . "<br>";
+            echo "Session profil: " . $_SESSION['photo_profil'] . "<br>";
 
-       echo "<img src='" . $_SESSION['photo_profil'] . "' alt=''>";
-
-            
+            echo "<img src='" . $_SESSION['photo_profil'] . "' alt=''>";
         }
-     
+
 
         // Afficher le lien de déconnexion
 
         // Afficher le lien vers envoyer_message.php si l'utilisateur est un professeur
-     
+
         if ($_SESSION['type'] == 'eleve') {
 
 
@@ -66,9 +65,6 @@ session_start();
                     <a href='index.php'>accueil</a>
                     <a href='profil.php'>mon profil</a>
                     <a href='scolarite.php'>scolarité</a>
-                   
-
-                    
                     <a href='documents.php'>mes documents</a>
 
                 
@@ -87,15 +83,16 @@ session_start();
 
             <nav class='desk_nav'>
                                <a href='index.php'><img src='home.png' alt='' class='profil_img'></a>
-                               <a href='profil.php'>#</a>
                                
 <div class='menu-container'>
     <div class='menu-btn'>scolarité</div>
     <ul class='menu-items'>
         <ul>
-    <li><a href='#'>Lien 5</a></li>
-    <li><a href='eleve_abs_index.php'>absence</a></li>
-    <li><a href='#'>Lien 5</a></li>
+    <li><a href='#'> ade</a></li>
+    <li><a href='eleve_abs_index.php'>absences</a></li>
+    <li><a href='#'>notes </a></li>
+    <li><a href='#'> ressources pédagogiques</a></li>
+
 
 
     </ul>
@@ -119,12 +116,28 @@ session_start();
   <div id='item-2'>&nbsp;</div>
   <div id='item-3'>&nbsp;</div>
 </div>
+
+
+  
+  </div>
+
+  
+<div class='test_parent'>
+<div class='test'>
+<div class='test_child'><p>hey </p></div>
+<div class='test_child'><p>hey </p></div>
+<div class='test_child'><p>hey </p></div>
+<div class='test_child'><p>hey </p></div>
+<div class='test_child'><p>hey </p></div>
+<div class='test_child'><p>hey </p></div>
+
+</div>
+
   </div>
 
 
+
             ";
-
-
         }
         if ($_SESSION['type'] == 'admin') {
             echo "hey admin
@@ -132,18 +145,14 @@ session_start();
             <a href='admin.php'>admin</a>
             ";
         }
-        echo "<a href='logout.php'>Déconnexion</a>";
-      
-            // ... (your login form code)
-            
-         
-        
+        // echo "<a href='logout.php'>Déconnexion</a>";
 
-    } 
+        // ... (your login form code)
 
-    
-    
-    else {
+
+
+
+    } else {
         $error_message = ""; // Initialize the variable
 
         if (isset($_GET['error']) && $_GET['error'] == 'incorrect_password') {
@@ -151,11 +160,11 @@ session_start();
         } elseif (isset($_GET['error']) && $_GET['error'] == 'user_not_found') {
             $error_message = "l'utilisateur n'éxiste pas";
         }
-      
 
-        
 
-        
+
+
+
 
         echo "
         <img class='image_header' src='header.jpg' alt=''>
@@ -185,18 +194,14 @@ session_start();
             </main>
 
         ";
-
-      
-    
-        
     }
     ?>
 
-<style>
+    <style>
     </style>
-</head>
-<body>
+    </head>
 
-</body>
+    <body>
+
 
 </html>
