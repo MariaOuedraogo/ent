@@ -24,7 +24,7 @@
 
 
     <a href="eleve_abs_index.php"> retour</a>
-    <h2>Visualiser vos Absences</h2>
+    <h1>Visualiser vos Absences</h1>
     
 
     <form action="" method="get" id="filterForm">
