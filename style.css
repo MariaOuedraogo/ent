@@ -116,6 +116,21 @@ body {
     font-size: 0.813rem;
   }
 
+  .desk_nav {
+    font-family: "Montserrat", sans-serif;
+
+  }
+
+  .desk_nav .menu-btn {
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+
+
+  .desk_nav a:hover {
+    color: #F76647;
+  }
+
 
   .header{
     max-width: 400px;
@@ -185,6 +200,16 @@ font-size: 1.25rem;
 
 
 /* page élève */
+
+.msg {
+  font-size: 2rem;
+  margin-left: 10px;
+}
+
+.out {
+ font-size: 2rem;
+ margin-left: 10px;
+}
 
 .hello{
 padding-left: 20px;
@@ -306,8 +331,8 @@ padding-left: 20px;
   text-transform: capitalize;
 }
 .profil_img{
-  width:40px !important;
-  height:40px !important;
+  width:45px !important;
+  height:45px !important;
   border-radius: 100%;
   padding: 0 !important;
 }

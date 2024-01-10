@@ -28,8 +28,9 @@ if (!isset($_SESSION['nom']) || $_SESSION['type'] !== 'eleve') {
 <body>
     
 
-<a href="index.php">accueil</a>
-<p>accueil/ Mes documents</p>
+<div class="ariane">
+<a href='index.php' >accueil/ </a> <a class="active">Mes documents</a>
+</div>
 
 <h1>voici tes documents <br> indispensable pour l'année</h1>
 
@@ -42,14 +43,61 @@ if (!isset($_SESSION['nom']) || $_SESSION['type'] !== 'eleve') {
 </section>
 
 <div class="angry-grid">
-  <div id="item-0" class="item">&nbsp;</div>
-  <div id="item-1" class="item">&nbsp;</div>
-  <div id="item-2" class="item">&nbsp;</div>
-  <div id="item-3" class="item">&nbsp;</div>
-  <div id="item-4" class="item">&nbsp;</div>
-  <div id="item-5" class="item">&nbsp;</div>
+  <div id="item-0" class="item">&nbsp;
+        <h2><iconify-icon icon="fluent:document-28-regular" class="icon-doc"></iconify-icon>&nbsp;inscriptions administrative</h2>
+        <div class="item-footer">
+            <p>1.4MB</p>
+            <p>PDF</p>
+            <a href="#"><iconify-icon icon="ph:arrow-right" class="icon-arrow"></iconify-icon></a>
+        </div>
+  </div>
+
+  <div id="item-1" class="item">&nbsp;
+        <h2><iconify-icon icon="fluent:document-28-regular" class="icon-doc"></iconify-icon>&nbsp;certificat scolarité</h2>
+        <div class="item-footer">
+                <p>1.4MB</p>
+                <p>PDF</p>
+                <a href="#"><iconify-icon icon="ph:arrow-right" class="icon-arrow"></iconify-icon></a>
+        </div>
+  </div>
+
+  <div id="item-2" class="item">&nbsp;
+    <h2><iconify-icon icon="fluent:document-28-regular" class="icon-doc"></iconify-icon>&nbsp;carte izly</h2>
+        <div class="item-footer">
+            <p>1.4MB</p>
+            <p>PDF</p>
+            <a href="#"><iconify-icon icon="ph:arrow-right" class="icon-arrow"></iconify-icon></a>
+        </div>
+  </div>
+
+  <div id="item-3" class="item">&nbsp;
+    <h2><iconify-icon icon="fluent:document-28-regular" class="icon-doc"></iconify-icon>&nbsp;bulletins de notes S1</h2>
+        <div class="item-footer">
+            <p>1.4MB</p>
+            <p>PDF</p>
+            <a href="#"><iconify-icon icon="ph:arrow-right" class="icon-arrow"></iconify-icon></a>
+        </div>
+  </div>
+
+  <div id="item-4" class="item">&nbsp;
+    <h2><iconify-icon icon="fluent:document-28-regular" class="icon-doc"></iconify-icon>&nbsp;bulletins de notes S2</h2>
+        <div class="item-footer">
+            <p>1.4MB</p>
+            <p>PDF</p>
+            <a href="#"><iconify-icon icon="ph:arrow-right" class="icon-arrow"></iconify-icon></a>
+        </div>
+  </div>
+
+  <div id="item-5" class="item">&nbsp;
+    <h2><iconify-icon icon="fluent:document-28-regular" class="icon-doc"></iconify-icon>&nbsp;carte étudiante</h2>
+        <div class="item-footer">
+            <p>1.4MB</p>
+            <p>PDF</p>
+            <a href="#"><iconify-icon icon="ph:arrow-right" class="icon-arrow"></iconify-icon></a>
+        </div>
+  </div>
 </div>
-</div>
+
 
 <div id="popup" class="popup">
         <div class="popup-content">
@@ -59,7 +107,7 @@ if (!isset($_SESSION['nom']) || $_SESSION['type'] !== 'eleve') {
     </div>
 
 
-
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
     <script>
       document.addEventListener('DOMContentLoaded', function () {
     const willElement = document.querySelector('.will');

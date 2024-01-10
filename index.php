@@ -101,8 +101,8 @@ session_start();
                                <a href='documents.php'>mes documents</a>
 
                                <a href='profil.php' class='img_profil_desk'><img src='" . $_SESSION['photo_profil'] . "' alt='' class='profil_img'></img></a>
-                               <a href='eleve_msg_index.php'  class='msg'><img src='msg.png' alt=''></a>
-                               <a href='logout.php'><img src='out.png' alt='' class='out'></a>
+                               <a href='eleve_msg_index.php'  class='msg'><iconify-icon icon='ion:mail-outline'></iconify-icon></a>
+                               <a href='logout.php' class='out'><iconify-icon icon='ion:log-out-outline'></iconify-icon ></a>
 
 
             </nav>
@@ -200,8 +200,7 @@ session_start();
     }
     ?>
 
-    <style>
-    </style>
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
     </head>
 
     <body>
