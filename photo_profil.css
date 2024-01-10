@@ -4,8 +4,6 @@
   box-sizing: border-box;
 }
 
-
-
 body{
 margin: 0;
 overflow-x: hidden;
@@ -13,6 +11,10 @@ padding: 10px;
 background-color: #D2E5E3;
 font-family: 'Montserrat', sans-serif;
 }
+
+
+
+
 
 h1{
   text-align: center;
@@ -50,7 +52,7 @@ form{
     flex-direction: column;
     align-items: center;
     gap: 10px;
-    padding: 50px;
+    padding: 50px 50px 20px 50px;
     font-family: 'Montserrat', sans-serif;
 }
 
@@ -87,4 +89,22 @@ main img{
 
 .success{
   font-style: italic;
+}
+
+.icon_container {
+
+display: flex;
+justify-content: flex-start;
+margin-left: 20px;
+margin-bottom: 10px;
+
+}
+
+.icon {
+  font-size: 3rem;
+  color: black;
+}
+  
+.icon:active {
+  color: black;
 }

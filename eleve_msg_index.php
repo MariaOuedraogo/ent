@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
     <meta charset="UTF-8">
@@ -11,6 +11,7 @@
 
 <body>
 <a href="index.php">accueil</a>
+
 <h1>boîte de reception</h1>
 
 <?php
