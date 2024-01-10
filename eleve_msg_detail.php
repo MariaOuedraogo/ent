@@ -45,7 +45,7 @@ $resultCurrentMessage->execute();
 
     // Affichez le contenu complet du message
     if ($row = $resultCurrentMessage->fetch(PDO::FETCH_ASSOC)) {
-        $formattedDate = date("d/m/Y ", strtotime($row['timestamp']));
+        $formattedDate = date('d/m/Y', strtotime($absence['date']));
 
         echo "
         <p class='msg objet'>" . nl2br(htmlspecialchars($row['objet'])) . "</p>

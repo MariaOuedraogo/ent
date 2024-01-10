@@ -60,8 +60,8 @@ if ($uploadOk == 0) {
     }
 }
 
-// Redirection vers update_profile.php
-header("Location: profil.php");
+// Redirection vers update_pohotophp
+header("Location: update_photo.php");
 exit();
 
 }

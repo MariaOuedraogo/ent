@@ -6,10 +6,60 @@
 
 body {
   margin: 0;
+  background-color: #DADADA;
+  overflow-x: hidden;
 }
 
 main{
     display: flex;
-    flex-direction: row-reverse;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: center; /* Centre les éléments horizontalement */
+    gap: 20px;
+    margin-bottom: 30px;
+    
+
 }
+
+main p{
+  margin: 0;
+
+}
+
+.flex-item {
+  flex: 1;
+  border: solid black 1px;
+  border-radius: 8px;
+  background-color: #97BAFE;
+  padding: 7px 15px;
+
+
+}
+
+.last-item{
+  order: -1;
+  background-color: white;
+}
+
+
+
+.footer_abs{
+  border-top: solid black 1px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.detail{
+  border: solid 1px black;
+  text-decoration: none;
+  padding: 8px 12px;
+  border-radius: 8px;
+  color: black;
+}
+
+@media (min-width:700px){
+  main{
+    flex-direction: row;
+  }
+}
+
+

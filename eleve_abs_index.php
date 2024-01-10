@@ -57,7 +57,7 @@ try {
 <body>
 
     <a href="index.php">Retour</a>
-    <h2>Visualiser vos Absences</h2>
+    <h2>Tes absences</h2>
 
     <main>
     <?php
@@ -65,29 +65,33 @@ try {
         foreach ($absences as $absence) {
             // Convertir la date au format jour mois année
             setlocale(LC_TIME, 'fr_FR.utf8'); // Définir la locale pour le français
-            $formattedDate = strftime('%A %e %B %Y', strtotime($absence['date']));
+            $formattedDate = date('d/m/Y', strtotime($absence['date']));
 
-            echo "<section>
+            echo "<section class='flex-item'>
             <p>intégration</p>
             <p> {$absence['nom_prof']}</p>
             <p>2h</p>
 
+            <div class='footer_abs'>
+            <p> {$absence['heure']}</p>
 
             <p>{$formattedDate}</p>
-            <p> {$absence['heure']}</p>
+            </div>
+         
             </section>";
         }
 
+        echo"<section class='flex-item last-item '>";
         // Afficher le compteur en JavaScript
         echo "<script>
             var absenceCount = $absenceCount;
             if (absenceCount > 0) {
-                document.write('<div><p>Vous avez ' + absenceCount + '</p>');
+                document.write('<p>Vous avez <br> ' + absenceCount + ' absence(s)</p>');
                 
                 // Si le nombre d'absences est supérieur ou égal à 10, changer le texte
                 if (absenceCount >= 10) {
                     var score = -0.01 * (absenceCount - 10);
-                    document.write('<p> ' + score + ' sur votre moyenne</p></div>');
+                    document.write('<p> ' + score + ' sur votre moyenne</p>');
                 }
             } else {
                 document.write('<p>Aucune absence enregistrée.</p>');
@@ -96,10 +100,15 @@ try {
     } else {
         echo "<p>Aucune absence enregistrée.</p>";
     }
+
+    echo"</section>";
     ?>
 </main>
-    <a href="eleve_abs_detail.php">voir le detail</a>
+    <a href="eleve_abs_detail.php" class="detail">voir le detail</a>
 
+
+  
 </body>
+
 
 </html>

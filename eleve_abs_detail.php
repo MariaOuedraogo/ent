@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Visualiser les Absences</title>
+    <link rel="stylesheet" href="eleve_abs_index.css">
 
     <!-- Ajoutez vos liens CSS ici -->
 </head>
@@ -12,6 +13,13 @@
 <body>
     <a href="index.php">Accueil</a>
     <h2>Visualiser vos Absences</h2>
+
+    <form action="" method="get" id="filterForm">
+        <label for="dateFilter">Filtrer par date :</label>
+        <input type="date" id="dateFilter" name="dateFilter">
+        <button type="submit">Filtrer</button>
+        <button type="button" onclick="showAllAbsences()">Voir toutes les absences</button>
+    </form>
 
     <?php
     session_start();
@@ -37,11 +45,23 @@
         // Récupérer les absences de l'élève connecté avec le nom du professeur
         $sqlAbsences = "SELECT absences.*, user.nom as nom_prof FROM absences
                         INNER JOIN user ON absences.prof_id = user.id
-                        WHERE absences.eleve_id = :eleveId
-                        ORDER BY absences.date DESC, absences.heure DESC";
+                        WHERE absences.eleve_id = :eleveId";
+
+        // Ajouter une condition si une date de filtrage est spécifiée
+        if (isset($_GET['dateFilter']) && !empty($_GET['dateFilter'])) {
+            $sqlAbsences .= " AND absences.date = :dateFilter";
+        }
+
+        $sqlAbsences .= " ORDER BY absences.date DESC, absences.heure DESC";
 
         $stmtAbsences = $db->prepare($sqlAbsences);
         $stmtAbsences->bindParam(':eleveId', $userId);
+
+        // Lié la date de filtrage si elle est spécifiée
+        if (isset($_GET['dateFilter']) && !empty($_GET['dateFilter'])) {
+            $stmtAbsences->bindParam(':dateFilter', $_GET['dateFilter']);
+        }
+
         $stmtAbsences->execute();
         $absences = $stmtAbsences->fetchAll(PDO::FETCH_ASSOC);
 
@@ -52,20 +72,31 @@
     }
     ?>
 
+
+
     <?php
+    echo" <main>";
     if ($absenceCount > 0) {
         foreach ($absences as $absence) {
             // Convertir la date au format jour mois année
             setlocale(LC_TIME, 'fr_FR.utf8'); // Définir la locale pour le français
-            $formattedDate = strftime('%A %e %B %Y', strtotime($absence['date']));
+            $formattedDate = date('d/m/Y', strtotime($absence['date']));
 
-            echo "<div>";
-            echo "<p>Date: {$formattedDate}</p>";
-            echo "<p>Heure: {$absence['heure']}</p>";
-            echo "<p>Nom du professeur: {$absence['nom_prof']}</p>"; // Ajout du nom du professeur
-            echo "</div>";
-            echo "<hr>";
+            echo "<section class='flex-item'>
+            <p>intégration</p>
+            <p> {$absence['nom_prof']}</p>
+            <p>2h</p>
+
+            <div class='footer_abs'>
+            <p> {$absence['heure']}</p>
+
+            <p>{$formattedDate}</p>
+            </div>
+         
+            </section>";
         }
+        echo" </main>";
+
 
         // Afficher le compteur en JavaScript
         echo "<script>
@@ -90,6 +121,14 @@
     }
     ?>
 
+    <script>
+        function showAllAbsences() {
+            // Rediriger vers la même URL sans le paramètre de filtre de date
+            var currentUrl = window.location.href;
+            var newUrl = currentUrl.split('?')[0];
+            window.location.href = newUrl;
+        }
+    </script>
 
 </body>
 
