@@ -13,21 +13,22 @@ h1::first-letter {
    text-transform: uppercase;
 }
 
-
-p::first-letter {
+h2::first-letter {
    text-transform: uppercase;
 }
 
-   a{
+a{
       text-decoration: none;
+      color: #000000;
       
-   }
+}
 
 
 h1 {
    font-family: 'Familjen Grotesk', sans-serif;
    margin-left: 50px;
    font-size: 3rem;
+   margin-top: 10px;
 }
 
 section {
@@ -42,7 +43,7 @@ hr {
 .item{
    border-radius: 22px;
    background-color: aquamarine;
-   
+   position: relative;
 }
 
 .angry-grid {
@@ -54,7 +55,6 @@ hr {
    padding: 0 20px 0 50px;
    gap: 8px;
    height:900px;
-   
 }
   
 section{
@@ -70,20 +70,41 @@ section p:hover{
 cursor: pointer;
 }
 
+.ariane {
+   margin-left: 50px;
+   margin-top: 20px;
+   display: flex;
+}
+
+p::first-letter {
+   text-transform: uppercase;
+}
+
+a::first-letter {
+   text-transform: uppercase;
+}
+
+
 .in{
    color: #D2E5E3;
    background-color: #1E5FC7;
+   box-shadow: 5px 5px 5px rgb(200, 200, 200);
 }
 
 .will{
    color: #1E5FC7;
    background-color: #D2E5E3;
+   border: 0.5px solid #1E5FC7;
    transition: color .2s ease-in;
 }
 
 .will:hover{
    color: #D2E5E3;
    background-color: #1E5FC7;
+}
+
+h2::first-letter {
+   text-transform: uppercase;
 }
 
 #item-0 {
@@ -95,10 +116,54 @@ cursor: pointer;
    grid-column-end: 3;
 
    background-color: #97BAFE;
-   
-   
+   color: #A12821;
    
 }
+
+#item-0 p {
+   border: 1px #A12821 solid;
+}
+
+#item-0 a {
+   color:  #A12821;
+}
+
+.icon-doc {
+   font-size: 2.2rem;
+}
+
+.item a {
+   font-size: 2rem;
+   position: absolute;
+   right: 0;
+   margin-right: 15px;
+}
+
+.item-footer {
+   display: flex;
+   align-items: center;
+   margin-left: 20px;
+   margin-top: 125px;
+   gap: 10px;
+}
+
+.item h2 {
+   display: flex;
+   align-items: center;
+   margin-top: 0;
+   font-family: 'Familjen Grotesk', sans-serif;
+   margin-left: 20px;
+}
+
+.item p {
+   padding: 2px 10px 2px 10px;
+   display: flex;
+   justify-content: center; 
+   border-radius: 20px;
+   font-size: 0.9rem;
+}
+
+
 #item-1 {
 
    grid-row-start: 2;
@@ -107,8 +172,19 @@ cursor: pointer;
    grid-row-end: 3;
    grid-column-end: 3;
    background-color: #3B3B3D;
+   color: #ffffff;
    
 }
+
+#item-1 p {
+   border: 1px #ffffff solid;
+}
+
+#item-1 a {
+   color:  #ffffff;
+}
+
+
 #item-2 {
 
    grid-row-start: 3;
@@ -116,9 +192,20 @@ cursor: pointer;
 
    grid-row-end: 4;
    grid-column-end: 3;
-   background-color: #475A60;
+   background-color: #D8E898;
+   color: #7C2001;
    
 }
+
+#item-2 p {
+   border: 1px #7C2001 solid;
+}
+
+#item-2 a {
+   color:  #7C2001;
+}
+
+
 #item-3 {
 
    grid-row-start: 4;
@@ -127,8 +214,18 @@ cursor: pointer;
    grid-row-end: 5;
    grid-column-end: 3;
    background-color: #FFC2ED;
+   color: #411513;
    
 }
+
+#item-3 p {
+   border: 1px #411513 solid;
+}
+
+#item-3 a {
+   color:  #411513;
+}
+
 #item-4 {
 
    grid-row-start: 5;
@@ -136,9 +233,22 @@ cursor: pointer;
 
    grid-row-end: 6;
    grid-column-end: 3;
-   background-color: #D8E898;
+ 
+   background-color: #EAAA64;
+   color: black;
+  
    
 }
+
+#item-4 p {
+   border: 1px #000000 solid;
+}
+
+#item-4 a {
+   color:  #000000;
+}
+
+
 #item-5 {
 
    grid-row-start: 6;
@@ -146,11 +256,18 @@ cursor: pointer;
 
    grid-row-end: 7;
    grid-column-end: 3;
-   background-color: #EAAA64;
+   background-color: #475A60;
+   color: white;
    
 }
 
+#item-5 p {
+   border: 1px #ffffff solid;
+}
 
+#item-5 a {
+   color:  #ffffff;
+}
 
 
 .popup {
