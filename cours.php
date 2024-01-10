@@ -24,9 +24,10 @@ if (!isset($_SESSION['nom']) || $_SESSION['type'] !== 'eleve') {
 <a href="index.php">accueil</a>
 
 <nav>
-    <a href="#">ressources pédagogies↘︎</a>
+    <a href="cours.php">ressources pédagogies↘︎</a>
     <a href="#">mes outils ↘ </a>
 </nav>
+
 
 <div class="container">
 <section>

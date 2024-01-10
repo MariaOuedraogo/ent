@@ -87,11 +87,12 @@ session_start();
 <div class='menu-container'>
     <div class='menu-btn'>scolarité</div>
     <ul class='menu-items'>
-        <ul>
     <li><a href='#'> ade</a></li>
     <li><a href='eleve_abs_index.php'>absences</a></li>
     <li><a href='#'>notes </a></li>
     <li><a href='cours.php'> ressources pédagogiques</a></li>
+    <li><a href='#'> mes outils</a></li>
+
 
 
 

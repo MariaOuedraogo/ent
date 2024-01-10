@@ -10,7 +10,13 @@ font-family: sans-serif;
 }
 
 nav{
-    margin: 50px;
+    margin: 50px 0 0 0;
+    border-bottom: 1px solid black;
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
 
 }
 a{
@@ -24,7 +30,6 @@ a{
 
 .item{
     border-radius: 22px;
-     background-color: #97BAFE;
  }
  
  .angry-grid {
@@ -74,6 +79,9 @@ a{
  
     grid-row-end: 2;
     grid-column-end: 3;
+
+    background-color: #E9E9E9;
+
     
  }
  #item-1 {
@@ -83,6 +91,9 @@ a{
  
     grid-row-end: 3;
     grid-column-end: 3;
+    background-color: #3B3B3D;
+    color: white;
+
     
  }
  #item-2 {
@@ -92,6 +103,8 @@ a{
  
     grid-row-end: 4;
     grid-column-end: 3;
+    background-color: #D2E5E3;
+
     
  }
  #item-3 {
@@ -101,6 +114,8 @@ a{
  
     grid-row-end: 5;
     grid-column-end: 3;
+    background-color: #F6765B;
+
     
  }
  #item-4 {
@@ -110,6 +125,8 @@ a{
  
     grid-row-end: 6;
     grid-column-end: 3;
+    background-color: #FFC2ED;
+
     
  }
  #item-5 {
@@ -119,6 +136,8 @@ a{
  
     grid-row-end: 7;
     grid-column-end: 3;
+    background-color: #F6765B;
+
     
  }
  
