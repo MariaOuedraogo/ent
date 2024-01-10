@@ -95,8 +95,6 @@
          
             </section>";
         }
-        echo" </main>";
-
 
         // Afficher le compteur en JavaScript
         echo "<script>
