@@ -56,7 +56,7 @@ try {
 
 <body>
 
-    <a href="index.php">Retour</a>
+    <a href="index.php">accueil</a>
     <h2>Tes absences</h2>
 
     <main>

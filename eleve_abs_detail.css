@@ -1,3 +1,10 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+
 body {
     margin: 0;
     background-color: #DADADA;
@@ -8,12 +15,70 @@ body {
       display: flex;
       flex-direction: column;
       justify-content: center; /* Centre les éléments horizontalement */
+      gap: 12px;
       
   }
 
 
   .flex-item {
  width: 100%;
- aspect-ratio: 309/148;
  border: solid 1px black;
+ background-color: #97BAFE;
+ border-radius: 8px;
+ padding: 10px;
   }
+
+  .flex-item p{
+    margin: 0;
+  }
+
+  .footer_abs{
+    display: flex;
+justify-content: space-between;
+border-top: solid black 1px;
+  }
+
+  .nbr_abs{
+    display: block;
+    width: fit-content;
+    border: solid 1px black;
+    background-color: white;
+    border-radius: 8px;
+  }
+  
+
+
+  /* Media query pour les écrans entre 600px et 700px */
+@media screen and (min-width: 600px) and (max-width: 830px) {
+    main{
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        width: fit-content;
+        margin-left: 12px; /* Ajouter une marge à gauche */
+        margin-right: auto; /* Réinitialiser la marge à droite */      box-sizing: border-box; /* Inclut la marge dans le calcul de la largeur */
+  
+      }
+   .flex-item{
+    width: calc(33% - 12px); /* ajuste la largeur des éléments avec un espace entre eux */
+}
+}
+
+
+@media (min-width:830px){
+    main{
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      margin-left: 12px; /* Ajouter une marge à gauche */
+      margin-right: auto; /* Réinitialiser la marge à droite */      box-sizing: border-box; /* Inclut la marge dans le calcul de la largeur */
+
+    }
+
+    .flex-item{
+        width: calc(20% - 12px); /* ajuste la largeur des éléments avec un espace entre eux */
+
+
+    }
+  }
+  

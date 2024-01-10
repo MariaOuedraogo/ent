@@ -11,7 +11,8 @@
 </head>
 
 <body>
-    <a href="index.php">Accueil</a>
+
+    <a href="eleve_abs_index.php"> retour</a>
     <h2>Visualiser vos Absences</h2>
 
     <form action="" method="get" id="filterForm">
@@ -96,11 +97,12 @@
             </section>";
         }
 
+        echo"<div class='nbr_abs flex-item'>";
         // Afficher le compteur en JavaScript
         echo "<script>
             var absenceCount = $absenceCount;
             if (absenceCount > 0) {
-                document.write('<p>Nombre total d\'absences: ' + absenceCount + '</p>');
+                document.write('<p > Vous avez ' + absenceCount + ' absences</p>');
                 
                 // Si le nombre d'absences est supérieur ou égal à 10, changer le texte
                 if (absenceCount >= 10) {
@@ -117,6 +119,8 @@
     } else {
         echo "<p>Aucune absence enregistrée.</p>";
     }
+
+    echo"</div>";
     ?>
 
     <script>
