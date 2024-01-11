@@ -50,12 +50,12 @@ hr {
    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
    grid-template-columns: 1fr 1fr;
 
-   padding: 0 20px 0 50px;
-   gap: 8px;
+  
+   gap: 15px;
    height:900px;
 
-   margin-bottom: 10px;
-   margin-top: 10px;
+   margin-bottom: 20px;
+   margin-top: 30px;
 }
   
 section{
@@ -406,8 +406,12 @@ h2::first-letter {
       grid-template-rows: 1fr 1fr;
       grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
       
+
       gap: 25px;
       height: 500px;
+      width: 90%;
+
+      margin: 20px auto 50px;
 
       
    }
