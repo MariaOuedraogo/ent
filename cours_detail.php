@@ -27,7 +27,7 @@ if (!isset($_SESSION['nom']) || $_SESSION['type'] !== 'eleve') {
     
 
 <div class="ariane">
-<a href='index.php' >accueil&nbsp;/ </a> <a href='#'>&nbsp; Ressources pédagogiques /</a><a href='#' class="active">&nbsp; Deploiement de services </a>
+<a href='index.php' >accueil&nbsp;/ </a> <a href='cours.php'>&nbsp; Ressources pédagogiques /</a><a href='#' class="active">&nbsp; Deploiement de services </a>
 </div>
 
 <h1>Deploiement<br> de services</h1>
@@ -49,12 +49,54 @@ Apprentissages </p>
 </section>
 
 <div class="angry-grid">
-  <div id="item-0" class="item">&nbsp;</div>
-  <div id="item-1" class="item">&nbsp;</div>
-  <div id="item-2" class="item">&nbsp;</div>
-  <div id="item-3" class="item">&nbsp;</div>
-  <div id="item-4" class="item">&nbsp;</div>
-  <div id="item-5" class="item">&nbsp;</div>
+  <div id="item-0" class="item">&nbsp;
+    <h2>&nbsp;TD1 Mail Exercice Fichier</h2>
+        <div class="item-footer">
+            <p>1.4MB</p>
+            <p>PDF</p>
+            <a href="#"><iconify-icon icon="ph:arrow-right" class="icon-arrow"></iconify-icon></a>
+        </div>
+    </div>
+  <div id="item-1" class="item">&nbsp;
+    <h2>&nbsp;TD1 Mail Exercice Fichier</h2>
+        <div class="item-footer">
+            <p>1.4MB</p>
+            <p>PDF</p>
+            <a href="#"><iconify-icon icon="ph:arrow-right" class="icon-arrow"></iconify-icon></a>
+        </div>
+  </div>
+  <div id="item-2" class="item">&nbsp;
+    <h2>&nbsp;TD1 Mail Exercice Fichier</h2>
+        <div class="item-footer">
+            <p>1.4MB</p>
+            <p>PDF</p>
+            <a href="#"><iconify-icon icon="ph:arrow-right" class="icon-arrow"></iconify-icon></a>
+        </div>
+  </div>
+  <div id="item-3" class="item">&nbsp;
+    <h2>&nbsp;TD1 Mail Exercice Fichier</h2>
+        <div class="item-footer">
+            <p>1.4MB</p>
+            <p>PDF</p>
+            <a href="#"><iconify-icon icon="ph:arrow-right" class="icon-arrow"></iconify-icon></a>
+        </div>
+  </div>
+  <div id="item-4" class="item">&nbsp;
+    <h2>&nbsp;TD1 Mail Exercice Fichier</h2>
+        <div class="item-footer">
+            <p>1.4MB</p>
+            <p>PDF</p>
+            <a href="#"><iconify-icon icon="ph:arrow-right" class="icon-arrow"></iconify-icon></a>
+        </div>
+  </div>
+  <div id="item-5" class="item">&nbsp;
+    <h2>&nbsp;TD1 Mail Exercice Fichier</h2>
+        <div class="item-footer">
+            <p>1.4MB</p>
+            <p>PDF</p>
+            <a href="#"><iconify-icon icon="ph:arrow-right" class="icon-arrow"></iconify-icon></a>
+        </div>
+  </div>
 </div>
 </div>
 
@@ -66,7 +108,7 @@ Apprentissages </p>
     </div>
 
 
-
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
     <script>
       document.addEventListener('DOMContentLoaded', function () {
     const willElement = document.querySelector('.will');
