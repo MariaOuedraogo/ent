@@ -122,8 +122,14 @@ body {
     font-size: 0.813rem;
   }
 
+  nav .desk_nav {
+    margin-top: 20px;
+  }
+
   .desk_nav {
     font-family: "Montserrat", sans-serif;
+    border-radius: 20px;
+    width: 90%;
 
   }
 
@@ -134,7 +140,7 @@ body {
 
 
   .desk_nav a:hover {
-    color: #F76647;
+    color: #171C8F;
   }
 
 
@@ -438,7 +444,7 @@ padding:  0 3rem;;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: auto;
+  margin: 30px auto;
   background-color: rgba(225,225,225, .7);
 
 
