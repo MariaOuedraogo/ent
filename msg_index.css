@@ -122,6 +122,13 @@ border-radius:50% ;
     border-radius: 8px;
     margin-bottom: 20px;
     margin-right: 7px;
+    transition: color .2s ease-in;
+}
+
+.create_msg:hover {
+    background-color: #bababa;
+    transition: color .2s ease-out;
+    cursor: pointer;
 }
 
 @media(max-width:500px){
