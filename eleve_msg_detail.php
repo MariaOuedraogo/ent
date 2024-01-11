@@ -5,6 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Message Detail</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="msg_detail.css">
 </head>
 
@@ -18,7 +23,9 @@ if (!isset($_SESSION['nom']) || $_SESSION['type'] !== 'eleve') {
     header("Location: index.php"); // Redirige vers index.php si ce n'est pas un étudiant
     exit();
 }
-echo "<a href='eleve_msg_index.php'>retour</a>";
+echo "<div class='ariane'>
+<a href='index.php' >accueil&nbsp;/ </a> <a href='eleve_msg_index.php'>&nbsp; Messagerie&nbsp;/</a><a href='#' class='active'>&nbsp; détails</a>
+</div>";
 
 // Récupérez l'ID du message à partir des paramètres GET
 $messageId = isset($_GET['id']) ? $_GET['id'] : null;
