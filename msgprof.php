@@ -187,7 +187,7 @@ function getAllStudentNames()
 
       
 
-        <button type="submit" name="submit" id="submit">Send Message</button>
+        <button type="submit" name="submit" id="submit">Envoyer un message</button>
 
     </form>
 </body>

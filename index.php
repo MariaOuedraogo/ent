@@ -223,9 +223,9 @@ session_start();
         $error_message = ""; // Initialize the variable
 
         if (isset($_GET['error']) && $_GET['error'] == 'incorrect_password') {
-            $error_message = "le mot de passe est erroné";
+            $error_message = "*le mot de passe est erroné";
         } elseif (isset($_GET['error']) && $_GET['error'] == 'user_not_found') {
-            $error_message = "l'utilisateur n'éxiste pas";
+            $error_message = "*l'utilisateur n'éxiste pas";
         }
 
 

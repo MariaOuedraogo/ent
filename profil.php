@@ -56,7 +56,7 @@ try {
     <a href='update_photo.php' class='photo'><img src='" . $_SESSION['photo_profil'] . "' alt='' class='out'></a>
 
     <div class='modifier'>
-    <a href='update_photo.php'>Modifier</a>
+    <a href='update_photo.php'>Modifier la photo de profil</a>
     </div>
 
     <section>
@@ -91,6 +91,11 @@ try {
 
 
     echo "<h2>Changer votre mot de passe</h2>";
+    // Afficher le message d'erreur s'il y en a un
+    if (isset($_SESSION['erreur_mdp'])) {
+        echo "<p class='mdp_error'>{$_SESSION['erreur_mdp']}</p>";
+        unset($_SESSION['erreur_mdp']); // Supprimer la variable de session après l'avoir affichée
+    }
 
     echo "<form action='changer_mdp.php' method='post'>
     <label for='nouveau_mdp'>Nouveau mot de passe:</label> <br>
@@ -98,18 +103,14 @@ try {
     <br>
     <label for='confirmer_mdp'>Confirmer le mot de passe:</label>
     <input type='password' name='confirmer_mdp' required>
-    <br>
-    <input type='submit' value='Changer le mot de passe' id='submit'>
-</form>
-</main>
+    <br>";
     
-    ";
-    // Afficher le message d'erreur s'il y en a un
-if (isset($_SESSION['erreur_mdp'])) {
-    echo "<p>{$_SESSION['erreur_mdp']}</p>";
-    unset($_SESSION['erreur_mdp']); // Supprimer la variable de session après l'avoir affichée
-}
+    
+    
+    echo "<input type='submit' value='Changer le mot de passe' id='submit'>
+</form>
 
+</main>";
 } catch (PDOException $e) {
     echo "Erreur : " . $e->getMessage();
 }
