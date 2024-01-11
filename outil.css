@@ -126,7 +126,7 @@ body{
    gap: 15px;
    height:900px;
 
-   padding: 0 20px 0 50px;
+  
    margin-top: 30px;
    margin-bottom: 20px;
    
@@ -359,8 +359,9 @@ cursor: pointer;
       
       gap: 25px;
       height: 500px;
+      width: 90%;
 
-      
+      margin: 50px auto 50px;
    }
      
    #item-0 {
