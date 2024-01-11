@@ -225,7 +225,7 @@ session_start();
 
 
         echo "
-        <img class='image_header' src='header.jpg' alt=''>
+        <img class='image_header' src='mmi.jpg' alt=''>
         <main>
        <header class='header'>
        <h1>BUT MMI <br>

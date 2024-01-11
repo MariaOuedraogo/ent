@@ -54,6 +54,7 @@ if (!isset($_SESSION['nom']) || $_SESSION['type'] !== 'eleve') {
     <p>total cours</p>
     <p class="heures">28 heures</p>
   </div>
+
   <div id="item-1" class="item">&nbsp;
     <img src="images/cours.png" alt="">
     <h2>Déploiement de service</h2>
@@ -63,6 +64,7 @@ if (!isset($_SESSION['nom']) || $_SESSION['type'] !== 'eleve') {
     <p>total cours</p>
     <p class="heures">28 heures</p>
   </div>
+
   <div id="item-2" class="item">&nbsp;
     <img src="images/cours.png" alt="">
     <h2>Déploiement de service</h2>
@@ -72,6 +74,7 @@ if (!isset($_SESSION['nom']) || $_SESSION['type'] !== 'eleve') {
     <p>total cours</p>
     <p class="heures">28 heures</p>
   </div>
+
   <div id="item-3" class="item">&nbsp;
    <img src="images/cours.png" alt="">
     <h2>Déploiement de service</h2>
@@ -81,6 +84,7 @@ if (!isset($_SESSION['nom']) || $_SESSION['type'] !== 'eleve') {
     <p>total cours</p>
     <p class="heures">28 heures</p>
   </div>
+
   <div id="item-4" class="item">&nbsp;
     <img src="images/cours.png" alt="">
     <h2>Déploiement de service</h2>
@@ -90,6 +94,7 @@ if (!isset($_SESSION['nom']) || $_SESSION['type'] !== 'eleve') {
     <p>total cours</p>
     <p class="heures">28 heures</p>
   </div>
+  
   <div id="item-5" class="item">&nbsp;
     <img src="images/cours.png" alt="">
     <h2>Déploiement de service</h2>
