@@ -31,6 +31,11 @@ a {
 .active {
   font-style: normal;
 }
+.obligo{
+font-size: .8rem;
+margin-top: 0;
+color: #dd1616;
+}
 
 p::first-letter {
   text-transform: uppercase;
@@ -59,7 +64,7 @@ h1 {
 
 h2 {
   font-size: 1rem;
-}
+font-weight: normal;}
 
 .modifier {
   width: 100%;

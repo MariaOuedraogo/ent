@@ -92,7 +92,8 @@ try {
 
 
 
-    echo "<h2>Changer votre mot de passe</h2>";
+    echo "<h2>Changer votre mot de passe</h2>
+  ";
     // Afficher le message d'erreur s'il y en a un
     if (isset($_SESSION['erreur_mdp'])) {
         echo "<p class='mdp_error'>{$_SESSION['erreur_mdp']}</p>";
@@ -109,7 +110,8 @@ try {
     
     
     
-    echo "<input type='submit' value='Changer le mot de passe' id='submit'>
+    echo "  <p class='obligo'>*Tous les champs sont obligatoire</p>    
+    <input type='submit' value='Changer le mot de passe' id='submit'>
 </form>
 
 </main>";
