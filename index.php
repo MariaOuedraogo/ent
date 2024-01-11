@@ -18,6 +18,9 @@ session_start();
 
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
 
+    <link rel="icon" href="home.png" type="image/png">
+
+
     <script src="script.js" defer></script>
 
 </head>
