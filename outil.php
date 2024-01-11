@@ -28,46 +28,46 @@ if (!isset($_SESSION['nom']) || $_SESSION['type'] !== 'eleve') {
 
 
 <div class="ariane">
-<a href='index.php' >accueil&nbsp;/ </a> <a href='#' class="active">&nbsp; Ressources pédagogiques </a>
+<a href='index.php' >accueil&nbsp;/ </a> <a href='#' class="active">&nbsp; Outils collaboratifs</a>
 </div>
 
 <h1> voici les outils dont <br>tu as accès cette année</h1>
 
 <nav>
-    <a href="cours.php" class='active2'>ressources pédagogiques↘︎</a>
-    <a href="outil.php">mes outils ↘ </a>
+    <a href="cours.php" >ressources pédagogiques↘︎</a>
+    <a href="outil.php" class='active2'>mes outils ↘ </a>
 </nav>
 
 
 
 <div class="angry-grid">
   <div id="item-0" class="item">&nbsp;
-    <h2>Powerpoint</h2>
+    <h2><iconify-icon icon="vscode-icons:file-type-powerpoint2"></iconify-icon>&nbsp;Powerpoint</h2>
     <a href="cours_detail.php"><iconify-icon icon="ph:arrow-right" class="icon-arrow"></iconify-icon></a>
     <p>collaborer avec docs en créant en ligne des documents </p> 
   </div>
   <div id="item-1" class="item">&nbsp;
-  <h2>Word</h2>
+  <h2><img src="./images/words.png" alt="">&nbsp;Word</h2>
     <a href="cours_detail.php"><iconify-icon icon="ph:arrow-right" class="icon-arrow"></iconify-icon></a>
     <p>collaborer avec docs en créant en ligne des documents </p>
   </div>
   <div id="item-2" class="item">&nbsp;
-  <h2>Excel</h2>
+  <h2><iconify-icon icon="vscode-icons:file-type-excel"></iconify-icon>&nbsp;Excel</h2>
     <a href="cours_detail.php"><iconify-icon icon="ph:arrow-right" class="icon-arrow"></iconify-icon></a>
     <p>collaborer avec docs en créant en ligne des documents </p>
   </div>
   <div id="item-3" class="item">&nbsp;
-  <h2>Suite Adobe</h2>
+  <h2><iconify-icon icon="entypo-social:creative-cloud" class="icon_adobe"></iconify-icon>&nbsp;Suite Adobe</h2>
     <a href="cours_detail.php"><iconify-icon icon="ph:arrow-right" class="icon-arrow"></iconify-icon></a>
     <p>collaborer avec docs en créant en ligne des documents </p>
   </div>
   <div id="item-4" class="item">&nbsp;
-  <h2>Canvas</h2>
+  <h2><img src="./images/Canva.png" alt="">&nbsp;Canvas</h2>
     <a href="cours_detail.php"><iconify-icon icon="ph:arrow-right" class="icon-arrow"></iconify-icon></a>
     <p>collaborer avec docs en créant en ligne des documents </p>
   </div>
   <div id="item-5" class="item">&nbsp;
-  <h2>Zoom</h2>
+  <h2><iconify-icon icon="logos:zoom-icon"></iconify-icon>&nbsp;Zoom</h2>
     <a href="cours_detail.php"><iconify-icon icon="ph:arrow-right" class="icon-arrow"></iconify-icon></a>
     <p>collaborer avec docs en créant en ligne des documents </p>
   </div>

@@ -11,6 +11,27 @@ body {
   font-family: 'Montserrat', sans-serif;
 }
 
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a::first-letter {
+  text-transform: uppercase;
+}
+
+.ariane {
+  margin-left: 50px;
+  margin-top: 20px;
+  display: flex;
+
+  font-style: italic;
+}
+
+.active {
+  font-style: normal;
+}
+
 h1 {
   font-family: 'Familjen Grotesk', sans-serif;
   margin-left: 100px;

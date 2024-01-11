@@ -63,7 +63,10 @@ try {
 
 <body>
 
-    <a href="index.php">accueil</a>
+    <div class="ariane">
+        <a href='index.php' >accueil&nbsp;/ </a> <a href='#' class="active">&nbsp; Absences </a>
+    </div>
+
     <h1>Absences</h1>
     <hr>
     <main>

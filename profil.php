@@ -17,7 +17,9 @@
 </head>
 <body>
 
-<a href='index.php'>Accueil</a>
+<div class="ariane">
+<a href='index.php' >accueil&nbsp;/ </a> <a href='#' class="active">&nbsp; Profil</a>
+</div>
 
 <?php
 session_start();

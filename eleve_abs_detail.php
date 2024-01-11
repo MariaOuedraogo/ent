@@ -20,11 +20,10 @@
 </head>
 
 <body>
-    <a href="index.php">Accueil</a>
-
-
-    <a href="eleve_abs_index.php"> retour</a>
-    <h1>Visualiser vos Absences</h1>
+    <div class="ariane">
+    <a href='index.php' >accueil&nbsp;/ </a> <a href='eleve_abs_index.php'>&nbsp;Absences&nbsp;/</a><a href='#' class="active">&nbsp; Absences détails</a>
+    </div>
+    <h1>Visualiser vos absences</h1>
     
 
     <form action="" method="get" id="filterForm">

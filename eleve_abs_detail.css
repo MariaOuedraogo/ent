@@ -12,6 +12,31 @@ body {
     font-family: 'Montserrat', sans-serif;
     scroll-behavior: smooth;
   }
+
+  a {
+    color: black;
+    text-decoration: none;
+ }
+ 
+ .ariane {
+    margin-left: 50px;
+    margin-top: 20px;
+    display: flex;
+ 
+    font-style: italic;
+ }
+ 
+ .active {
+    font-style: normal;
+ }
+ 
+ p::first-letter {
+    text-transform: uppercase;
+ }
+ 
+ a::first-letter {
+    text-transform: uppercase;
+ }
   
   main{
       display: flex;
@@ -107,7 +132,7 @@ form#filterForm input, button {
         width: fit-content;
         margin-left: 12px; /* Ajouter une marge à gauche */
         margin-right: auto; /* Réinitialiser la marge à droite */      box-sizing: border-box; /* Inclut la marge dans le calcul de la largeur */
-  
+        margin-bottom: 20px;
       }
    .flex-item{
     width: calc(33% - 12px); /* ajuste la largeur des éléments avec un espace entre eux */

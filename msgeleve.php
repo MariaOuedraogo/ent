@@ -6,9 +6,6 @@
     <title>messagerie eleve</title>
 </head>
 <body>
-    
-    
-<a href='index.php'>acceuil</a>
 
 
 

@@ -50,7 +50,10 @@
 
 
             echo "
-            <a href='index.php'>accueil</a>
+            
+    <div class='ariane'>
+        <a href='index.php' >accueil&nbsp;/ </a> <a href='profil.php' class='active'>&nbsp; Profil&nbsp;/</a> <a href='#' class='active'>&nbsp; Photo de profil</a>
+    </div>
             <h1>Personnalisation du profil</h1>
 
             <main>

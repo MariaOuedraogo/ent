@@ -113,7 +113,7 @@ body{
   align-items: center;
   margin-top: 0;
   font-family: 'Familjen Grotesk', sans-serif;
-  margin-left: 20px;
+  margin-left: 20px; 
 }
 
 .angry-grid {
@@ -127,6 +127,7 @@ body{
 
    padding: 0 20px 0 50px;
    margin-top: 30px;
+   margin-bottom: 20px;
    
 }
   
@@ -230,6 +231,9 @@ cursor: pointer;
    
 }
 
+.icon_adobe {
+   color: #D41818;
+}
 
 
 .popup {

@@ -11,6 +11,31 @@ body{
     background-color: #DADADA;
 }
 
+a {
+    color: black;
+    text-decoration: none;
+ }
+ 
+ .ariane {
+    margin-left: 50px;
+    margin-top: 20px;
+    display: flex;
+ 
+    font-style: italic;
+ }
+ 
+ .active {
+    font-style: normal;
+ }
+ 
+ p::first-letter {
+    text-transform: uppercase;
+ }
+ 
+ a::first-letter {
+    text-transform: uppercase;
+ }
+
 
 form{
     display: flex;

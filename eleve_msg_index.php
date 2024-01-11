@@ -10,7 +10,10 @@
 </head>
 
 <body>
-<a href="index.php">accueil</a>
+    
+<div class="ariane">
+<a href='index.php' >accueil&nbsp;/ </a> <a href='#' class="active">&nbsp; Messagerie</a>
+</div>
 
 <h1>boîte de reception</h1>
 
