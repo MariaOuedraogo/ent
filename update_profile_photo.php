@@ -22,7 +22,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
    // Vérifier si le fichier est une image réelle
 $check = getimagesize($_FILES["photo_profil"]["tmp_name"]);
 if ($check !== false) {
-    $_SESSION['update_message'] = "Le fichier " . $check["mime"] . " est prit en charge.";
+    $_SESSION['update_message'] = "Le fichier " . $check["mime"] . " n'est pas prit en charge.";
     $uploadOk = 1;
 } else {
     $_SESSION['update_message'] = "Le fichier n'est pas une image.";

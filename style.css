@@ -20,6 +20,11 @@ body {
     text-decoration: none;
     color: black;
   }
+
+  .error-message{
+    color: #dd1616;
+    font-style: italic;
+  }
   .login-container {
     display: flex;
     /* align-items: center; */

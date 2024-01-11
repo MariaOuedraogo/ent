@@ -20,7 +20,7 @@ try {
 
     // Vérifier que le mot de passe et la confirmation sont identiques
     if ($nouveau_mdp !== $confirmer_mdp) {
-        $_SESSION['erreur_mdp'] = "Les mots de passe ne correspondent pas.";
+        $_SESSION['erreur_mdp'] = "*Les mots de passe ne correspondent pas.";
         header("Location: profil.php"); // Redirection vers la page précédente
         exit();
     }

@@ -13,6 +13,7 @@ padding: 20px;
 font-family: 'Montserrat', sans-serif;
 
 }
+<<<<<<< HEAD
 
 a {
   color: black;
@@ -39,6 +40,12 @@ a::first-letter {
   text-transform: uppercase;
 }
 
+=======
+.mdp_error{
+  color: #dd1616;
+  font-style: italic;
+}
+>>>>>>> 4b94a06add14e43a3347e3bc87140725dbd556f5
 main{
   border: solid #656563 0.5px;
   padding: 20px 20px 40px;
