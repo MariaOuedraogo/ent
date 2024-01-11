@@ -106,6 +106,7 @@ body{
 .item p {
   margin-left: 20px;
   margin-top: 80px;
+  margin-right: 20px;
 }
 
 .item h2 {
@@ -196,7 +197,7 @@ cursor: pointer;
    grid-row-end: 4;
    grid-column-end: 3;
    
-   background-color: #475A60;
+   background-color: #EAAA64;
 }
 #item-3 {
 
@@ -226,9 +227,13 @@ cursor: pointer;
 
    grid-row-end: 7;
    grid-column-end: 3;
+  
+   background-color: #475A60;
+   color: white;
+}
 
-   background-color: #EAAA64;
-   
+#item-5 a {
+   color: white;
 }
 
 .icon_adobe {
