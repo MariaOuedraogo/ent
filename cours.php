@@ -46,9 +46,11 @@ if (!isset($_SESSION['nom']) || $_SESSION['type'] !== 'eleve') {
 
 <div class="angry-grid">
   <div id="item-0" class="item">&nbsp;
-     <img src="images/cours.png" alt="">
+    <img src="images/cours.png" alt="">
+    <div class="box_link">
     <h2>Déploiement de service</h2>
     <a href="cours_detail.php"><iconify-icon icon="ph:arrow-right" class="icon-arrow"></iconify-icon></a>
+    </div>
     <p>12/06/24</p>
     <hr>
     <p>total cours</p>
@@ -56,9 +58,11 @@ if (!isset($_SESSION['nom']) || $_SESSION['type'] !== 'eleve') {
   </div>
 
   <div id="item-1" class="item">&nbsp;
-    <img src="images/cours.png" alt="">
+  <img src="images/cours.png" alt="">
+    <div class="box_link">
     <h2>Déploiement de service</h2>
     <a href="cours_detail.php"><iconify-icon icon="ph:arrow-right" class="icon-arrow"></iconify-icon></a>
+    </div>
     <p>12/06/24</p>
     <hr>
     <p>total cours</p>
@@ -66,9 +70,11 @@ if (!isset($_SESSION['nom']) || $_SESSION['type'] !== 'eleve') {
   </div>
 
   <div id="item-2" class="item">&nbsp;
-    <img src="images/cours.png" alt="">
+  <img src="images/cours.png" alt="">
+    <div class="box_link">
     <h2>Déploiement de service</h2>
     <a href="cours_detail.php"><iconify-icon icon="ph:arrow-right" class="icon-arrow"></iconify-icon></a>
+    </div>
     <p>12/06/24</p>
     <hr>
     <p>total cours</p>
@@ -76,9 +82,11 @@ if (!isset($_SESSION['nom']) || $_SESSION['type'] !== 'eleve') {
   </div>
 
   <div id="item-3" class="item">&nbsp;
-   <img src="images/cours.png" alt="">
+  <img src="images/cours.png" alt="">
+    <div class="box_link">
     <h2>Déploiement de service</h2>
     <a href="cours_detail.php"><iconify-icon icon="ph:arrow-right" class="icon-arrow"></iconify-icon></a>
+    </div>
     <p>12/06/24</p>
     <hr>
     <p>total cours</p>
@@ -86,9 +94,11 @@ if (!isset($_SESSION['nom']) || $_SESSION['type'] !== 'eleve') {
   </div>
 
   <div id="item-4" class="item">&nbsp;
-    <img src="images/cours.png" alt="">
+  <img src="images/cours.png" alt="">
+    <div class="box_link">
     <h2>Déploiement de service</h2>
     <a href="cours_detail.php"><iconify-icon icon="ph:arrow-right" class="icon-arrow"></iconify-icon></a>
+    </div>
     <p>12/06/24</p>
     <hr>
     <p>total cours</p>
@@ -96,9 +106,11 @@ if (!isset($_SESSION['nom']) || $_SESSION['type'] !== 'eleve') {
   </div>
   
   <div id="item-5" class="item">&nbsp;
-    <img src="images/cours.png" alt="">
+  <img src="images/cours.png" alt="">
+    <div class="box_link">
     <h2>Déploiement de service</h2>
     <a href="cours_detail.php"><iconify-icon icon="ph:arrow-right" class="icon-arrow"></iconify-icon></a>
+    </div>
     <p>12/06/24</p>
     <hr>
     <p>total cours</p>

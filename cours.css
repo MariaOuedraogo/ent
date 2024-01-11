@@ -91,6 +91,8 @@ nav a{
    top: 0;
    border-radius: 22px;
    width: 100%;
+   object-fit: cover;
+   height: 30%;
 }
 
 .item{
@@ -104,14 +106,10 @@ nav a{
     position: relative;
  }
 
- 
 
  .item a {
    font-size: 2rem;
-   position: absolute;
-   right: 0;
-   top: 42%;
-   margin-right: 20px;
+   /*position: absolute;*/
  }
 
  .item p {
@@ -120,12 +118,10 @@ nav a{
  }
  
  .item h2 {
-   display: flex;
-   align-items: center;
-   margin-top: 0;
+   margin: 0;
+   
    font-family: 'Familjen Grotesk', sans-serif;
-   margin-left: 20px;
-   margin-top: 80px;
+ 
 }
 
 hr {
@@ -138,6 +134,17 @@ hr {
    bottom: 0;
    right: 0;
    margin-right: 15px;
+}
+
+.box_link {
+
+   display: flex;
+   justify-content: space-between;
+   flex-wrap: wrap;
+   margin-left: 20px;
+   margin-top: 80px;
+   margin-right: 20px;
+   
 }
 
  .angry-grid {
