@@ -25,8 +25,8 @@ session_start();
 <body>
     <?php
     if (isset($_SESSION['nom'])) {
-        echo "Vous êtes connecté en tant que " . $_SESSION['nom'];
-        echo "<a href='logout.php'>Déconnexion</a>";
+        // echo "Vous êtes connecté en tant que " . $_SESSION['nom'];
+        // echo "<a href='logout.php'>Déconnexion</a>";
 
 
         if ($_SESSION['type'] == 'prof') {
@@ -54,6 +54,8 @@ session_start();
                 background-image: url(".$_SESSION['photo_profil'].");
                 background-position: center;
                 background-repeat: no-repeat;
+                background-size: cover;
+              
               
             }
         </style>
@@ -170,10 +172,19 @@ session_start();
             ";
         }
         if ($_SESSION['type'] == 'admin') {
-            echo "hey admin
-            <a href='matiereprof.php'>matiere prof</a>
+            echo "
+            <h1 class='hello'>Bonjour " . $_SESSION['nom'] . " ✌️</h1>
+
+            
+      <nav>
+      <a href='matiereprof.php'>matiere prof</a>
             <a href='admin.php'>admin</a>
 
+            <a href='logout.php'>deco</a>
+
+
+
+      </nav>
         
             ";
         }

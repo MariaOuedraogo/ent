@@ -548,6 +548,8 @@ display: none;
      background-image: url(mmi.jpg);
      background-position: center;
   background-repeat: no-repeat;
+  background-size: cover;
+
         grid-row-start: 1;
         grid-column-start: 5;
      
@@ -641,6 +643,10 @@ display: none;
 
 #box-4 {
   background-image: url(mmi.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
   grid-row: 3;
   grid-column: 1 / span 4;
   background-position: center;
@@ -682,6 +688,11 @@ margin-right: auto;
 
 .angry-grid-prof-desk #box-0 {
   background-image: url(mmi.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+
   grid-row-start: 1;
   grid-column-start: 1;
   grid-row-end: 3;
