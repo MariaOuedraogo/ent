@@ -147,7 +147,7 @@ try {
    
             <section class='flex-item'>
             <p>Élève: <?php echo $absence['nom_eleve']; ?></p>
-            <p>Heure: <?php echo $absence['heure']; ?></p>
+            <p>Heure: <?php echo date('H:i', strtotime($absence['heure'])); ?></p>
 
             <!-- Ajouter des liens pour la suppression et la modification -->
            <div class="actions">

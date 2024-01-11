@@ -66,7 +66,6 @@ function getAllStudentNames()
     return $result->fetchAll(PDO::FETCH_ASSOC);
 }
 ?>
-
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -82,10 +81,18 @@ function getAllStudentNames()
     <form method="POST" action="prof_abs_traitement.php">
 
         <label for="date">Date :</label>
-        <input type="date" name="date" required>
+        <input type="date" name="date" value="<?php echo date('Y-m-d'); ?>" min="<?php echo date('Y-m-d'); ?>" max="<?php echo date('Y-m-d'); ?>" required>
 
         <label for="heure">Heure :</label>
-        <input type="time" name="heure" required>
+        <select name="heure" required>
+            <option value="08:15">8h15</option>
+            <option value="08:30">8h30</option>
+            <option value="08:45">8h45</option>
+            <option value="09:00">9h00</option>
+            <option value="10:30">10h30</option>
+            <option value="13:30">13h30</option>
+            <option value="15:30">15h30</option>
+        </select>
 
         <label for="eleve">Élèves :</label>
         <?php $studentNames = getAllStudentNames(); ?>
@@ -95,8 +102,6 @@ function getAllStudentNames()
         <?php endforeach; ?>
 
         <button type="submit" name="submit">Enregistrer Absence</button>
-
-     
     </form>
 </body>
 
