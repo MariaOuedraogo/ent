@@ -114,6 +114,7 @@ try {
 </main>
     <a href="eleve_abs_detail.php" class="detail">voir le détail</a>
 
+ 
 
   
 </body>
