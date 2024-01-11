@@ -7,13 +7,13 @@
     <title>Page d'Administration</title>
 </head>
 <body>
+<a href="index.php">accueil</a>
 <a href='matiereprof.php'>matiere prof</a>
-            <a href='admin.php'>admin</a>
-            <a href='logout.php'>Déconnexion</a>
+
+         
  
 <body>
     <h1>Page d'Administration</h1>
-
     <form action="ajoutermodifierunutilisateur.php" method="post">
         <label for="nom">Nom d'utilisateur :</label>
         <input type="text" id="nom" name="nom" required>

@@ -25,23 +25,54 @@ session_start();
 <body>
     <?php
     if (isset($_SESSION['nom'])) {
-        echo "Vous êtes connecté en tant que " . $_SESSION['nom'];
-        echo "<a href='logout.php'>Déconnexion</a>";
+        // echo "Vous êtes connecté en tant que " . $_SESSION['nom'];
+        // echo "<a href='logout.php'>Déconnexion</a>";
 
 
         if ($_SESSION['type'] == 'prof') {
             echo "
            
-            <a href='prof_msg_index.php'>boite mail</a>
+
+            <nav class='nav-desk-prof'>
+
+            <a href='index.php'><img src='home.png' alt='lien vers la messagerie'></a>
+            <a href='prof_msg_index.php'  ><img src='msg.png' alt=''></a>
+            <a href='logout.php'><img src='logout.png' alt='déconnexion'></a>
+
+
+
+            </nav>
             <div id='main'>
             <h1 class='hello'>Bonjour " . $_SESSION['nom'] . " ✌️</h1>
             <h2 class='title_page'> Bienvenu sur ton tableau de bord</h2>
+            
             <div class='angry-grid-prof'>
-            <div id='grid_0'>&nbsp;</div>
-            <div id='grid_1'>&nbsp;</div>
-            <div id='grid_2'>&nbsp;</div>
-            <div id='grid_3'>&nbsp;</div>
+            <div id='box-1' class='box-item'>&nbsp;</div>
+            <a href='profil.php' id='box-2' class='box-item'>&nbsp;</a>
+            <style>
+           #box-2 {
+                background-image: url(".$_SESSION['photo_profil'].");
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+              
+              
+            }
+        </style>
+        
+            <div id='box-3' class='box-item'>&nbsp;</div>
+            <div id='box-4' class='box-item'>&nbsp;</div>
           </div>
+          
+
+          
+<div class='angry-grid-prof-desk'>
+<div id='box-0'>&nbsp;</div>
+<div id='box-1'>&nbsp;</div>
+<a href='profil.php' id='box-2'>&nbsp;</a>
+<div id='box-3'>&nbsp;</div>
+
+</div>
           </main>
             ";
 
@@ -141,11 +172,35 @@ session_start();
             ";
         }
         if ($_SESSION['type'] == 'admin') {
-            echo "hey admin
-            <a href='matiereprof.php'>matiere prof</a>
-            <a href='admin.php'>admin</a>
+            echo "
+            
 
+            
+      <nav class='nav-admin-desk'>
+      <a href='index.php'><img src='home.png' alt='lien vers la messagerie'></a>
+
+
+            <a href='admin.php'>gestion de profil</a>
+            <a href='matiereprof.php'>assignation de matière</a>
+
+            <a href='update_photo.php'><img src='" . $_SESSION['photo_profil'] . "' alt='' class='profil_img '></img></a>
+
+            <a href='logout.php'><img src='logout.png' alt=''></a>
+            </nav>
         
+     <div id='main'>
+     <h1 class='hello'>Bonjour " . $_SESSION['nom'] . " ✌️</h1>
+     <div class='angry-grid-admin'>
+     <div id='adm-box-0'><a href='#'>gestion de profil</a></div>
+     <div id='adm-box-1'><a href='#'>assignation de matière</a></div>
+   </div>
+     </div>
+
+     
+<div class='angry-grid-admin-desk'>
+<div id='adm-box-0'><a href='#'>assignation de matière</a></div>
+<div id='adm-box-1'><a href='#'>gestion de profil</a></div>
+</div>
             ";
         }
         // echo "<a href='logout.php'>Déconnexion</a>";

@@ -22,7 +22,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
    // Vérifier si le fichier est une image réelle
 $check = getimagesize($_FILES["photo_profil"]["tmp_name"]);
 if ($check !== false) {
-    $_SESSION['update_message'] = "Le fichier est une image - " . $check["mime"] . ".";
+    $_SESSION['update_message'] = "Le fichier " . $check["mime"] . " est prit en charge.";
     $uploadOk = 1;
 } else {
     $_SESSION['update_message'] = "Le fichier n'est pas une image.";
@@ -43,11 +43,11 @@ if ($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpe
 
 // Vérifier si $uploadOk est défini à 0
 if ($uploadOk == 0) {
-    $_SESSION['update_message'] = "Désolé, votre fichier n'a pas été téléchargé.";
+    $_SESSION['update_message'] = "Désolé, votre fichier n'a pas été téléchargé. Veuillez tenter d'importer une autre image";
 } else {
     // Tout est bon, tenter de télécharger le fichier
     if (move_uploaded_file($_FILES["photo_profil"]["tmp_name"], $targetFile)) {
-        $_SESSION['update_message'] = "Le fichier " . htmlspecialchars(basename($_FILES["photo_profil"]["name"])) . " a été téléchargé.";
+        $_SESSION['update_message'] = "Le fichier " . htmlspecialchars(basename($_FILES["photo_profil"]["name"])) . " a été téléchargé. Veuillez recharger la page";
 
         // Mettre à jour le chemin de la photo de profil dans la base de données
         $updateSql = "UPDATE user SET photo_profil = :photo_profil WHERE nom = :nom";
