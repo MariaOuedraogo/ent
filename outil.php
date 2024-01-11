@@ -15,42 +15,68 @@ if (!isset($_SESSION['nom']) || $_SESSION['type'] !== 'eleve') {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="outil.css">
     <script src="script.js" defer></script>
 </head>
 <body>
     
 
-<a href="index.php">accueil</a>
-<style>
 
-</style>
+<div class="ariane">
+<a href='index.php' >accueil&nbsp;/ </a> <a href='#' class="active">&nbsp; Ressources pédagogiques </a>
+</div>
 
-<div class="container">
-<section>
-<p class="in">2021/2023</p>
-  <p class="will">2023/2024</p>
-</section>
+<h1> voici les outils dont <br>tu as accès cette année</h1>
+
+<nav>
+    <a href="cours.php" class='active2'>ressources pédagogiques↘︎</a>
+    <a href="outil.php">mes outils ↘ </a>
+</nav>
+
+
 
 <div class="angry-grid">
-  <div id="item-0" class="item">&nbsp;</div>
-  <div id="item-1" class="item">&nbsp;</div>
-  <div id="item-2" class="item">&nbsp;</div>
-  <div id="item-3" class="item">&nbsp;</div>
-  <div id="item-4" class="item">&nbsp;</div>
-  <div id="item-5" class="item">&nbsp;</div>
+  <div id="item-0" class="item">&nbsp;
+    <h2>Powerpoint</h2>
+    <a href="cours_detail.php"><iconify-icon icon="ph:arrow-right" class="icon-arrow"></iconify-icon></a>
+    <p>collaborer avec docs en créant en ligne des documents </p> 
+  </div>
+  <div id="item-1" class="item">&nbsp;
+  <h2>Word</h2>
+    <a href="cours_detail.php"><iconify-icon icon="ph:arrow-right" class="icon-arrow"></iconify-icon></a>
+    <p>collaborer avec docs en créant en ligne des documents </p>
+  </div>
+  <div id="item-2" class="item">&nbsp;
+  <h2>Excel</h2>
+    <a href="cours_detail.php"><iconify-icon icon="ph:arrow-right" class="icon-arrow"></iconify-icon></a>
+    <p>collaborer avec docs en créant en ligne des documents </p>
+  </div>
+  <div id="item-3" class="item">&nbsp;
+  <h2>Suite Adobe</h2>
+    <a href="cours_detail.php"><iconify-icon icon="ph:arrow-right" class="icon-arrow"></iconify-icon></a>
+    <p>collaborer avec docs en créant en ligne des documents </p>
+  </div>
+  <div id="item-4" class="item">&nbsp;
+  <h2>Canvas</h2>
+    <a href="cours_detail.php"><iconify-icon icon="ph:arrow-right" class="icon-arrow"></iconify-icon></a>
+    <p>collaborer avec docs en créant en ligne des documents </p>
+  </div>
+  <div id="item-5" class="item">&nbsp;
+  <h2>Zoom</h2>
+    <a href="cours_detail.php"><iconify-icon icon="ph:arrow-right" class="icon-arrow"></iconify-icon></a>
+    <p>collaborer avec docs en créant en ligne des documents </p>
+  </div>
 </div>
-</div>
-
-<div id="popup" class="popup">
-        <div class="popup-content">
-            <span class="close" onclick="closePopup()">&times;</span>
-            <p>tu n'as pas encore accès à cette section</p>
-        </div>
-    </div>
 
 
 
+
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
     <script>
       document.addEventListener('DOMContentLoaded', function () {
     const willElement = document.querySelector('.will');

@@ -34,7 +34,7 @@ if (!isset($_SESSION['nom']) || $_SESSION['type'] !== 'eleve') {
 
 <nav>
     <a href="cours.php" class='active2'>ressources pédagogiques↘︎</a>
-    <a href="#">mes outils ↘ </a>
+    <a href="outil.php">mes outils ↘ </a>
 </nav>
 
 
@@ -48,7 +48,7 @@ if (!isset($_SESSION['nom']) || $_SESSION['type'] !== 'eleve') {
   <div id="item-0" class="item">&nbsp;
      <img src="images/cours.png" alt="">
     <h2>Déploiement de service</h2>
-    <a href="#"><iconify-icon icon="ph:arrow-right" class="icon-arrow"></iconify-icon></a>
+    <a href="cours_detail.php"><iconify-icon icon="ph:arrow-right" class="icon-arrow"></iconify-icon></a>
     <p>12/06/24</p>
     <hr>
     <p>total cours</p>
@@ -58,7 +58,7 @@ if (!isset($_SESSION['nom']) || $_SESSION['type'] !== 'eleve') {
   <div id="item-1" class="item">&nbsp;
     <img src="images/cours.png" alt="">
     <h2>Déploiement de service</h2>
-    <a href="#"><iconify-icon icon="ph:arrow-right" class="icon-arrow"></iconify-icon></a>
+    <a href="cours_detail.php"><iconify-icon icon="ph:arrow-right" class="icon-arrow"></iconify-icon></a>
     <p>12/06/24</p>
     <hr>
     <p>total cours</p>
@@ -68,7 +68,7 @@ if (!isset($_SESSION['nom']) || $_SESSION['type'] !== 'eleve') {
   <div id="item-2" class="item">&nbsp;
     <img src="images/cours.png" alt="">
     <h2>Déploiement de service</h2>
-    <a href="#"><iconify-icon icon="ph:arrow-right" class="icon-arrow"></iconify-icon></a>
+    <a href="cours_detail.php"><iconify-icon icon="ph:arrow-right" class="icon-arrow"></iconify-icon></a>
     <p>12/06/24</p>
     <hr>
     <p>total cours</p>
@@ -78,7 +78,7 @@ if (!isset($_SESSION['nom']) || $_SESSION['type'] !== 'eleve') {
   <div id="item-3" class="item">&nbsp;
    <img src="images/cours.png" alt="">
     <h2>Déploiement de service</h2>
-    <a href="#"><iconify-icon icon="ph:arrow-right" class="icon-arrow"></iconify-icon></a>
+    <a href="cours_detail.php"><iconify-icon icon="ph:arrow-right" class="icon-arrow"></iconify-icon></a>
     <p>12/06/24</p>
     <hr>
     <p>total cours</p>
@@ -88,7 +88,7 @@ if (!isset($_SESSION['nom']) || $_SESSION['type'] !== 'eleve') {
   <div id="item-4" class="item">&nbsp;
     <img src="images/cours.png" alt="">
     <h2>Déploiement de service</h2>
-    <a href="#"><iconify-icon icon="ph:arrow-right" class="icon-arrow"></iconify-icon></a>
+    <a href="cours_detail.php"><iconify-icon icon="ph:arrow-right" class="icon-arrow"></iconify-icon></a>
     <p>12/06/24</p>
     <hr>
     <p>total cours</p>
@@ -98,7 +98,7 @@ if (!isset($_SESSION['nom']) || $_SESSION['type'] !== 'eleve') {
   <div id="item-5" class="item">&nbsp;
     <img src="images/cours.png" alt="">
     <h2>Déploiement de service</h2>
-    <a href="#"><iconify-icon icon="ph:arrow-right" class="icon-arrow"></iconify-icon></a>
+    <a href="cours_detail.php"><iconify-icon icon="ph:arrow-right" class="icon-arrow"></iconify-icon></a>
     <p>12/06/24</p>
     <hr>
     <p>total cours</p>
