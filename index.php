@@ -244,7 +244,7 @@ session_start();
                         <label for='password'>mot de passe</label>
                         <input type='password' placeholder='mot de passe' name='mdp'  id='password' required>
                         <div class='login-buttons'>
-                            <button type='submit' class='login-button' name='submit'>Login</button>
+                            <button type='submit' class='login-button' name='submit'>connexion</button>
                         </div>
                     </form>
                 </div>
