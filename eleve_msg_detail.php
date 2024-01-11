@@ -24,7 +24,7 @@ if (!isset($_SESSION['nom']) || $_SESSION['type'] !== 'eleve') {
     exit();
 }
 echo "<div class='ariane'>
-<a href='index.php' >accueil&nbsp;/ </a> <a href='eleve_msg_index.php'>&nbsp; Messagerie&nbsp;/</a><a href='#' class='active'>&nbsp; détails</a>
+<a href='index.php' >accueil&nbsp;/ </a> <a href='eleve_msg_index.php'>&nbsp; Messagerie&nbsp;/</a><a href='#' class='active'>&nbsp; Détails</a>
 </div>";
 
 // Récupérez l'ID du message à partir des paramètres GET

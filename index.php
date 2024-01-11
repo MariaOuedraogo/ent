@@ -39,9 +39,8 @@ session_start();
             <nav class='nav-desk-prof'>
 
             <a href='index.php'><img src='home.png' alt='lien vers la messagerie'></a>
-            <a href='prof_msg_index.php'  ><img src='msg.png' alt=''></a>
-            <a href='logout.php'><img src='logout.png' alt='déconnexion'></a>
-
+            <a href='eleve_msg_index.php'  class='msg'><iconify-icon icon='ion:mail-outline'></iconify-icon></a>
+            <a href='logout.php' class='out'><iconify-icon icon='ion:log-out-outline'></iconify-icon ></a>
 
 
             </nav>
