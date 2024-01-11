@@ -6,16 +6,93 @@
 
 body{
    margin:0;
+   font-family: 'Montserrat', sans-serif;
+   background-color: #EAE9E9;
    }
 
-   a{
+a{
       text-decoration: none;
+      color: black;
       
-   }
+ }
+
+ .ariane {
+   margin-left: 50px;
+   margin-top: 20px;
+   display: flex;
+
+   font-style: italic;
+}
+
+.prof {
+   margin-left: 50px;
+}
+
+.descriptif {
+   margin-left: 50px;
+   width: 800px;
+}
+
+hr {
+   margin-left: 50px;
+   margin-right: 20px;
+}
+
+.active {
+   font-style: normal;
+}
+
+p::first-letter {
+   text-transform: uppercase;
+}
+
+a::first-letter {
+   text-transform: uppercase;
+}
+
+h1::first-letter {
+   text-transform: uppercase;
+}
+
+.in{
+   margin-left: 50px;
+   color: #D2E5E3;
+   background-color: #1E5FC7;
+   box-shadow: 5px 5px 5px rgb(200, 200, 200);
+}
+
+.will{
+   color: #1E5FC7;
+   background-color: #D2E5E3;
+   border: 0.5px solid #1E5FC7;
+   transition: color .2s ease-in;
+}
+
+
+
+h1 {
+   font-family: 'Familjen Grotesk', sans-serif;
+   margin-left: 50px;
+   font-size: 3rem;
+}
+
+nav{
+    margin: 50px 0 0 0;
+    border-bottom: 1px solid black;
+    padding-bottom: 20px;
+    margin-bottom: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-left: 50px;
+    margin-right: 20px;
+
+}
 
 .item{
    border-radius: 22px;
-    background-color: #97BAFE;
+    background-color: #D2E5E3;
+    border: 1px solid #C4C4C4;
 }
 
 .angry-grid {
@@ -26,6 +103,8 @@ body{
    
    gap: 15px;
    height:900px;
+
+   padding: 0 20px 0 50px;
    
 }
   
@@ -131,6 +210,7 @@ cursor: pointer;
    left: 50%;
    transform: translate(-50%, -50%);
    background-color: #fff;
+   border-radius: 10px;
    padding: 20px;
 }
 

@@ -14,6 +14,11 @@ if (!isset($_SESSION['nom']) || $_SESSION['type'] !== 'eleve') {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
     <title>Document</title>
     <link rel="stylesheet" href="cours_detail.css">
     <script src="script.js" defer></script>
@@ -21,15 +26,26 @@ if (!isset($_SESSION['nom']) || $_SESSION['type'] !== 'eleve') {
 <body>
     
 
-<a href="index.php">accueil</a>
-<style>
+<div class="ariane">
+<a href='index.php' >accueil&nbsp;/ </a> <a href='#'>&nbsp; Ressources pédagogiques /</a><a href='#' class="active">&nbsp; Deploiement de services </a>
+</div>
 
-</style>
+<h1>Deploiement<br> de services</h1>
+
+<p class="prof">Matthieu Berthet</p>
+
+<p class="descriptif">
+Au programmre, streaming et chiffrement/cryptographie principes et mise en oeuvre.
+Compétence ciblée :
+Développer pour le web et les médias numériques.
+Apprentissages </p>
+
+<hr>
 
 <div class="container">
 <section>
-<p class="in">2021/2023</p>
-  <p class="will">2023/2024</p>
+<p class="in">semestre 3</p>
+<p class="will">semestre 4</p>
 </section>
 
 <div class="angry-grid">
