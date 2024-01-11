@@ -173,7 +173,7 @@ session_start();
         }
         if ($_SESSION['type'] == 'admin') {
             echo "
-            <h1 class='hello'>Bonjour " . $_SESSION['nom'] . " ✌️</h1>
+            
 
             
       <nav>
@@ -181,11 +181,21 @@ session_start();
             <a href='admin.php'>admin</a>
 
             <a href='logout.php'>deco</a>
-
-
-
       </nav>
         
+     <div id='main'>
+     <h1 class='hello'>Bonjour " . $_SESSION['nom'] . " ✌️</h1>
+     <div class='angry-grid-admin'>
+     <div id='adm-box-0'>&nbsp;</div>
+     <div id='adm-box-1'>&nbsp;</div>
+   </div>
+     </div>
+
+     
+<div class='angry-grid-admin-desk'>
+<div id='adm-box-0'>&nbsp;</div>
+<div id='adm-box-1'>&nbsp;</div>
+</div>
             ";
         }
         // echo "<a href='logout.php'>Déconnexion</a>";
