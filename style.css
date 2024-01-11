@@ -782,6 +782,13 @@ gap: 12px;
 }
 
 @media(min-width:900px){
+  .nav-admin-desk{
+    display: flex;
+align-items: center; 
+ }
+  .nav-admin-desk a:nth-child(4){
+margin-left: auto;
+  }
   .angry-grid-admin{
     display: none;
   }

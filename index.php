@@ -176,25 +176,30 @@ session_start();
             
 
             
-      <nav>
-      <a href='matiereprof.php'>matiere prof</a>
-            <a href='admin.php'>admin</a>
+      <nav class='nav-admin-desk'>
+      <a href='index.php'><img src='home.png' alt='lien vers la messagerie'></a>
 
-            <a href='logout.php'>deco</a>
-      </nav>
+
+            <a href='admin.php'>gestion de profil</a>
+            <a href='matiereprof.php'>assignation de matière</a>
+
+            <a href='update_photo.php'><img src='" . $_SESSION['photo_profil'] . "' alt='' class='profil_img '></img></a>
+
+            <a href='logout.php'><img src='logout.png' alt=''></a>
+            </nav>
         
      <div id='main'>
      <h1 class='hello'>Bonjour " . $_SESSION['nom'] . " ✌️</h1>
      <div class='angry-grid-admin'>
-     <div id='adm-box-0'>&nbsp;</div>
-     <div id='adm-box-1'>&nbsp;</div>
+     <div id='adm-box-0'><a href='#'>gestion de profil</a></div>
+     <div id='adm-box-1'><a href='#'>assignation de matière</a></div>
    </div>
      </div>
 
      
 <div class='angry-grid-admin-desk'>
-<div id='adm-box-0'>&nbsp;</div>
-<div id='adm-box-1'>&nbsp;</div>
+<div id='adm-box-0'><a href='#'>assignation de matière</a></div>
+<div id='adm-box-1'><a href='#'>gestion de profil</a></div>
 </div>
             ";
         }

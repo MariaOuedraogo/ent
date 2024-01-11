@@ -23,8 +23,8 @@
 session_start();
 
 // Check if the user is a student
-if (!isset($_SESSION['nom']) || ($_SESSION['type'] !== 'eleve' && $_SESSION['type'] !== 'prof')) {
-    header("Location: index.php"); // Redirect to index.php if not a student
+if (!isset($_SESSION['nom'])) {
+    header("Location: index.php");
     exit();
 }
 
