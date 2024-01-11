@@ -13,9 +13,7 @@ h1::first-letter {
    text-transform: uppercase;
 }
 
-h2::first-letter {
-   text-transform: uppercase;
-}
+
 
 a{
       text-decoration: none;
@@ -55,6 +53,9 @@ hr {
    padding: 0 20px 0 50px;
    gap: 8px;
    height:900px;
+
+   margin-bottom: 10px;
+   margin-top: 10px;
 }
   
 section{
@@ -74,6 +75,12 @@ cursor: pointer;
    margin-left: 50px;
    margin-top: 20px;
    display: flex;
+
+   font-style: italic;
+}
+
+.active {
+   font-style: normal;
 }
 
 p::first-letter {
@@ -287,6 +294,19 @@ h2::first-letter {
    transform: translate(-50%, -50%);
    background-color: #fff;
    padding: 20px;
+   border-radius: 10px;
+   border: #000000;
+   display: flex;
+   justify-content: center;
+   flex-direction: column;
+   align-items: center;
+  
+}
+
+.popup iconify-icon {
+   color: #EAAA64;
+   font-size: 2rem;
+   
 }
 
 .close {

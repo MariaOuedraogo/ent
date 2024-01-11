@@ -29,7 +29,7 @@ if (!isset($_SESSION['nom']) || $_SESSION['type'] !== 'eleve') {
     
 
 <div class="ariane">
-<a href='index.php' >accueil/ </a> <a class="active">Mes documents</a>
+<a href='index.php' >accueil&nbsp;/ </a> <a href='documents.php' class="active">&nbsp; Mes documents</a>
 </div>
 
 <h1>voici tes documents <br> indispensable pour l'année</h1>
@@ -102,6 +102,7 @@ if (!isset($_SESSION['nom']) || $_SESSION['type'] !== 'eleve') {
 <div id="popup" class="popup">
         <div class="popup-content">
             <span class="close" onclick="closePopup()">&times;</span>
+            <iconify-icon icon="ph:warning-light"></iconify-icon>
             <p>tu n'as pas encore accès à cette section</p>
         </div>
     </div>
