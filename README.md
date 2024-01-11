@@ -2,7 +2,7 @@ Visitez notre site via cette url : www.entmmichamps.fr
 
 COMMENT INSTALLER LE SITE SUR UN AUTRE SERVEUR?
 
-A) Installation d’un site en local:
+A) Installation d’un site en local 🏠:
 
 
 Installation du serveur local  XAMPP
@@ -32,7 +32,7 @@ Allez à l'adresse http://localhost/ent/index.php  dans votre navigateur pour ar
 
 
 
-B) INSTALLATION EN LIGNE: 
+B) INSTALLATION EN LIGNE 🚀: 
 
 Hébergement web : 
 
