@@ -70,7 +70,10 @@ session_start();
 <div id='box-0'>&nbsp;</div>
 <div id='box-1'>&nbsp;</div>
 <a href='profil.php' id='box-2'>&nbsp;</a>
-<div id='box-3'>&nbsp;</div>
+<div id='box-3'>
+<p>c'est bientôt l'été</p>
+    <div id='countdown'></div>
+</div>
 
 </div>
           </main>
@@ -145,7 +148,7 @@ session_start();
   <div class='angry-grid'>
   <div id='item-0'>&nbsp;</div>
   <div id='item-1'>&nbsp;</div>
-  <div id='item-2'>&nbsp;</div>
+  <div id='item-2'></div>
   <div id='item-3'>&nbsp;</div>
 </div>
 
@@ -157,7 +160,10 @@ session_start();
 <div class='angry-grid-desk'>
   <div id='item-0'>&nbsp;</div>
   <div id='item-1'>&nbsp;</div>
-  <div id='item-2'>&nbsp;</div>
+  <div id='item-2'>
+  <p>c'est bientôt l'été</p>
+    <div id='countdown'></div>
+  </div>
   <div id='item-3'>&nbsp;</div>
   <div id='item-4'>&nbsp;</div>
 </div>
@@ -254,7 +260,30 @@ session_start();
         ";
     }
     ?>
+<script>
+      function updateCountdown() {
+            var now = new Date();
+            var targetDate = new Date("June 28, 2024 00:00:00");
+            var difference = targetDate - now;
 
+            if (difference > 0) {
+                var days = Math.floor(difference / (1000 * 60 * 60 * 24));
+                var hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                var minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+                var seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+                document.getElementById("countdown").innerHTML = days + " jours, " + hours + " heures, " + minutes + " minutes, " + seconds + " secondes";
+            } else {
+                document.getElementById("countdown").innerHTML = "Événement terminé!";
+            }
+        }
+
+        // Mettre à jour le compteur chaque seconde
+        setInterval(updateCountdown, 1000);
+
+        // Appel initial pour éviter le délai d'une seconde lors du chargement de la page
+        updateCountdown();
+</script>
     <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
     </head>
 

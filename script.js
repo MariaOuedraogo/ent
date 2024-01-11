@@ -25,3 +25,7 @@ function closePopup() {
     const popupElement = document.getElementById('popup');
     popupElement.style.display = 'none';
 }
+
+
+
+
