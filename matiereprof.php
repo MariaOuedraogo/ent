@@ -7,7 +7,7 @@
     <title>Page d'Administration</title>
 </head>
 <body>
-<a href="index.php">accueil</a>
+<a href='matiereprof.php'>matiere prof</a>
             <a href='admin.php'>admin</a>
     <h1>Page d'Administration</h1>
 
