@@ -8,7 +8,6 @@ if (!isset($_SESSION['nom']) || $_SESSION['type'] !== 'prof') {
 }
 
 
-// ... le reste du code
 
 
 // Vérifier si le formulaire est soumis
