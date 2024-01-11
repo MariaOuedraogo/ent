@@ -32,18 +32,45 @@ session_start();
         if ($_SESSION['type'] == 'prof') {
             echo "
            
-            <a href='prof_msg_index.php'>boite mail</a>
+
+            <nav class='nav-desk-prof'>
+
+            <a href='index.php'><img src='home.png' alt='lien vers la messagerie'></a>
+            <a href='prof_msg_index.php'  ><img src='msg.png' alt=''></a>
+            <a href='logout.php'><img src='logout.png' alt='déconnexion'></a>
+
+
+
+            </nav>
             <div id='main'>
             <h1 class='hello'>Bonjour " . $_SESSION['nom'] . " ✌️</h1>
             <h2 class='title_page'> Bienvenu sur ton tableau de bord</h2>
             
             <div class='angry-grid-prof'>
             <div id='box-1' class='box-item'>&nbsp;</div>
-            <div id='box-2' class='box-item'>&nbsp;</div>
+            <a href='profil.php' id='box-2' class='box-item'>&nbsp;</a>
+            <style>
+           #box-2 {
+                background-image: url(".$_SESSION['photo_profil'].");
+                background-position: center;
+                background-repeat: no-repeat;
+              
+            }
+        </style>
+        
             <div id='box-3' class='box-item'>&nbsp;</div>
             <div id='box-4' class='box-item'>&nbsp;</div>
           </div>
           
+
+          
+<div class='angry-grid-prof-desk'>
+<div id='box-0'>&nbsp;</div>
+<div id='box-1'>&nbsp;</div>
+<a href='profil.php' id='box-2'>&nbsp;</a>
+<div id='box-3'>&nbsp;</div>
+
+</div>
           </main>
             ";
 
