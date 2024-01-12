@@ -183,6 +183,12 @@ body {
 
 
   @media screen and (max-width: 600px) {
+
+
+    #box-1 h2 {
+      font-size: 1.5rem;
+    }
+
     .login-card {
       width: 90%;
     }
@@ -991,6 +997,7 @@ display: none;
   .nav-desk-prof iconify-icon {
     font-size: 2rem;
   }
+
 
   .nav-desk-prof a:nth-child(1){
 margin-right: auto;
