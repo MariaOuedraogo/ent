@@ -20,6 +20,117 @@ a {
   text-decoration: none;
 }
 
+
+
+
+/* nav mobile */
+
+
+
+
+
+.navbar-mobile i {
+  position: fixed;
+  z-index: 11;
+  top: 9px;
+  left: 15px;
+  font-size: 3rem;
+  color: black;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.modal {
+  transition: left 0.9s; /* Change from top to left */
+  background-color: #DADADA;
+  height: 100vh;
+  position: fixed;
+  top: 0; /* Remove the initial negative top value */
+  left: -100vw; /* Set initial left value to -100vw */
+  width: 70%;
+  z-index: 10;
+}
+
+.change-modal {
+  left: 0; /* Change from top to left */
+}
+
+.navbar-mobile .navbar-mobile-list {
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  /* align-items: center; */
+  justify-content: center;
+}
+
+.navbar-mobile .navbar-mobile-list a {
+  font-style: 5rem;
+  font-weight: 500;
+  color: #1e2337;
+  padding-bottom: 1rem ;
+  padding-left: 4rem;
+  text-transform: capitalize;
+}
+.profil_img{
+  width:45px !important;
+  height:45px !important;
+  border-radius: 100%;
+  padding: 0 !important;
+}
+
+.navbar-mobile-list a:first-child{
+  margin-top: 3rem;
+}
+.navbar-mobile .navbar-mobile-list a img {
+ width: 20px;
+ height: 20px;
+ padding: 30px 30px 25px 0;
+}
+
+.navbar-mobile-list a:last-child{
+  margin-top: auto;
+  margin-left: auto;
+}
+
+.fa-xmark {
+  z-index: 11;
+}
+
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Black transparent background */
+  z-index: 9; /* Place it below the modal */
+}
+
+.show-overlay {
+  display: block;
+  transition: opacity 0.9s; /* Add transition for opacity property */
+
+}
+
+.messagerie{
+  position: absolute;
+  top: 5;
+  right: 15px;
+  left: auto;
+}
+
+.messagerie img{
+  width: 30px;
+  height: 30px;
+}
+
+.desk_nav{
+  display: none;
+}
+
+
+
 .ariane {
   margin-left: 50px;
   margin-top: 20px;
@@ -77,8 +188,8 @@ font-weight: normal;}
   text-decoration: none;
   padding-left: 10px;
   padding-right: 10px;
-  padding-top:1px;
-  padding-bottom:1px;
+  padding-top:12px;
+  padding-bottom:12px;
   border-radius: 5px;
   color: #000000;
   border: #656563 solid 1px;

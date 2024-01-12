@@ -1,3 +1,13 @@
+<?php
+session_start();
+
+// verifier si user est connecté
+if (!isset($_SESSION['nom'])) {
+    header("Location: index.php");
+    exit();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -17,18 +27,10 @@
 </head>
 <body>
 
-<div class="ariane">
-<a href='index.php' >accueil&nbsp;/ </a> <a href='#' class="active">&nbsp; Profil</a>
-</div>
+
 
 <?php
-session_start();
 
-// verifier si user est connecté
-if (!isset($_SESSION['nom'])) {
-    header("Location: index.php");
-    exit();
-}
 
 try {
     include("connexion.php");
@@ -46,12 +48,19 @@ try {
     // on recup les données du user
     $row = $result->fetch(PDO::FETCH_ASSOC);
 
-    echo "  <h1>Bienvenue dans ton profil, </h1>";
 
 
-    echo "
+    echo "  
+    <a href='index.php'>retour à l'accueil</a>
 
-    ";
+    <div class='ariane'>
+    <a href='index.php' >accueil&nbsp;/ </a> <a href='#' class='active'>&nbsp; Profil</a>
+    </div>
+    
+    
+    <h1>Bienvenue dans ton profil, </h1>";
+
+
 
     echo "<main>
     <a href='update_photo.php' class='photo'><img src='" . $_SESSION['photo_profil'] . "' alt='' class='out'></a>
@@ -125,6 +134,5 @@ function toggleVisibility() {
     mdpActuel.type = (mdpActuel.type === 'password') ? 'text' : 'password';
 }
 </script>
-
 </body>
 </html>

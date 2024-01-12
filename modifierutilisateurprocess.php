@@ -1,8 +1,29 @@
+<?php
+session_start();
+
+//check is user is a prof
+if (!isset($_SESSION['nom']) || $_SESSION['type'] !== 'admin') {
+    header("Location: index.php"); // si non redirect to index page
+    exit();
+}
+?>
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>modifier mdp</title>
+
+</head>
 <body>
+    <body>
 <a href='matiereprof.php'>matiere prof</a>
             <a href='admin.php'>admin</a>
             <a href='logout.php'>Déconnexion</a>
 </body>
+</body>
+</html>
 
 <!-- modifier_utilisateur_process.php -->
 <?php

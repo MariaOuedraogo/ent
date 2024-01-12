@@ -114,15 +114,24 @@ session_start();
                 <i class='fa-solid fa-bars ' tabindex='0' > </i>
                 <div class='modal' >
                     <div class='navbar-mobile-list'>
-                    <a href='update_photo.php'><img src='" . $_SESSION['photo_profil'] . "' alt='' class='profil_img'></img></a>
+                    <a href='profil.php'><img src='" . $_SESSION['photo_profil'] . "' alt='' class='profil_img'></img></a>
                     <a href='index.php'>accueil</a>
-                    <a href='profil.php'>mon profil</a>
-                    <a href='scolarite.php'>scolarité</a>
+                   <div class='scolarite'>
+                   <p> scolarité </p>
+                  <a href='#'> ade</a>
+    <a href='eleve_abs_index.php'>absences</a>
+    <a href='#'>notes </a>
+    <a href='cours.php'> ressources pédagogiques</a>
+    <a href='outil.php'> mes outils</a>
+                   </div>
                     <a href='documents.php'>mes documents</a>
+                    <a href='mention.pdf' target='_blank'>mentions légales</a>
+                    <a href='#'>politique de confidentialité</a>
+
 
                 
 
-                    <a href='logout.php'><img src='logout.png' alt=''></a>
+                    <a href='logout.php' class='out'><iconify-icon icon='ion:log-out-outline'></iconify-icon ></a>
 
 
                     
@@ -229,6 +238,38 @@ session_start();
   </div>
 
   
+  <footer>
+  <a href='mention.pdf' target='_blank'>mentions légales</a>
+  <a href='politique' target='_blank'> politique de confidentialité</a>
+<div class='menu'>
+<p> menu</p> 
+<a href='index.php'> accueil </a>
+<div class='footer_title'>scolarité</div>
+    <ul>
+    <li><a href='#'> ade</a></li>
+    <li><a href='eleve_abs_index.php'>absences</a></li>
+    <li><a href='#'>notes </a></li>
+    <li><a href='cours.php'> ressources pédagogiques</a></li>
+    <li><a href='outil.php'> mes outils</a></li>
+    </ul>
+
+    <a href='documents.php'> mes documents </a><br>
+<a href='eleve_msg_index.php'> messagerie </a>
+</div>
+
+<div class='lieu'>
+<h3>Lieu</h3>
+<p> 2 rue Albert Einstein77420 <br>Champs-sur-Marne <br> +33 (0)1 60 95 75 00</p>
+</div>
+
+
+
+</div>
+
+
+<p class='allrights'>ent champs <br>
+@ 2024 tout droit réserver <p>
+  </footer>
 
 
 
