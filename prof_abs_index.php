@@ -7,14 +7,6 @@ if (!isset($_SESSION['nom']) || $_SESSION['type'] !== 'prof') {
     exit();
 }
 
-// ... le reste du code
-
-// var_dump($_SESSION);
-//        echo "Session ID: " . $_SESSION['id'] . "<br>";
-//        echo "Session nom " . $_SESSION['nom'] . "<br>";
-//        echo "Session type " . $_SESSION['type'] . "<br>";
-
-
 
 
 try {
@@ -115,20 +107,27 @@ try {
     }
 </style>
 
-    <a href="index.php">Retour</a>
-    <h2>Visualiser les Absences</h2>
+    <div class="ariane">
+    <a href='index.php' >accueil&nbsp;/ </a> <a href='#' class="active">&nbsp; Absences</a>
+    </div>
 
-    <a href="prof_abs_form.php">Entrer des absences</a>
+    <h1>Visualiser les Absences</h1>
 
+    <a href="prof_abs_form.php" class='btn_abs'>Entrer des absences</a>
+    <br>
+    <div class='filtre_abs'>
     <form method="post">
         <label for="selected_date">Sélectionner une date:</label>
         <input type="date" id="selected_date" name="selected_date" value="<?php echo $selectedDate; ?>" required>
         <button type="submit">Filtrer</button>
     </form>
+    </div>
 
     <form method="post">
         <button type="submit" name="showAll">Voir toutes les absences</button>
     </form>
+    </div>
+
     <main class="prof">
     <?php
     $currentDate = null;

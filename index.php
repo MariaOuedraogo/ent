@@ -38,16 +38,20 @@ session_start();
 
             <nav class='nav-desk-prof'>
 
-            <a href='index.php'><img src='home.png' alt='l'acceuil''></a>
-            <a href='prof_msg_index.php'  class='msg'><iconify-icon icon='ion:mail-outline'></iconify-icon></a>
-            <a href='logout.php' class='out'><iconify-icon icon='ion:log-out-outline' alt='deco'></iconify-icon ></a>
+
+          
+
+            <a href='index.php'><img src='home.png' alt='lien vers l'accueil'></a>
+            <a href='prof_abs_index.php'>absences</a>
+            <a href='prof_msg_index.php' ><iconify-icon icon='ion:mail-outline' class='icon_mail'></iconify-icon></a>
+            <a href='logout.php'><iconify-icon icon='ion:log-out-outline'></a>
+
+
 
 
             </nav>
             <div id='main'>
-            <h1 class='hello'>Bonjour " . $_SESSION['nom'] . " ✌️</h1>
-            <h2 class='title_page'> Bienvenu sur ton tableau de bord</h2>
-            
+            <h1 class='hello'>Bienvenue sur ton tableau <br> de bord  " . $_SESSION['nom'] . " 👋</h1>
             <div class='angry-grid-prof'>
             <div id='box-1' class='box-item'>&nbsp;</div>
             <a href='profil.php' id='box-2' class='box-item'>&nbsp;</a>
@@ -62,19 +66,28 @@ session_start();
             }
         </style>
         
-            <div id='box-3' class='box-item'>&nbsp;</div>
-            <div id='box-4' class='box-item'>&nbsp;</div>
+            <div id='box-3' class='box-item'>
+            <h2>c'est bientôt <br> l'été !</h2>
+            &nbsp;
+            </div>
+            <div id='box-1' class='box-item'>&nbsp;
+              <h2>dernières absences</h2>
+              <p>vous avez <br> 17 absences</p>
+            </div>
           </div>
           
 
           
 <div class='angry-grid-prof-desk'>
 <div id='box-0'>&nbsp;</div>
-<div id='box-1'>&nbsp;</div>
+<div id='box-1'>&nbsp;
+  <h2>dernières absences</h2>
+  <p>vous avez <br> 17 absences</p>
+</div>
 <a href='profil.php' id='box-2'>&nbsp;</a>
 <div id='box-3'>
-<p>c'est bientôt l'été</p>
-    <div id='countdown'></div>
+    <h2>c'est bientôt <br> l'été !</h2>
+    <div id='countdown' class='countdown'></div>
 </div>
 
 </div>
@@ -145,29 +158,69 @@ session_start();
 
          
   <div id='main'>
-  <h1 class='hello'>Bonjour " . $_SESSION['nom'] . " ✌️</h1>
-  <h2 class='title_page'> Bienvenu sur ton tableau de bord</h2>
+  <h1 class='hello'>Bienvenue sur ton tableau <br> de bord  " . $_SESSION['nom'] . " 👋</h1>
   <div class='angry-grid'>
-  <div id='item-0'>&nbsp;</div>
-  <div id='item-1'>&nbsp;</div>
-  <div id='item-2'></div>
-  <div id='item-3'>&nbsp;</div>
+  <div id='item-0'>&nbsp;
+    <h2>absences à justifier</h2>
+    <div class='infos_abs'>
+        <p>vous avez <br> 17 absences</p>
+        <p class='malus'>-0.07 sur votre moyenne</p>
+    </div>
+  </div>
+  <div id='item-1'>&nbsp;
+    <h2>menu de la cantine</h2>
+    <p class='date' >vendredi 12 janvier</p>
+    <div class='menu_cantine'>
+      <p>pastabox jambon /4€</p>
+      <p>pastabox saumon /4€</p>
+    </div>
+  </div>
+  <div id='item-2'>
+    <h2>c'est bientôt <br> l'été !</h2>
+    <div id='countdown' class='countdown'></div>
+  </div>
+  <div id='item-3'>&nbsp;
+    <h2>mes documents</h2>
+    <p>derniers documents ouverts :</p>
+    <div class='docs_ouverts'>
+      <a href='#' >certificat de scolarité</a>
+      <br>
+      <a href='#' >carte Izly</a>
+    </div>
+  </div>
 </div>
 
 
-<style>
-
-</style>
-
 <div class='angry-grid-desk'>
   <div id='item-0'>&nbsp;</div>
-  <div id='item-1'>&nbsp;</div>
-  <div id='item-2'>
-  <p>c'est bientôt l'été</p>
-    <div id='countdown'></div>
+  <div id='item-1'>&nbsp;
+        <h2>mes documents</h2>
+        <p>derniers documents ouverts :</p>
+        <div class='docs_ouverts'>
+        <a href='#' >certificat de scolarité</a>
+        <br>
+        <a href='#' >carte Izly</a>
+        </div>
   </div>
-  <div id='item-3'>&nbsp;</div>
-  <div id='item-4'>&nbsp;</div>
+  <div id='item-2'>
+  <h2>c'est bientôt <br> l'été !</h2>
+    <div id='countdown' class='countdown'></div>
+  </div>
+  <div id='item-3'>&nbsp;
+    <h2>menu de la cantine</h2>
+    <p class='date' >vendredi 12 janvier</p>
+    <div class='menu_cantine'>
+        <p>pastabox jambon /4€</p>
+        <p>pastabox saumon /4€</p>
+    </div>
+  </div>
+  <div id='item-4'>&nbsp;
+    <h2>absences à justifier</h2>
+    <div class='infos_abs'>
+      <p>vous avez <br> 17 absences</p>
+      <p class='malus'>-0.07 sur votre moyenne</p>
+    </div>
+  </div>
 </div>
   
   </div>

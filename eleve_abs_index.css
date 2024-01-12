@@ -38,6 +38,60 @@ h1 {
   margin-bottom: 50px;
 }
 
+.btn_abs {
+  margin-left: 100px;
+  background-color: white;
+  border: 1px black solid;
+  padding: 2px 5px 2px 5px;
+  border-radius: 5px;
+  box-shadow: 5px 5px 5px rgb(154, 154, 154);
+  transition: color .2s ease-in;
+}
+
+.btn_abs:hover {
+  background-color: black;
+  color: white;
+  transition: color .2s ease-out;
+}
+
+.filtre_abs {
+  margin-top: 50px;
+  margin-left: 100px;
+}
+
+.filtre_abs input, button {
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: 0.5px solid black;
+  cursor: pointer;
+ 
+}
+
+.voir_abs {
+  margin-top: 20px;
+  margin-left: 100px;
+}
+
+.enr_abs {
+  margin-left: 100px;
+}
+
+.enr_abs input, select {
+  padding: 5px;
+  border-radius: 10px;
+  border: 0.5px black solid;
+}
+
+.modif_abs {
+  margin-left: 100px;
+}
+
+.modif_abs input {
+  padding: 5px;
+  border-radius: 10px;
+  border: 0.5px black solid;
+}
+
 hr {
  border: 0.5px solid rgb(127, 127, 127);
  margin-left: 50px;
@@ -45,6 +99,14 @@ hr {
 }
 
 p::first-letter {
+  text-transform: uppercase;
+}
+
+h1::first-letter {
+  text-transform: uppercase;
+}
+
+button:first-letter {
   text-transform: uppercase;
 }
 
@@ -140,12 +202,18 @@ main p{
 }
 
 .suppr{
+  margin-top: 20px;
   background-color: red;
+  border-radius: 5px;
+  padding: 2px 5px;
 
 }
 
 .mod{
+  margin-top: 20px;
   background-color: greenyellow;
+  border-radius: 5px;
+  padding: 2px 5px;
 }
 
 
