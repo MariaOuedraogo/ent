@@ -107,11 +107,10 @@ try {
     }
 </style>
 
-    <div class="ariane">
-    <a href='index.php' >accueil&nbsp;/ </a> <a href='#' class="active">&nbsp; Absences</a>
-    </div>
+    <a href="index.php">Retour</a>
+    <h2>Visualiser les Absences</h2>
 
-    <h1>Visualiser les Absences</h1>
+    <a href="prof_abs_form.php">Entrer des absences</a>
 
     <a href="prof_abs_form.php" class='btn_abs'>Entrer des absences</a>
     <br>
