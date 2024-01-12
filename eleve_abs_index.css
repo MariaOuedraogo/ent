@@ -19,6 +19,9 @@ a {
 a::first-letter {
   text-transform: uppercase;
 }
+.cours{
+  font-weight: bold;
+ }
 
 .ariane {
   margin-left: 50px;

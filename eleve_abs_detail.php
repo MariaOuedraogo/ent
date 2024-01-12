@@ -20,9 +20,10 @@
         $userId = $stmtUserId->fetchColumn();
 
         // Récupérer les absences de l'élève connecté avec le nom du professeur
-        $sqlAbsences = "SELECT absences.*, user.nom as nom_prof FROM absences
-                        INNER JOIN user ON absences.prof_id = user.id
-                        WHERE absences.eleve_id = :eleveId";
+        $sqlAbsences = "SELECT absences.*, user.nom as nom_prof, user.matiere FROM absences
+        INNER JOIN user ON absences.prof_id = user.id
+        WHERE absences.eleve_id = :eleveId";
+
 
         // Ajouter une condition si une date de filtrage est spécifiée
         if (isset($_GET['dateFilter']) && !empty($_GET['dateFilter'])) {
@@ -97,7 +98,7 @@
             $formattedDate = date('d/m/Y', strtotime($absence['date']));
 
             echo "<section class='flex-item'>
-            <p>intégration</p>
+            <p class='cours'>{$absence['matiere']}</p>
             <p> {$absence['nom_prof']}</p>
             <p>2h</p>
 

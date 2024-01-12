@@ -25,7 +25,9 @@ body {
  
     font-style: italic;
  }
- 
+ .cours{
+  font-weight: bold;
+ }
  .active {
     font-style: normal;
  }

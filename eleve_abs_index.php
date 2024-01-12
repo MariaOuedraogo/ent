@@ -1,6 +1,8 @@
 <?php
 session_start();
 
+
+
 // Vérifier si l'utilisateur est un étudiant
 if (!isset($_SESSION['nom']) || $_SESSION['type'] !== 'eleve') {
     header("Location: index.php"); // Redirige vers index.php si ce n'est pas un étudiant
@@ -26,8 +28,9 @@ try {
     $stmtAbsencesAll->execute();
     $absencesAll = $stmtAbsencesAll->fetchAll(PDO::FETCH_ASSOC);
 
-    // Récupérer les trois dernières absences avec les noms des professeurs
-    $sqlAbsences = "SELECT absences.*, user.nom as nom_prof FROM absences
+    // Récupérer les trois dernières absences avec les noms des professeurs et la matière
+    $sqlAbsences = "SELECT absences.*, user.nom as nom_prof, user.matiere as nom_matiere 
+                    FROM absences
                     INNER JOIN user ON absences.prof_id = user.id
                     WHERE absences.eleve_id = :eleveId
                     ORDER BY absences.date DESC, absences.heure DESC LIMIT 3";
@@ -78,21 +81,19 @@ try {
             $formattedDate = date('d/m/Y', strtotime($absence['date']));
 
             echo "<section class='flex-item'>
-            <p>intégration</p>
-            <p> {$absence['nom_prof']}</p>
+            <p class='cours'>{$absence['nom_matiere']}</p>
+            <p>{$absence['nom_prof']}</p>
             <p>2h</p>
 
             <div class='footer_abs'>
-            <p> {$absence['heure']}</p>
-            
-
+            <p>{$absence['heure']}</p>
             <p>{$formattedDate}</p>
             </div>
          
             </section>";
         }
 
-        echo"<section class='flex-item last-item '>";
+        echo "<section class='flex-item last-item '>";
         // Afficher le compteur en JavaScript
         echo "<script>
             var absenceCount = $absenceCount;

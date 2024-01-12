@@ -163,7 +163,8 @@ session_start();
   <div id='item-0'>&nbsp;
    <a href='eleve_abs_index.php'>  <h2>absences à justifier</h2> </a>
     <div class='infos_abs'>
-        <p>vous avez <br> 17 absences</p>
+        <p>vous avez <br> 
+        17 absences</p>
         <p class='malus'>-0.07 sur votre moyenne</p>
     </div>
   </div>
