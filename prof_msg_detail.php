@@ -1,6 +1,6 @@
 <?php
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
+// error_reporting(E_ALL);
+// ini_set('display_errors', 1);
 
 session_start();
 
@@ -22,7 +22,7 @@ try {
         $sender = $_GET['sender'];
         $timestamp = $_GET['timestamp'];
 
-        // Sélectionnez les détails du message en fonction de l'expéditeur et de l'horodatage
+        // Sélectionne les détails du message en fonction de l'expéditeur et de l'heure
         $sql = "
             SELECT *
             FROM messages

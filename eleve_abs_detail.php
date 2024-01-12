@@ -1,39 +1,4 @@
-
-<!DOCTYPE html>
-<html lang="fr">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Visualiser les Absences</title>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk&display=swap" rel="stylesheet">
-
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
-
-
-    <link rel="stylesheet" href="eleve_abs_detail.css">
-
-    <!-- Ajoutez vos liens CSS ici -->
-</head>
-
-<body>
-    <div class="ariane">
-    <a href='index.php' >accueil&nbsp;/ </a> <a href='eleve_abs_index.php'>&nbsp;Absences&nbsp;/</a><a href='#' class="active">&nbsp; Absences détails</a>
-    </div>
-    <h1>Visualiser vos absences</h1>
-    
-
-    <form action="" method="get" id="filterForm">
-        <label for="dateFilter">Filtrer par date :</label>
-        <input type="date" id="dateFilter" name="dateFilter">
-        <button type="submit">Filtrer</button>
-        <button type="button" onclick="showAllAbsences()">Voir toutes les absences</button>
-    </form>
-
-    <?php
+<?php
     session_start();
 
     // Vérifier si l'utilisateur est un étudiant
@@ -83,6 +48,43 @@
         echo "Error: " . $e->getMessage();
     }
     ?>
+
+
+
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visualiser les Absences</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="eleve_abs_detail.css">
+
+    <!-- Ajoutez vos liens CSS ici -->
+</head>
+
+<body>
+    <div class="ariane">
+    <a href='index.php' >accueil&nbsp;/ </a> <a href='eleve_abs_index.php'>&nbsp;Absences&nbsp;/</a><a href='#' class="active">&nbsp; Absences détails</a>
+    </div>
+    <h1>Visualiser vos absences</h1>
+    
+
+    <form action="" method="get" id="filterForm">
+        <label for="dateFilter">Filtrer par date :</label>
+        <input type="date" id="dateFilter" name="dateFilter">
+        <button type="submit">Filtrer</button>
+        <button type="button" onclick="showAllAbsences()">Voir toutes les absences</button>
+    </form>
+
 
 
 

@@ -19,15 +19,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $uploadOk = 1;
     $imageFileType = strtolower(pathinfo($targetFile, PATHINFO_EXTENSION));
 
-   // Vérifier si le fichier est une image réelle
-$check = getimagesize($_FILES["photo_profil"]["tmp_name"]);
-if ($check !== false) {
-    $_SESSION['update_message'] = "Le fichier est une image - " . $check["mime"] . ".";
-    $uploadOk = 1;
-} else {
-    $_SESSION['update_message'] = "Le fichier n'est pas une image.";
-    $uploadOk = 0;
-}
+
 
 // Vérifier la taille du fichier
 if ($_FILES["photo_profil"]["size"] > 500000) {
@@ -41,9 +33,9 @@ if ($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpe
     $uploadOk = 0;
 }
 
-// Vérifier si $uploadOk est défini à 0
+// Vérifier si le fichier a été téléchargé
 if ($uploadOk == 0) {
-    $_SESSION['update_message'] = "Désolé, votre fichier n'a pas été téléchargé.";
+    $_SESSION['update_message'] = "Désolé, votre fichier n'a pas été téléchargé. Tentez à nouveau avec un fichier différent";
 } else {
     // Tout est bon, tenter de télécharger le fichier
     if (move_uploaded_file($_FILES["photo_profil"]["tmp_name"], $targetFile)) {
@@ -60,9 +52,12 @@ if ($uploadOk == 0) {
     }
 }
 
-// Redirection vers update_profile.php
+// Redirection 
 header("Location: update_photo.php");
 exit();
 
 }
+$db = null;
+
 ?>
+
