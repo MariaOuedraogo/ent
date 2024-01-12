@@ -41,7 +41,7 @@ session_start();
 
           
 
-            <a href='index.php'><img src='home.png' alt='lien vers l'accueil'></a>
+            <a href='index.php'><img src='home.png' alt='lien vers la l'accueil'></a>
             <a href='prof_abs_index.php'>absences</a>
             <a href='prof_msg_index.php' ><iconify-icon icon='ion:mail-outline' class='icon_mail'></iconify-icon></a>
             <a href='logout.php'><iconify-icon icon='ion:log-out-outline'></a>
@@ -68,7 +68,7 @@ session_start();
         
             <div id='box-3' class='box-item'>
             <h2>c'est bientôt <br> l'été !</h2>
-            &nbsp;
+            <div class='countdown'> </div>
             </div>
             <div id='box-1' class='box-item'>&nbsp;
               <h2>dernières absences</h2>
@@ -161,7 +161,7 @@ session_start();
   <h1 class='hello'>Bienvenue sur ton tableau <br> de bord  " . $_SESSION['nom'] . " 👋</h1>
   <div class='angry-grid'>
   <div id='item-0'>&nbsp;
-    <h2>absences à justifier</h2>
+   <a href='eleve_abs_index.php'>  <h2>absences à justifier</h2> </a>
     <div class='infos_abs'>
         <p>vous avez <br> 17 absences</p>
         <p class='malus'>-0.07 sur votre moyenne</p>
@@ -180,7 +180,9 @@ session_start();
     <div id='countdown' class='countdown'></div>
   </div>
   <div id='item-3'>&nbsp;
-    <h2>mes documents</h2>
+  <a href='documents.php'>   <h2>mes documents</h2></a>
+
+ 
     <p>derniers documents ouverts :</p>
     <div class='docs_ouverts'>
       <a href='#' >certificat de scolarité</a>
@@ -194,7 +196,7 @@ session_start();
 <div class='angry-grid-desk'>
   <div id='item-0'>&nbsp;</div>
   <div id='item-1'>&nbsp;
-        <h2>mes documents</h2>
+  <a href='documents.php'>   <h2>mes documents</h2></a>
         <p>derniers documents ouverts :</p>
         <div class='docs_ouverts'>
         <a href='#' >certificat de scolarité</a>
@@ -215,8 +217,8 @@ session_start();
     </div>
   </div>
   <div id='item-4'>&nbsp;
-    <h2>absences à justifier</h2>
-    <div class='infos_abs'>
+  <a href='eleve_abs_index.php'>  <h2>absences à justifier</h2> </a>
+  <div class='infos_abs'>
       <p>vous avez <br> 17 absences</p>
       <p class='malus'>-0.07 sur votre moyenne</p>
     </div>
@@ -316,28 +318,40 @@ session_start();
     }
     ?>
 <script>
-      function updateCountdown() {
-            var now = new Date();
-            var targetDate = new Date("June 28, 2024 00:00:00");
-            var difference = targetDate - now;
+    function updateCountdown() {
+        var now = new Date();
+        var targetDate = new Date("June 28, 2024 00:00:00");
+        var difference = targetDate - now;
 
-            if (difference > 0) {
-                var days = Math.floor(difference / (1000 * 60 * 60 * 24));
-                var hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                var minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
-                var seconds = Math.floor((difference % (1000 * 60)) / 1000);
+        if (difference > 0) {
+            var days = Math.floor(difference / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((difference % (1000 * 60)) / 1000);
 
-                document.getElementById("countdown").innerHTML = days + " jours, " + hours + " heures, " + minutes + " minutes, " + seconds + " secondes";
-            } else {
-                document.getElementById("countdown").innerHTML = "Événement terminé!";
+            // Use document.getElementsByClassName to select elements with the class
+            var countdownElements = document.getElementsByClassName("countdown");
+
+            // Loop through all elements with the class and update the content
+            for (var i = 0; i < countdownElements.length; i++) {
+                countdownElements[i].innerHTML = days + " jours, " + hours + " heures, " + minutes + " minutes, " + seconds + " secondes";
+            }
+        } else {
+            // Use document.getElementsByClassName to select elements with the class
+            var countdownElements = document.getElementsByClassName("countdown");
+
+            // Loop through all elements with the class and update the content
+            for (var i = 0; i < countdownElements.length; i++) {
+                countdownElements[i].innerHTML = "Événement terminé!";
             }
         }
+    }
 
-        // Mettre à jour le compteur chaque seconde
-        setInterval(updateCountdown, 1000);
+    // Mettre à jour le compteur chaque seconde
+    setInterval(updateCountdown, 1000);
 
-        // Appel initial pour éviter le délai d'une seconde lors du chargement de la page
-        updateCountdown();
+    // Appel initial pour éviter le délai d'une seconde lors du chargement de la page
+    updateCountdown();
 </script>
     <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
     </head>
