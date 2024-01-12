@@ -1,15 +1,18 @@
+<?php
+session_start();
+?>
+
 <body>
 <a href='matiereprof.php'>matiere prof</a>
             <a href='admin.php'>admin</a>
             <a href='logout.php'>Déconnexion</a>
 </body>
 
-<!-- supprimer_utilisateur.php -->
 <?php
 include("connexion.php");
 
 // Vérifier si l'utilisateur est connecté en tant qu'admin
-session_start();
+
 if (isset($_SESSION['type']) && $_SESSION['type'] === 'admin') {
 
     // Vérifier si l'ID de l'utilisateur est présent dans l'URL

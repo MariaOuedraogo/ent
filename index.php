@@ -38,10 +38,14 @@ session_start();
 
             <nav class='nav-desk-prof'>
 
-            <a href='index.php'><img src='home.png' alt='lien vers la messagerie'></a>
+
+          
+
+            <a href='index.php'><img src='home.png' alt='lien vers la l'accueil'></a>
             <a href='prof_abs_index.php'>absences</a>
             <a href='prof_msg_index.php' ><iconify-icon icon='ion:mail-outline' class='icon_mail'></iconify-icon></a>
             <a href='logout.php'><iconify-icon icon='ion:log-out-outline'></a>
+
 
 
 
@@ -64,7 +68,7 @@ session_start();
         
             <div id='box-3' class='box-item'>
             <h2>c'est bientôt <br> l'été !</h2>
-            &nbsp;
+            <div class='countdown'> </div>
             </div>
             <div id='box-1' class='box-item'>&nbsp;
               <h2>dernières absences</h2>
@@ -110,15 +114,24 @@ session_start();
                 <i class='fa-solid fa-bars ' tabindex='0' > </i>
                 <div class='modal' >
                     <div class='navbar-mobile-list'>
-                    <a href='update_photo.php'><img src='" . $_SESSION['photo_profil'] . "' alt='' class='profil_img'></img></a>
+                    <a href='profil.php'><img src='" . $_SESSION['photo_profil'] . "' alt='' class='profil_img'></img></a>
                     <a href='index.php'>accueil</a>
-                    <a href='profil.php'>mon profil</a>
-                    <a href='scolarite.php'>scolarité</a>
+                   <div class='scolarite'>
+                   <p> scolarité </p>
+                  <a href='#'> ade</a>
+    <a href='eleve_abs_index.php'>absences</a>
+    <a href='#'>notes </a>
+    <a href='cours.php'> ressources pédagogiques</a>
+    <a href='outil.php'> mes outils</a>
+                   </div>
                     <a href='documents.php'>mes documents</a>
+                    <a href='mention.pdf' target='_blank'>mentions légales</a>
+                    <a href='#'>politique de confidentialité</a>
+
 
                 
 
-                    <a href='logout.php'><img src='logout.png' alt=''></a>
+                    <a href='logout.php' class='out'><iconify-icon icon='ion:log-out-outline'></iconify-icon ></a>
 
 
                     
@@ -157,9 +170,10 @@ session_start();
   <h1 class='hello'>Bienvenue sur ton tableau <br> de bord  " . $_SESSION['nom'] . " 👋</h1>
   <div class='angry-grid'>
   <div id='item-0'>&nbsp;
-    <h2>absences à justifier</h2>
+   <a href='eleve_abs_index.php'>  <h2>absences à justifier</h2> </a>
     <div class='infos_abs'>
-        <p>vous avez <br> 17 absences</p>
+        <p>vous avez <br> 
+        17 absences</p>
         <p class='malus'>-0.07 sur votre moyenne</p>
     </div>
   </div>
@@ -176,7 +190,9 @@ session_start();
     <div id='countdown' class='countdown'></div>
   </div>
   <div id='item-3'>&nbsp;
-    <h2>mes documents</h2>
+  <a href='documents.php'>   <h2>mes documents</h2></a>
+
+ 
     <p>derniers documents ouverts :</p>
     <div class='docs_ouverts'>
       <a href='#' >certificat de scolarité</a>
@@ -190,7 +206,7 @@ session_start();
 <div class='angry-grid-desk'>
   <div id='item-0'>&nbsp;</div>
   <div id='item-1'>&nbsp;
-        <h2>mes documents</h2>
+  <a href='documents.php'>   <h2>mes documents</h2></a>
         <p>derniers documents ouverts :</p>
         <div class='docs_ouverts'>
         <a href='#' >certificat de scolarité</a>
@@ -211,8 +227,8 @@ session_start();
     </div>
   </div>
   <div id='item-4'>&nbsp;
-    <h2>absences à justifier</h2>
-    <div class='infos_abs'>
+  <a href='eleve_abs_index.php'>  <h2>absences à justifier</h2> </a>
+  <div class='infos_abs'>
       <p>vous avez <br> 17 absences</p>
       <p class='malus'>-0.07 sur votre moyenne</p>
     </div>
@@ -222,6 +238,38 @@ session_start();
   </div>
 
   
+  <footer>
+  <a href='mention.pdf' target='_blank'>mentions légales</a>
+  <a href='politique' target='_blank'> politique de confidentialité</a>
+<div class='menu'>
+<p> menu</p> 
+<a href='index.php'> accueil </a>
+<div class='footer_title'>scolarité</div>
+    <ul>
+    <li><a href='#'> ade</a></li>
+    <li><a href='eleve_abs_index.php'>absences</a></li>
+    <li><a href='#'>notes </a></li>
+    <li><a href='cours.php'> ressources pédagogiques</a></li>
+    <li><a href='outil.php'> mes outils</a></li>
+    </ul>
+
+    <a href='documents.php'> mes documents </a><br>
+<a href='eleve_msg_index.php'> messagerie </a>
+</div>
+
+<div class='lieu'>
+<h3>Lieu</h3>
+<p> 2 rue Albert Einstein77420 <br>Champs-sur-Marne <br> +33 (0)1 60 95 75 00</p>
+</div>
+
+
+
+</div>
+
+
+<p class='allrights'>ent champs <br>
+@ 2024 tout droit réserver <p>
+  </footer>
 
 
 
@@ -312,28 +360,40 @@ session_start();
     }
     ?>
 <script>
-      function updateCountdown() {
-            var now = new Date();
-            var targetDate = new Date("June 28, 2024 00:00:00");
-            var difference = targetDate - now;
+    function updateCountdown() {
+        var now = new Date();
+        var targetDate = new Date("June 28, 2024 00:00:00");
+        var difference = targetDate - now;
 
-            if (difference > 0) {
-                var days = Math.floor(difference / (1000 * 60 * 60 * 24));
-                var hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                var minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
-                var seconds = Math.floor((difference % (1000 * 60)) / 1000);
+        if (difference > 0) {
+            var days = Math.floor(difference / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((difference % (1000 * 60)) / 1000);
 
-                document.getElementById("countdown").innerHTML = days + " jours, " + hours + " heures, " + minutes + " minutes, " + seconds + " secondes";
-            } else {
-                document.getElementById("countdown").innerHTML = "Événement terminé!";
+            // Use document.getElementsByClassName to select elements with the class
+            var countdownElements = document.getElementsByClassName("countdown");
+
+            // Loop through all elements with the class and update the content
+            for (var i = 0; i < countdownElements.length; i++) {
+                countdownElements[i].innerHTML = days + " jours, " + hours + " heures, " + minutes + " minutes, " + seconds + " secondes";
+            }
+        } else {
+            // Use document.getElementsByClassName to select elements with the class
+            var countdownElements = document.getElementsByClassName("countdown");
+
+            // Loop through all elements with the class and update the content
+            for (var i = 0; i < countdownElements.length; i++) {
+                countdownElements[i].innerHTML = "Événement terminé!";
             }
         }
+    }
 
-        // Mettre à jour le compteur chaque seconde
-        setInterval(updateCountdown, 1000);
+    // Mettre à jour le compteur chaque seconde
+    setInterval(updateCountdown, 1000);
 
-        // Appel initial pour éviter le délai d'une seconde lors du chargement de la page
-        updateCountdown();
+    // Appel initial pour éviter le délai d'une seconde lors du chargement de la page
+    updateCountdown();
 </script>
     <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
     </head>

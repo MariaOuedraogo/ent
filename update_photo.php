@@ -1,3 +1,7 @@
+<?php
+    session_start();
+    ?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -16,8 +20,8 @@
 </head>
 
 <body>
+
 <?php
-    session_start();
 
     // Vérifie si l'utilisateur est connecté
     if (!isset($_SESSION['nom'])) {
@@ -42,12 +46,6 @@
             $photo_profil = $row['photo_profil'] ? $row['photo_profil'] : 'profil/default.jpg';
 
             
-
-// ... le reste du code ...
-
-// Afficher le message de mise à jour
-
-
 
             echo "
             

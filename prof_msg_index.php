@@ -1,9 +1,9 @@
 <?php
 session_start();
 
-// Check if the user is a professor
+//check is user is a prof
 if (!isset($_SESSION['nom']) || $_SESSION['type'] !== 'prof') {
-    header("Location: index.php"); // Redirect to index.php if not a professor
+    header("Location: index.php"); // si non redirect to index page
     exit();
 }
 

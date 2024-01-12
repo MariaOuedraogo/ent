@@ -1,3 +1,56 @@
+<?php
+    session_start();
+
+    // Vérifier si l'utilisateur est un étudiant
+    if (!isset($_SESSION['nom']) || $_SESSION['type'] !== 'eleve') {
+        header("Location: index.php"); // Redirige vers index.php si ce n'est pas un étudiant
+        exit();
+    }
+
+    try {
+        include("connexion.php");
+
+        $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+        // Récupérer l'ID de l'élève à partir de la base de données
+        $sqlUserId = "SELECT id FROM user WHERE nom = :nom LIMIT 1";
+        $stmtUserId = $db->prepare($sqlUserId);
+        $stmtUserId->bindParam(':nom', $_SESSION['nom']);
+        $stmtUserId->execute();
+        $userId = $stmtUserId->fetchColumn();
+
+        // Récupérer les absences de l'élève connecté avec le nom du professeur
+        $sqlAbsences = "SELECT absences.*, user.nom as nom_prof, user.matiere FROM absences
+        INNER JOIN user ON absences.prof_id = user.id
+        WHERE absences.eleve_id = :eleveId";
+
+
+        // Ajouter une condition si une date de filtrage est spécifiée
+        if (isset($_GET['dateFilter']) && !empty($_GET['dateFilter'])) {
+            $sqlAbsences .= " AND absences.date = :dateFilter";
+        }
+
+        $sqlAbsences .= " ORDER BY absences.date DESC, absences.heure DESC";
+
+        $stmtAbsences = $db->prepare($sqlAbsences);
+        $stmtAbsences->bindParam(':eleveId', $userId);
+
+        // Lié la date de filtrage si elle est spécifiée
+        if (isset($_GET['dateFilter']) && !empty($_GET['dateFilter'])) {
+            $stmtAbsences->bindParam(':dateFilter', $_GET['dateFilter']);
+        }
+
+        $stmtAbsences->execute();
+        $absences = $stmtAbsences->fetchAll(PDO::FETCH_ASSOC);
+
+        // Nombre total d'absences
+        $absenceCount = $stmtAbsences->rowCount();
+    } catch (PDOException $e) {
+        echo "Error: " . $e->getMessage();
+    }
+    ?>
+
+
 
 <!DOCTYPE html>
 <html lang="fr">
@@ -33,56 +86,6 @@
         <button type="button" onclick="showAllAbsences()">Voir toutes les absences</button>
     </form>
 
-    <?php
-    session_start();
-
-    // Vérifier si l'utilisateur est un étudiant
-    if (!isset($_SESSION['nom']) || $_SESSION['type'] !== 'eleve') {
-        header("Location: index.php"); // Redirige vers index.php si ce n'est pas un étudiant
-        exit();
-    }
-
-    try {
-        include("connexion.php");
-
-        $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
-        // Récupérer l'ID de l'élève à partir de la base de données
-        $sqlUserId = "SELECT id FROM user WHERE nom = :nom LIMIT 1";
-        $stmtUserId = $db->prepare($sqlUserId);
-        $stmtUserId->bindParam(':nom', $_SESSION['nom']);
-        $stmtUserId->execute();
-        $userId = $stmtUserId->fetchColumn();
-
-        // Récupérer les absences de l'élève connecté avec le nom du professeur
-        $sqlAbsences = "SELECT absences.*, user.nom as nom_prof FROM absences
-                        INNER JOIN user ON absences.prof_id = user.id
-                        WHERE absences.eleve_id = :eleveId";
-
-        // Ajouter une condition si une date de filtrage est spécifiée
-        if (isset($_GET['dateFilter']) && !empty($_GET['dateFilter'])) {
-            $sqlAbsences .= " AND absences.date = :dateFilter";
-        }
-
-        $sqlAbsences .= " ORDER BY absences.date DESC, absences.heure DESC";
-
-        $stmtAbsences = $db->prepare($sqlAbsences);
-        $stmtAbsences->bindParam(':eleveId', $userId);
-
-        // Lié la date de filtrage si elle est spécifiée
-        if (isset($_GET['dateFilter']) && !empty($_GET['dateFilter'])) {
-            $stmtAbsences->bindParam(':dateFilter', $_GET['dateFilter']);
-        }
-
-        $stmtAbsences->execute();
-        $absences = $stmtAbsences->fetchAll(PDO::FETCH_ASSOC);
-
-        // Nombre total d'absences
-        $absenceCount = $stmtAbsences->rowCount();
-    } catch (PDOException $e) {
-        echo "Error: " . $e->getMessage();
-    }
-    ?>
 
 
 
@@ -95,7 +98,7 @@
             $formattedDate = date('d/m/Y', strtotime($absence['date']));
 
             echo "<section class='flex-item'>
-            <p>intégration</p>
+            <p class='cours'>{$absence['matiere']}</p>
             <p> {$absence['nom_prof']}</p>
             <p>2h</p>
 

@@ -42,7 +42,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['submit'])) {
 
         foreach ($recipientTypes as $recipientType) {
             if ($recipientType === 'all') {
-                // Insert the message for all students into the database
+                // inérer le msg pour tous les élèves
                 $sql = "INSERT INTO messages (sender, message, objet, recipient_type, recipient_name, attachment_path) 
                         VALUES (:sender, :message, :objet, 'all', NULL, :attachmentPath)";
                 $result = $db->prepare($sql);
@@ -53,10 +53,10 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['submit'])) {
                     'attachmentPath' => $attachmentPath
                 ]);
             } elseif (strpos($recipientType, 'specific_') === 0) {
-                // Extract the student name from the recipient_type
+                // Extraire le nom des élèves quand le recipient est spécifié
                 $recipientName = substr($recipientType, strlen('specific_'));
 
-                // Insert the message for the specific student into the database
+                // insérer le msg spécifique dans la bdd
                 $sql = "INSERT INTO messages (sender, message, objet, recipient_type, recipient_name, attachment_path) 
                         VALUES (:sender, :message, :objet, 'specific', :recipientName, :attachmentPath)";
                 $result = $db->prepare($sql);
@@ -70,7 +70,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['submit'])) {
             }
         }
 
-        // Redirect to index.php with a success message
+    
         header("Location: prof_msg_index.php?message=sent");
         exit();
     } catch (PDOException $e) {
@@ -168,7 +168,7 @@ function getAllStudentNames()
 
     <label for="recipient_type">à:</label>
         <select name="recipient_type[]" id="recipient_select" class="js-example-basic-multiple" multiple required >
-            <option value="all">All Students</option>
+            <option value="all">Tous les élèves</option>
             <?php $studentNames = getAllStudentNames(); ?>
             <?php foreach ($studentNames as $studentName) : ?>
                 <option value="specific_<?php echo $studentName; ?>"><?php echo $studentName; ?></option>

@@ -1,3 +1,13 @@
+<?php
+session_start();
+
+// verifier si user est connecté
+if (!isset($_SESSION['nom'])) {
+    header("Location: index.php");
+    exit();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -17,18 +27,10 @@
 </head>
 <body>
 
-<div class="ariane">
-<a href='index.php' >accueil&nbsp;/ </a> <a href='#' class="active">&nbsp; Profil</a>
-</div>
+
 
 <?php
-session_start();
 
-// Check if the user is a student
-if (!isset($_SESSION['nom'])) {
-    header("Location: index.php");
-    exit();
-}
 
 try {
     include("connexion.php");
@@ -36,24 +38,30 @@ try {
     // Set PDO to throw exceptions on errors
     $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-    // Use a prepared statement to avoid SQL injection
+    // on utilise une requete préparé pour évité les inejction SQL :)
     $sql = "SELECT * FROM user WHERE nom = :studentName";
 
     $result = $db->prepare($sql);
     $result->bindParam(':studentName', $_SESSION['nom']);
     $result->execute();
 
-    // Fetch the user data
+    // on recup les données du user
     $row = $result->fetch(PDO::FETCH_ASSOC);
 
-    echo "  <h1>Bienvenue dans ton profil, </h1>";
 
 
-    echo "
+    echo "  
+    <a href='index.php'>retour à l'accueil</a>
 
-    ";
+    <div class='ariane'>
+    <a href='index.php' >accueil&nbsp;/ </a> <a href='#' class='active'>&nbsp; Profil</a>
+    </div>
+    
+    
+    <h1>Bienvenue dans ton profil, </h1>";
 
-    // Afficher le nom
+
+
     echo "<main>
     <a href='update_photo.php' class='photo'><img src='" . $_SESSION['photo_profil'] . "' alt='' class='out'></a>
 
@@ -83,11 +91,9 @@ try {
         echo "<p>professeur en {$row['matiere']}</p>";
     }
 
-    // Afficher le mot de passe dans un champ texte (non sécurisé)
     // echo "<label for='mdp_actuel'>Mot de passe actuel:</label> <br>";
     // echo "<input type='password' name='mdp_actuel' value='{$row['password']}' id='mdp_actuel' readonly>";
 
-    // Ajouter un bouton pour basculer la visibilité du mot de passe
     // echo "<button onclick='toggleVisibility()'>voir</button> <br>";
 
 
@@ -128,6 +134,5 @@ function toggleVisibility() {
     mdpActuel.type = (mdpActuel.type === 'password') ? 'text' : 'password';
 }
 </script>
-
 </body>
 </html>

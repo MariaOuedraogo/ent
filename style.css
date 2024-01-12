@@ -441,7 +441,7 @@ font-size: 3rem;
     }
 
     #item-0 .malus {
-      font-size: ;
+      font-size:1rem ;
     }
   }
 
@@ -492,7 +492,7 @@ font-size: 3rem;
   font-weight: 500;
   color: #1e2337;
   padding-bottom: 1rem ;
-  padding-left: 4rem;
+  padding-left: 2rem;
   text-transform: capitalize;
 }
 .profil_img{
@@ -511,9 +511,9 @@ font-size: 3rem;
  padding: 30px 30px 25px 0;
 }
 
-.navbar-mobile-list a:last-child{
+.out{
   margin-top: auto;
-  margin-left: auto;
+  /* margin-left: auto; */
 }
 
 .fa-xmark {
@@ -539,7 +539,7 @@ font-size: 3rem;
 
 .messagerie{
   position: absolute;
-  top: 5;
+  top: 5px;
   right: 15px;
   left: auto;
 }
@@ -548,6 +548,23 @@ font-size: 3rem;
   width: 30px;
   height: 30px;
 }
+.scolarite{
+  display: flex;
+  flex-direction: column;
+}
+
+.scolarite p{
+  padding-left: 2rem;
+}
+.scolarite a{
+  padding-bottom: 0 !important;
+  font-size: .8rem;
+}
+
+.scolarite:last-child{
+  margin-left: 0;
+}
+
 
 .desk_nav{
   display: none;
@@ -557,8 +574,9 @@ font-size: 3rem;
   display: none;
 }
 
-
-
+footer{
+  display: none;
+}
 @media (min-width:900px){
   .hello{
     padding: 0;
@@ -886,6 +904,60 @@ display: none;
      }
 
 
+     footer{
+      background-color: #1D1D1D;
+      color:white;
+      display: flex;
+      justify-content: flex-end;
+      gap: 40px;
+      
+      padding: 40px 40px 0;
+      flex-wrap: wrap
+    }
+    
+    footer p{
+      margin: 0;
+    }
+    
+    footer h3{
+      margin: 0;
+      font-weight: normal;
+    }
+    footer a{
+      color: white;
+    }
+    
+    footer ul{
+      padding-left: 7px;
+      color: #A8B0B5;
+    
+      list-style: disc;
+    }
+    
+    footer ul li a{
+      color: #A8B0B5;
+      font-size: .9rem;
+    
+    }
+    
+    footer .menu a{
+      color: #A8B0B5;
+    
+    }
+    
+    .footer_title{
+      color: #A8B0B5;
+    
+    }
+    .allrights{
+      width: 100%;
+    }
+    
+    .lieu p{
+      color: #A8B0B5;
+    
+    
+    }
     
 }
 

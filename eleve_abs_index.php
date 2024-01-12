@@ -1,6 +1,8 @@
 <?php
 session_start();
 
+
+
 // Vérifier si l'utilisateur est un étudiant
 if (!isset($_SESSION['nom']) || $_SESSION['type'] !== 'eleve') {
     header("Location: index.php"); // Redirige vers index.php si ce n'est pas un étudiant
@@ -26,8 +28,9 @@ try {
     $stmtAbsencesAll->execute();
     $absencesAll = $stmtAbsencesAll->fetchAll(PDO::FETCH_ASSOC);
 
-    // Récupérer les trois dernières absences avec les noms des professeurs
-    $sqlAbsences = "SELECT absences.*, user.nom as nom_prof FROM absences
+    // Récupérer les trois dernières absences avec les noms des professeurs et la matière
+    $sqlAbsences = "SELECT absences.*, user.nom as nom_prof, user.matiere as nom_matiere 
+                    FROM absences
                     INNER JOIN user ON absences.prof_id = user.id
                     WHERE absences.eleve_id = :eleveId
                     ORDER BY absences.date DESC, absences.heure DESC LIMIT 3";
@@ -59,9 +62,42 @@ try {
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="eleve_abs_index.css">
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 </head>
 
 <body>
+<div class='navbar-mobile'>
+                    <a href='eleve_msg_index.php'  class='messagerie'><img src='msg.png' alt=''></a>
+
+                <i class='fa-solid fa-bars ' tabindex='0' > </i>
+                <div class='modal' >
+                    <div class='navbar-mobile-list'>
+                    <?php echo"
+                    <a href='profil.php'><img src='" . $_SESSION['photo_profil'] . "' alt='' class='profil_img'></img></a>";
+                    ?>                    <a href='index.php'>accueil</a>
+                    <a href='scolarite.php'>scolarité</a>
+                    <a href='documents.php'>mes documents</a>
+                    <a href='#'>mentions légales</a>
+                    <a href='#'>politique de confidentialité</a>
+
+
+                
+
+                    <a href='logout.php' class='out'><iconify-icon icon='ion:log-out-outline'></iconify-icon ></a>
+
+
+                    
+
+                   
+                    </div>
+                </div>
+               
+            </div>
+            <div class='overlay'></div>
+
+
 
     <div class="ariane">
         <a href='index.php' >accueil&nbsp;/ </a> <a href='#' class="active">&nbsp; Absences </a>
@@ -78,21 +114,19 @@ try {
             $formattedDate = date('d/m/Y', strtotime($absence['date']));
 
             echo "<section class='flex-item'>
-            <p>intégration</p>
-            <p> {$absence['nom_prof']}</p>
+            <p class='cours'>{$absence['nom_matiere']}</p>
+            <p>{$absence['nom_prof']}</p>
             <p>2h</p>
 
             <div class='footer_abs'>
-            <p> {$absence['heure']}</p>
-            
-
+            <p>{$absence['heure']}</p>
             <p>{$formattedDate}</p>
             </div>
          
             </section>";
         }
 
-        echo"<section class='flex-item last-item '>";
+        echo "<section class='flex-item last-item '>";
         // Afficher le compteur en JavaScript
         echo "<script>
             var absenceCount = $absenceCount;
@@ -119,7 +153,8 @@ try {
 
  
 
-  
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+
 </body>
 
 

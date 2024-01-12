@@ -7,8 +7,6 @@ if (!isset($_SESSION['nom']) || $_SESSION['type'] !== 'prof') {
     exit();
 }
 
-// Afficher les informations de session pour le débogage
-// var_dump($_SESSION);
 
 // Vérifier si le formulaire est soumis
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
@@ -19,8 +17,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     try {
         include("connexion.php");
         $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
-        // Récupérer l'ID du professeur depuis la session
+   // Récupérer l'ID du professeur depuis la session
     
 
         // Récupérer l'ID du professeur depuis la session

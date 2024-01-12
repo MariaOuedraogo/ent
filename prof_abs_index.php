@@ -7,14 +7,6 @@ if (!isset($_SESSION['nom']) || $_SESSION['type'] !== 'prof') {
     exit();
 }
 
-// ... le reste du code
-
-// var_dump($_SESSION);
-//        echo "Session ID: " . $_SESSION['id'] . "<br>";
-//        echo "Session nom " . $_SESSION['nom'] . "<br>";
-//        echo "Session type " . $_SESSION['type'] . "<br>";
-
-
 
 
 try {
@@ -71,11 +63,6 @@ try {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk&display=swap" rel="stylesheet">
-
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
     <title>Visualiser les Absences prof</title>
     <link rel="stylesheet" href="eleve_abs_index.css">
 
@@ -120,11 +107,10 @@ try {
     }
 </style>
 
-    <div class="ariane">
-    <a href='index.php' >accueil&nbsp;/ </a> <a href='#' class="active">&nbsp; Absences</a>
-    </div>
+    <a href="index.php">Retour</a>
+    <h2>Visualiser les Absences</h2>
 
-    <h1>Visualiser les Absences</h1>
+    <a href="prof_abs_form.php">Entrer des absences</a>
 
     <a href="prof_abs_form.php" class='btn_abs'>Entrer des absences</a>
     <br>
@@ -136,7 +122,6 @@ try {
     </form>
     </div>
 
-    <div class='voir_abs'>
     <form method="post">
         <button type="submit" name="showAll">Voir toutes les absences</button>
     </form>
