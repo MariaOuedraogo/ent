@@ -52,14 +52,19 @@ try {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
     <title>Détails du message du professeur</title>
     <link rel="stylesheet" href="msg_detail.css">
 </head>
 
 <body>
-    <a href='index.php'>Accueil</a>
-    <a href='logout.php'>Déconnexion</a>
-    <a href='prof_msg_index.php'>Retour</a>
+    <div class="ariane">
+    <a href='index.php' >accueil&nbsp;/ </a> <a href='prof_msg_index.php'>&nbsp; messagerie /</a><a href='#' class="active">&nbsp; message détail</a>
+    </div>
 
 
     <?php // Affichage des détails du message

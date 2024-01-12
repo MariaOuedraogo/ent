@@ -910,6 +910,19 @@ display: none;
   grid-column: 1 / span 2;
 }
 
+#box-1 h2 {
+  font-size: 2rem;
+  font-family: 'Familjen Grotesk', sans-serif;
+  margin: 0;
+  margin-left: 20px;
+}
+
+#box-1 p {
+  margin-left: 20px;
+  font-size: 1rem;
+}
+
+
 #box-2 {
   grid-row: 1;
   grid-column: 3 / span 2;
@@ -921,7 +934,28 @@ display: none;
   background-color: #3B3B3D; 
   grid-row: 2;
   grid-column: 3 / span 2;
+
 }
+
+#box-3 h2 {
+  font-size: 2rem;
+  font-family: 'Familjen Grotesk', sans-serif;
+  margin: 0;
+  margin-left: 20px;
+  margin-top: 15px;
+  color: white;
+}
+
+#box-3 .countdown {
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 20px;
+  color: white;
+ }
+
+ #box-3 h3{
+  margin: 0;
+ }
 
 #box-4 {
   background-image: url(mmi.jpg);
@@ -937,6 +971,7 @@ display: none;
 
 .angry-grid-prof-desk{
   display: none;
+  margin-bottom: 20px;
 }
 
 
@@ -944,14 +979,26 @@ display: none;
 
   .nav-desk-prof{
     display: flex;
-    
+    background-color: white;
+    border-radius: 20px;
+    width: 90%;
+    margin: 30px auto;
+
+    display: flex;
+    align-items: center;
   }
+
+  .nav-desk-prof iconify-icon {
+    font-size: 2rem;
+  }
+
   .nav-desk-prof a:nth-child(1){
 margin-right: auto;
   }
 
 .angry-grid-prof{
   display: none;
+  margin-bottom: 20px;
 }
 
 .angry-grid-prof-desk {

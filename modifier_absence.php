@@ -60,25 +60,36 @@ try {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="eleve_abs_index.css">
     <title>Modifier une Absence</title>
 </head>
 
 <body>
 
-    <a href="prof_abs_index.php">Retour</a>
-    <h2>Modifier une Absence</h2>
+    <div class="ariane">
+    <a href='index.php' >accueil&nbsp;/ </a> <a href='prof_abs_index.php'>&nbsp; absences / </a><a href='#' class="active">&nbsp; modifier absences</a>
+    </div>
+    <h1>Modifier une Absence</h1>
 
+    <div class='modif_abs'>
     <form method="post">
         <input type="hidden" name="absenceId" value="<?php echo $absenceId; ?>">
 
         <label for="newDate">Nouvelle Date:</label>
         <input type="date" id="newDate" name="newDate" value="<?php echo $absenceDetails['date']; ?>" required>
-
+        &nbsp; 
         <label for="newHeure">Nouvelle Heure:</label>
         <input type="time" id="newHeure" name="newHeure" value="<?php echo $absenceDetails['heure']; ?>" required>
-
+        <br>
+        <br>
         <button type="submit" name="submit">Modifier l'Absence</button>
     </form>
+    </div>
 
 </body>
 

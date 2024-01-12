@@ -39,16 +39,15 @@ session_start();
             <nav class='nav-desk-prof'>
 
             <a href='index.php'><img src='home.png' alt='lien vers la messagerie'></a>
-            <a href='prof_msg_index.php'  ><img src='msg.png' alt=''></a>
-            <a href='logout.php'><img src='logout.png' alt='déconnexion'></a>
+            <a href='prof_abs_index.php'>absences</a>
+            <a href='prof_msg_index.php' ><iconify-icon icon='ion:mail-outline' class='icon_mail'></iconify-icon></a>
+            <a href='logout.php'><iconify-icon icon='ion:log-out-outline'></a>
 
 
 
             </nav>
             <div id='main'>
-            <h1 class='hello'>Bonjour " . $_SESSION['nom'] . " ✌️</h1>
-            <h2 class='title_page'> Bienvenu sur ton tableau de bord</h2>
-            
+            <h1 class='hello'>Bienvenue sur ton tableau <br> de bord  " . $_SESSION['nom'] . " 👋</h1>
             <div class='angry-grid-prof'>
             <div id='box-1' class='box-item'>&nbsp;</div>
             <a href='profil.php' id='box-2' class='box-item'>&nbsp;</a>
@@ -63,19 +62,28 @@ session_start();
             }
         </style>
         
-            <div id='box-3' class='box-item'>&nbsp;</div>
-            <div id='box-4' class='box-item'>&nbsp;</div>
+            <div id='box-3' class='box-item'>
+            <h2>c'est bientôt <br> l'été !</h2>
+            &nbsp;
+            </div>
+            <div id='box-1' class='box-item'>&nbsp;
+              <h2>dernières absences</h2>
+              <p>vous avez <br> 17 absences</p>
+            </div>
           </div>
           
 
           
 <div class='angry-grid-prof-desk'>
 <div id='box-0'>&nbsp;</div>
-<div id='box-1'>&nbsp;</div>
+<div id='box-1'>&nbsp;
+  <h2>dernières absences</h2>
+  <p>vous avez <br> 17 absences</p>
+</div>
 <a href='profil.php' id='box-2'>&nbsp;</a>
 <div id='box-3'>
-<p>c'est bientôt l'été</p>
-    <div id='countdown'></div>
+    <h2>c'est bientôt <br> l'été !</h2>
+    <div id='countdown' class='countdown'></div>
 </div>
 
 </div>
