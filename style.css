@@ -184,9 +184,8 @@ body {
 
   @media screen and (max-width: 600px) {
 
-
     #box-1 h2 {
-      font-size: 1.5rem;
+      font-size: 1.5rem ;
     }
 
     .login-card {
@@ -208,7 +207,10 @@ body {
   }
   
   @media screen and (min-width:900px){
-  
+    
+    #box-1 h2{
+      font-size: 2rem !important ;
+    }
 main{
   display: flex;
   justify-content: space-evenly;
@@ -278,6 +280,9 @@ font-size: 3rem;
 
 .angry-grid div{
   border-radius: 22px;
+  padding-left:10px;
+  /* padding-right:10px; */
+
 }
   
 #item-0 {
@@ -295,7 +300,7 @@ font-size: 3rem;
   font-family: 'Familjen Grotesk', sans-serif;
   font-size: 2.5rem;
   margin: 0;
-  margin-left: 20px;
+  /* margin-left: 20px; */
   color: #393F42;
 
   }
@@ -303,7 +308,7 @@ font-size: 3rem;
  #item-0 .infos_abs {
   display: flex;
   justify-content: space-between;
-  margin-left: 20px;
+  /* margin-left: 20px; */
   margin-right: 20px;
  }
 
@@ -339,12 +344,12 @@ font-size: 3rem;
   font-size: 2rem;
   font-family: 'Familjen Grotesk', sans-serif;
   margin: 0;
-  margin-left: 20px;
+  /* margin-left: 20px; */
   margin-top: 15px;
  }
 
  #item-2 .countdown {
-  margin-left: 20px;
+  /* margin-left: 20px; */
   margin-top: 20px;
  }
 
@@ -363,19 +368,19 @@ font-size: 3rem;
   margin-left: 15px;
   font-family: 'Familjen Grotesk', sans-serif;
   margin: 0;
-  margin-left: 20px;
+  /* margin-left: 20px; */
  }
 
  #item-3 p {
   color: white;
   font-size: .8rem;
-  margin-left: 20px;
+  /* margin-left: 20px; */
  }
 
  #item-3 .docs_ouverts {
   display: flex;
   flex-direction: column;
-  margin-left: 20px;
+  /* margin-left: 20px; */
   font-size: .8rem;
   text-decoration: underline 0.5px white solid;
 
@@ -391,13 +396,12 @@ font-size: 3rem;
   font-family: 'Familjen Grotesk', sans-serif;
   font-size: 2.5rem;
   margin: 0;
-  margin-left: 15px;
   color: #393F42;
 
   }
 
 #item-1  p {
-    margin-left: 20px;
+    /* margin-left: 20px; */
     color: #393F42;
   }
 
@@ -413,7 +417,7 @@ font-size: 3rem;
   @media screen and (max-width:511px) {
 
     #item-1  h2 {
-      font-size: 2rem;
+      font-size: 1.5rem;
     }
 
     #item-0  h2 {
@@ -466,12 +470,12 @@ font-size: 3rem;
 
 .modal {
   transition: left 0.9s; /* Change from top to left */
-  background-color: #DADADA;
+  background-color: #EAE9E9;
   height: 100vh;
   position: fixed;
   top: 0; /* Remove the initial negative top value */
   left: -100vw; /* Set initial left value to -100vw */
-  width: 70%;
+  width: 80%;
   z-index: 10;
 }
 
@@ -488,16 +492,17 @@ font-size: 3rem;
 }
 
 .navbar-mobile .navbar-mobile-list a {
-  font-style: 5rem;
+font-size: 1rem;
   font-weight: 500;
-  color: #1e2337;
-  padding-bottom: 1rem ;
-  padding-left: 2rem;
+  color: black;
+  padding-bottom: 1.5rem ;
+  padding-left: 1.2rem;
   text-transform: capitalize;
+  
 }
 .profil_img{
-  width:45px !important;
-  height:45px !important;
+  width:73px !important;
+  height:73px !important;
   border-radius: 100%;
   padding: 0 !important;
 }
@@ -512,11 +517,14 @@ font-size: 3rem;
 }
 
 .out{
+  font-size: 2rem !important;
   margin-top: auto;
-  /* margin-left: auto; */
+  margin-left: auto;
+  margin-right: 20px;
 }
 
 .fa-xmark {
+  font-size: 3rem;
   z-index: 11;
 }
 
@@ -551,18 +559,30 @@ font-size: 3rem;
 .scolarite{
   display: flex;
   flex-direction: column;
+  font-weight: 500;
 }
 
 .scolarite p{
-  padding-left: 2rem;
+  padding-left: 1.2rem;
+  font-size: 1rem;
+  margin: 0 0 10px;
+  color: black;
+
 }
 .scolarite a{
   padding-bottom: 0 !important;
-  font-size: .8rem;
+  margin-bottom: 20px;
+  color: rgba(0, 0, 0, .8) !important;
+font-size: .85rem !important;
+font-weight: bold;
+margin-left: 10px;
+border: none !important;
 }
+
 
 .scolarite:last-child{
   margin-left: 0;
+  margin-bottom: 10px;
 }
 
 
@@ -570,6 +590,8 @@ font-size: 3rem;
   display: none;
 }
 
+.docu{
+margin-bottom: 2rem !important;}
 .tets{
   display: none;
 }
@@ -578,6 +600,11 @@ footer{
   display: none;
 }
 @media (min-width:900px){
+
+  .profil_img{
+    width:45px !important;
+    height:45px !important;
+  }
   .hello{
     padding: 0;
     margin-bottom: 0;
@@ -636,11 +663,14 @@ padding:  0 3rem;;
 
 }
 
-nav a:nth-child(4){
-    margin-left: auto;
+.docs{
+    margin-right: auto;
 }
 
-
+.out{
+margin: 0;
+font-size: 2rem;
+}
 
 nav a{
   padding: 10px;
@@ -699,6 +729,7 @@ display: none;
         width: 100%;
       }
 
+   
       /* Style des liens du menu et activation au survol */
       .menu-container:hover .menu-items {
           display: block;
@@ -713,9 +744,7 @@ display: none;
           padding: 10px 0 0;
       }
       
-      ::-webkit-scrollbar {
-        display: none;
-      }
+     
       * {
         -ms-overflow-style: none;
         scrollbar-width: none;
@@ -770,28 +799,29 @@ display: none;
         grid-column-end: 3;
 
         color: white;
+
+        padding-left: 20px;
         
      }
 
      .angry-grid-desk #item-1 h2 {
       color: white;
       font-size: 2rem;
-      margin-left: 15px;
       font-family: 'Familjen Grotesk', sans-serif;
       margin: 0;
-      margin-left: 20px;
+      /* margin-left: 20px; */
      }
 
      .angry-grid-desk #item-1 p {
       color: white;
       font-size: .8rem;
-      margin-left: 20px;
+      /* margin-left: 20px; */
      }
 
      .docs_ouverts {
       display: flex;
       flex-direction: column;
-      margin-left: 20px;
+      /* margin-left: 20px; */
       margin-top: 40px;
       text-decoration: underline 0.5px white solid;
   
@@ -974,6 +1004,8 @@ display: none;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   height: 500px;
   gap: 12px;
+  padding: 0 15px;
+
 }
 
 .box-item {
@@ -989,14 +1021,14 @@ display: none;
 }
 
 #box-1 h2 {
-  font-size: 2rem;
+  font-size: 1.2rem;
   font-family: 'Familjen Grotesk', sans-serif;
   margin: 0;
-  margin-left: 20px;
+  margin-left: 10px;
 }
 
 #box-1 p {
-  margin-left: 20px;
+  margin-left: 10px;
   font-size: 1rem;
 }
 
@@ -1019,15 +1051,16 @@ display: none;
   font-size: 2rem;
   font-family: 'Familjen Grotesk', sans-serif;
   margin: 0;
-  margin-left: 20px;
+  margin-left: 10px;
   margin-top: 15px;
   color: white;
 }
 
 #box-3 .countdown {
-  margin-left: 20px;
-  margin-right: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
   margin-top: 20px;
+  margin-bottom: 20px;
   color: white;
  }
 
@@ -1052,12 +1085,58 @@ display: none;
   margin-bottom: 20px;
 }
 
+.nav-desk-prof img{
+  width: 30px !important;
+  height: 30px !important;
+}
+
+.nav-desk-prof {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.nav-desk-prof a:nth-child(2){
+  margin-right: auto;
+}
+.nav-desk-prof a:nth-child(4){
+font-size: 2rem;
+}
+
+.nav-desk-prof a:nth-child(5){
+  font-size: 2rem;
+  }
+
 
 @media(min-width:900px){
+  .nav-desk-prof img{
+    width: 40px !important;
+    height: 40px !important;
+  }
+  
 
+  h2{
+    /* margin-left: 20px !important; */
+  }
+
+  #box-3 h2 {
+    
+    margin-left: 20px;
+    
+  }
+
+  #box-1 p {
+    margin-left: 20px;
+  }
+
+  #box-3 h2 {
+  
+    margin-left: 20px;
+   
+  }
   .nav-desk-prof{
     display: flex;
-    background-color: white;
+    background-color: rgba(225,225,225, .7);
     border-radius: 20px;
     width: 90%;
     margin: 30px auto;
@@ -1066,12 +1145,18 @@ display: none;
     align-items: center;
   }
 
+  #box-3 .countdown {
+    margin-left: 20px;
+    margin-right: 20px;
+   
+   }
+
   .nav-desk-prof iconify-icon {
     font-size: 2rem;
   }
 
 
-  .nav-desk-prof a:nth-child(1){
+  .nav-desk-prof a:nth-child(2){
 margin-right: auto;
   }
 
@@ -1171,8 +1256,20 @@ gap: 12px;
 
   grid-row-end: 2;
   grid-column-end: 2;
+  padding: 50px;
   
 }
+
+#adm-box-1 a{
+  color: white ;
+
+}
+#adm-box-0 a, #adm-box-1 a{
+  font-size: 3rem;
+
+}
+
+
 #adm-box-1 {
 
   background-color: #3B3B3D; 
@@ -1182,6 +1279,7 @@ gap: 12px;
 
   grid-row-end: 3;
   grid-column-end: 2;
+  padding: 50px;
   
 }
 
@@ -1191,9 +1289,16 @@ gap: 12px;
 
 @media(min-width:900px){
   .nav-admin-desk{
-    display: flex;
-align-items: center; 
+   
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 30px auto;
+      background-color: rgba(225,225,225, .7);
+      width: 90%;
+      border-radius: 20px;
  }
+
   .nav-admin-desk a:nth-child(4){
 margin-left: auto;
   }
@@ -1238,4 +1343,16 @@ margin-left: auto;
     grid-column-end: 4;
     
  }
+
+ #adm-box-0 a{
+  color: white ;
+
+}
+
+#adm-box-1 a{
+  color: black ;
+
+}
+
+
 }

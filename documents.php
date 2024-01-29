@@ -21,12 +21,74 @@ if (!isset($_SESSION['nom']) || $_SESSION['type'] !== 'eleve') {
     <link href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk&display=swap" rel="stylesheet">
 
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 
     <link rel="stylesheet" href="documents.css">
+    <link rel="stylesheet" href="nav_mobile.css">
+
     <script src="script.js" defer></script>
 </head>
 <body>
-    
+
+
+<div class='navbar-mobile'>
+                    <a href='eleve_msg_index.php'  class='messagerie'><img src='msg.png' alt=''></a>
+
+                <i class='fa-solid fa-bars ' tabindex='0' > </i>
+                <div class='modal' >
+                    <div class='navbar-mobile-list'>
+                    <a href='profil.php'><img src='" . $_SESSION['photo_profil'] . "' alt='' class='profil_img'></img></a>
+                    <a href='index.php'>accueil</a>
+                   <div class='scolarite'>
+                   <p> scolarité </p>
+                  <a href='#'> ade</a>
+    <a href='eleve_abs_index.php'>absences</a>
+    <a href='#'>notes </a>
+    <a href='cours.php'> ressources pédagogiques</a>
+    <a href='outil.php'> mes outils</a>
+    <a href='documents.php' class='docu'>mes documents</a>
+
+                   </div>
+                    <a href='mention.pdf' target='_blank' >mentions légales</a>
+                    <a href='#'>politique de confidentialité</a>
+
+
+                
+
+                    <a href='logout.php' class='out'><iconify-icon icon='ion:log-out-outline'></iconify-icon ></a>
+
+
+                    
+
+                   
+                    </div>
+                </div>
+               
+            </div>
+            <div class='overlay'></div>
+
+<nav class='desk_nav'>
+                               <a href='index.php'><img src='home.png' alt='' class='profil_img'></a>
+                               
+<div class='menu-container'>
+    <div class='menu-btn'>scolarité</div>
+    <ul class='menu-items'>
+    <li><a href='#'> ade</a></li>
+    <li><a href='eleve_abs_index.php'>absences</a></li>
+    <li><a href='#'>notes </a></li>
+    <li><a href='cours.php'> ressources pédagogiques</a></li>
+    <li><a href='outil.php'> mes outils</a></li>
+    </ul>
+</div>
+                               <a href='documents.php ' class='docs'>mes documents</a>
+
+                               <a href='profil.php' class='img_profil_desk'><img src='" . $_SESSION['photo_profil'] . "' alt='' class='profil_img'></img></a>
+                               <a href='eleve_msg_index.php'  class='msg'><iconify-icon icon='ion:mail-outline'></iconify-icon></a>
+                               <a href='logout.php' class='out'><iconify-icon icon='ion:log-out-outline'></iconify-icon ></a>
+
+
+            </nav>
 
 <div class="ariane">
 <a href='index.php' >accueil&nbsp;/ </a> <a href='documents.php' class="active">&nbsp; Mes documents</a>

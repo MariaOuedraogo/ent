@@ -1,0 +1,255 @@
+
+/*MENU MOBILE*/
+
+/* .navbar-mobile{
+  display: none;
+
+} */
+.navbar-mobile i {
+    position: fixed;
+    z-index: 11;
+    top: 9px;
+    left: 15px;
+    font-size: 3rem;
+    color: black;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+  
+  .modal {
+    transition: left 0.9s; /* Change from top to left */
+    background-color: #EAE9E9;
+    height: 100vh;
+    position: fixed;
+    top: 0; /* Remove the initial negative top value */
+    left: -100vw; /* Set initial left value to -100vw */
+    width: 80%;
+    z-index: 10;
+  }
+  
+  .change-modal {
+    left: 0; /* Change from top to left */
+  }
+  
+  .navbar-mobile .navbar-mobile-list {
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    /* align-items: center; */
+    justify-content: center;
+  }
+  
+  .navbar-mobile .navbar-mobile-list a {
+  font-size: 1rem;
+    font-weight: 500;
+    color: black;
+    padding-bottom: 1.5rem ;
+    padding-left: 1.2rem;
+    text-transform: capitalize;
+    
+  }
+  .profil_img{
+    width:73px !important;
+    height:73px !important;
+    border-radius: 100%;
+    padding: 0 !important;
+  }
+  
+  .navbar-mobile-list a:first-child{
+    margin-top: 3rem;
+  }
+  .navbar-mobile .navbar-mobile-list a img {
+   width: 20px;
+   height: 20px;
+   padding: 30px 30px 25px 0;
+  }
+  
+  .out{
+    font-size: 2rem !important;
+    margin-top: auto;
+    margin-left: auto;
+    margin-right: 20px;
+  }
+  
+  .fa-xmark {
+    font-size: 3rem;
+    z-index: 11;
+  }
+  
+  .overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Black transparent background */
+    z-index: 9; /* Place it below the modal */
+  }
+  
+  .show-overlay {
+    display: block;
+    transition: opacity 0.9s; /* Add transition for opacity property */
+  
+  }
+  
+  .messagerie{
+    position: absolute;
+    top: 5px;
+    right: 15px;
+    left: auto;
+  }
+  
+  .messagerie img{
+    width: 30px;
+    height: 30px;
+  }
+  .scolarite{
+    display: flex;
+    flex-direction: column;
+    font-weight: 500;
+  }
+  
+  .scolarite p{
+    padding-left: 1.2rem;
+    font-size: 1rem;
+    margin: 0 0 10px;
+    color: black;
+  
+  }
+  .scolarite a{
+    padding-bottom: 0 !important;
+    margin-bottom: 20px;
+    color: rgba(0, 0, 0, .8) !important;
+  font-size: .85rem !important;
+  font-weight: bold;
+  margin-left: 10px;
+  border: none !important;
+  }
+  
+  
+  .scolarite:last-child{
+    margin-left: 0;
+    margin-bottom: 10px;
+  }
+  
+  
+  .desk_nav{
+    display: none;
+  }
+  
+  .docu{
+  margin-bottom: 2rem !important;}
+
+
+  @media (min-width:900px){
+    .navbar-mobile{
+        display: none;
+      
+      } 
+
+  }
+
+
+  
+@media(min-width:900px){
+
+
+    .desk_nav{  
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       margin: 30px auto;
+       background-color: rgba(225,225,225, .7);
+       font-family: "Montserrat", sans-serif;
+       border-radius: 20px;
+       width: 90%;
+       margin-top: 20px;
+ 
+     
+     
+     }
+ 
+ 
+  .desk_nav .menu-btn {
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+ 
+ 
+  .desk_nav a:hover {
+    color: #171C8F;
+  }
+  .desk_nav .menu-btn {
+    margin-right: 10px;
+    margin-left: 10px;
+ }
+ 
+ .menu-items {
+     background-color: white;
+     width: 200px;
+     padding: 5px;
+ }
+ .menu-items {
+     display: none;
+     position: absolute;
+     list-style: none;
+     margin: 0;
+ }
+ ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+ 
+  .menu-btn {
+    cursor: pointer;
+ }
+ .out {
+    font-size: 2rem;
+    margin-left: 10px;
+ }
+ .msg {
+    font-size: 2rem;
+ }
+ .menu-container:hover .menu-items {
+    display: block;
+    /* background-color: rgba(225,225,225, .7);
+    padding: 10px; */
+ }
+ .menu-items a {
+    text-decoration: none;
+    color: #333;
+    display: block;
+    padding: 10px 0 0;
+ }
+     .docs {
+       margin-right: auto;
+   }
+ 
+   .profil_img {
+    width: 45px !important;
+    height: 45px !important;
+ }
+ nav a {
+    padding: 10px;
+ }
+    .icon-doc {
+       font-size: 2.2rem;
+    }
+    .angry-grid {
+       display: grid; 
+    
+       grid-template-rows: 1fr 1fr;
+       grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+       
+ 
+       gap: 15px;
+       height: 500px;
+       width: 90%;
+ 
+       margin: 20px auto 50px;
+ 
+       
+    }}

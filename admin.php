@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Page d'Administration</title>
+
+    <link rel="stylesheet" href="admin_create.css">
 </head>
 <body>
 <a href="index.php">accueil</a>
@@ -60,8 +62,8 @@
                     <td>{$row['nom']}</td>
                     <td>{$row['type']}</td>
                     <td>
-                        <a href='modifierutilisateur.php?id={$row['id']}'>Modifier</a>
-                        <a href='supprimerutilisateur.php?id={$row['id']}'>Supprimer</a>
+                        <a href='modifierutilisateur.php?id={$row['id']}' class='mod'>Modifier</a>
+                        <a href='supprimerutilsiateur.php.php?id={$row['id']}' class='suppr'>Supprimer</a>
                     </td>
                   </tr>";
         }

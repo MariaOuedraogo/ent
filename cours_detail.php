@@ -19,12 +19,53 @@ if (!isset($_SESSION['nom']) || $_SESSION['type'] !== 'eleve') {
     <link href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk&display=swap" rel="stylesheet">
 
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <title>Document</title>
     <link rel="stylesheet" href="cours_detail.css">
+    <link rel="stylesheet" href="nav_mobile.css">
+
+
     <script src="script.js" defer></script>
 </head>
 <body>
     
+
+<div class='navbar-mobile'>
+                    <a href='eleve_msg_index.php'  class='messagerie'><img src='msg.png' alt=''></a>
+
+                <i class='fa-solid fa-bars ' tabindex='0' > </i>
+                <div class='modal' >
+                    <div class='navbar-mobile-list'>
+                    <a href='profil.php'><img src='" . $_SESSION['photo_profil'] . "' alt='' class='profil_img'></img></a>
+                    <a href='index.php'>accueil</a>
+                   <div class='scolarite'>
+                   <p> scolarité </p>
+                  <a href='#'> ade</a>
+    <a href='eleve_abs_index.php'>absences</a>
+    <a href='#'>notes </a>
+    <a href='cours.php'> ressources pédagogiques</a>
+    <a href='outil.php'> mes outils</a>
+    <a href='documents.php' class='docu'>mes documents</a>
+
+                   </div>
+                    <a href='mention.pdf' target='_blank' >mentions légales</a>
+                    <a href='#'>politique de confidentialité</a>
+
+
+                
+
+                    <a href='logout.php' class='out'><iconify-icon icon='ion:log-out-outline'></iconify-icon ></a>
+
+
+                    
+
+                   
+                    </div>
+                </div>
+               
+            </div>
+            <div class='overlay'></div>
 
 <div class="ariane">
 <a href='index.php' >accueil&nbsp;/ </a> <a href='cours.php'>&nbsp; Ressources pédagogiques /</a><a href='#' class="active">&nbsp; Deploiement de services </a>

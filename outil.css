@@ -48,23 +48,20 @@ body{
 
    h1 {
       font-family: 'Familjen Grotesk', sans-serif;
-      margin-left: 50px;
-      font-size: 3rem;
+      margin-left: 20px;
+      font-size: 2.5rem;
    }
    
-   nav{
-       margin: 50px 0 0 0;
-       border-bottom: 1px solid black;
+   .bby-nav{
+       margin: 20px 0 0 20px;
        padding-bottom: 20px;
        margin-bottom: 5px;
        display: flex;
        flex-wrap: wrap;
        gap: 12px;
-       margin-left: 50px;
-       margin-right: 20px;
    
    }
-   nav a{
+   .bby-nav a{
        text-decoration: none;
        padding: 5px 10px;
        border-radius: 8px;     
@@ -74,14 +71,19 @@ body{
        text-transform:uppercase ;
    }
    
-   .active2 {
+ .bby-nav  .active2 {
       background-color: #0443A7;
       color: #D2E5E3;
+   }
+
+   hr{
+      margin: 0 20px;
    }
 
 .item{
    border-radius: 22px;
     background-color: #97BAFE;
+    margin: 0 10px;
 }
 
 .item{
@@ -347,10 +349,109 @@ cursor: pointer;
 
 
 
-
+.desk_nav{
+   display: none;
+}
 
 
 @media(min-width:900px){
+   .desk_nav{  
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 30px auto;
+      background-color: rgba(225,225,225, .7);
+      font-family: "Montserrat", sans-serif;
+      border-radius: 20px;
+      width: 90%;
+      margin-top: 20px;
+
+    
+    
+    }
+
+
+ .desk_nav .menu-btn {
+   margin-right: 10px;
+   margin-left: 10px;
+ }
+
+
+ .desk_nav a:hover {
+   color: #171C8F;
+ }
+ .desk_nav .menu-btn {
+   margin-right: 10px;
+   margin-left: 10px;
+}
+
+.menu-items {
+    background-color: white;
+    width: 200px;
+    padding: 5px;
+}
+.menu-items {
+    display: none;
+    position: absolute;
+    list-style: none;
+    margin: 0;
+}
+ul{
+   list-style-type: none;
+   margin: 0;
+   padding: 0;
+   width: 100%;
+ }
+
+ .menu-btn {
+   cursor: pointer;
+}
+.out {
+   font-size: 2rem;
+   margin-left: 10px;
+}
+.msg {
+   font-size: 2rem;
+}
+.menu-container:hover .menu-items {
+   display: block;
+   /* background-color: rgba(225,225,225, .7);
+   padding: 10px; */
+}
+.menu-items a {
+   text-decoration: none;
+   color: #333;
+   display: block;
+   padding: 10px 0 0;
+}
+    .docs {
+      margin-right: auto;
+  }
+
+  .profil_img {
+   width: 45px !important;
+   height: 45px !important;
+}
+nav a {
+   padding: 10px;
+}
+   
+   hr{
+      margin: 0 50px;
+   }
+
+   .item{
+      margin: 0;
+   }
+
+   .bby-nav{
+      margin: 50px 0 0 50px;
+     
+  }
+   h1 {
+      margin-left: 50px;
+      font-size: 3rem;
+   }
    .angry-grid {
       display: grid; 
    

@@ -6,7 +6,7 @@
 
 body {
   margin: 0;
-  background-color: #DADADA;
+  background-color: #EAE9E9;
   overflow-x: hidden;
   font-family: 'Montserrat', sans-serif;
 }
@@ -141,12 +141,12 @@ a::first-letter {
 
 h1 {
   font-family: 'Familjen Grotesk', sans-serif;
-  margin-left: 100px;
+  margin-left: 20px;
   margin-bottom: 50px;
 }
 
 .btn_abs {
-  margin-left: 100px;
+  margin-left: 20px;
   background-color: white;
   border: 1px black solid;
   padding: 2px 5px 2px 5px;
@@ -162,8 +162,12 @@ h1 {
 }
 
 .filtre_abs {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  text-align: center;
   margin-top: 50px;
-  margin-left: 100px;
+  margin-left: 20px;
 }
 
 .filtre_abs input, button {
@@ -176,11 +180,11 @@ h1 {
 
 .voir_abs {
   margin-top: 20px;
-  margin-left: 100px;
+  margin-left: 20px;
 }
 
 .enr_abs {
-  margin-left: 100px;
+  margin-left: 20px;
 }
 
 .enr_abs input, select {
@@ -190,7 +194,7 @@ h1 {
 }
 
 .modif_abs {
-  margin-left: 100px;
+  margin-left: 20px;
 }
 
 .modif_abs input {
@@ -271,6 +275,7 @@ main p{
 }
 
 
+
 .footer_abs{
   border-top: solid black 1px;
   display: flex;
@@ -310,20 +315,115 @@ main p{
 
 .suppr{
   margin-top: 20px;
-  background-color: red;
+  background-color: #F6765B;
   border-radius: 5px;
-  padding: 2px 5px;
+  padding: 7px 15px;
 
 }
 
 .mod{
   margin-top: 20px;
-  background-color: greenyellow;
+  background-color: #D8E898;
   border-radius: 5px;
-  padding: 2px 5px;
+  padding: 7px  15px;
+}
+
+.suppr:hover, .mod:hover{
+font-style: italic;
 }
 
 
+
+.visualize{
+  margin-left: 20px;
+}
+.desk_nav{
+  display: none;
+}
+
+@media (min-width:900px) {
+  .desk_nav{  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px auto;
+    background-color: rgba(225,225,225, .7);
+    font-family: "Montserrat", sans-serif;
+    border-radius: 20px;
+    width: 90%;
+    margin-top: 20px;
+
+  
+  
+  }
+
+
+.desk_nav .menu-btn {
+ margin-right: 10px;
+ margin-left: 10px;
+}
+
+
+.desk_nav a:hover {
+ color: #171C8F;
+}
+.desk_nav .menu-btn {
+ margin-right: 10px;
+ margin-left: 10px;
+}
+
+.menu-items {
+  background-color: white;
+  width: 200px;
+  padding: 5px;
+}
+.menu-items {
+  display: none;
+  position: absolute;
+  list-style: none;
+  margin: 0;
+}
+ul{
+ list-style-type: none;
+ margin: 0;
+ padding: 0;
+ width: 100%;
+}
+
+.menu-btn {
+ cursor: pointer;
+}
+.out {
+ font-size: 2rem;
+ margin-left: 10px;
+}
+.msg {
+ font-size: 2rem;
+}
+.menu-container:hover .menu-items {
+ display: block;
+ /* background-color: rgba(225,225,225, .7);
+ padding: 10px; */
+}
+.menu-items a {
+ text-decoration: none;
+ color: #333;
+ display: block;
+ padding: 10px 0 0;
+}
+  .docs {
+    margin-right: auto;
+}
+
+.profil_img {
+ width: 45px !important;
+ height: 45px !important;
+}
+nav a {
+ padding: 10px;
+}
+  
+}
 @media (min-width:970px){
   main{
     flex-direction: row;
@@ -332,6 +432,34 @@ main p{
   flex-direction: column;
   max-width: 700px !important;
   margin: auto;
+  }
+  .visualize{
+    margin-left: 100px;
+  }
+  .modif_abs {
+    margin-left: 100px;
+  }
+
+  .voir_abs {
+    margin-left: 100px;
+  }
+  
+  .enr_abs {
+    margin-left: 100px;
+  }
+
+  .filtre_abs {
+    margin-left: 100px;
+  }
+
+
+  h1 {
+    margin-left: 100px;
+  }
+  
+  .btn_abs {
+    margin-left: 100px;
+   
   }
 }
 

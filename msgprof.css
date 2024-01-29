@@ -8,12 +8,16 @@
 body{
     margin: 0;
     overflow-x: hidden;
-    background-color: #DADADA;
+    background-color: #EAE9E9;
+    ;
 }
 
 a {
     color: black;
     text-decoration: none;
+ }
+ h2{
+    text-align: center;
  }
  
  .ariane {
@@ -44,23 +48,41 @@ form{
 
 #submit{
     width: fit-content;
+    margin: 50px auto;
+background-color: white;
+    padding: 10px ;
+    border: solid 1px black;
+    border-radius: 10px;
+    transition: color .4s ease-in ;
+}
+
+#submit:hover{
+    cursor: pointer;
+    font-style: italic;
+    background-color: #3B3B3D;
+color:white
 }
 
 textarea{
     background-color: transparent;
-    /* border: none;
-    border-bottom: solid 1px black; */
+   height: 100px;
 }
 
 label{
     margin-top: 50px;
+    margin-bottom: 10px;
 }
 
-#messages{
-    margin-bottom: 100px;
-}
+
 
 
 input{
     width: 100%;
+}
+
+form{
+    padding: 20px 40px;
+background-color: white;
+    max-width: 1000px;
+    margin: 0 auto 30px;
 }

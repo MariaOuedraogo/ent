@@ -163,8 +163,8 @@ function getAllStudentNames()
 <body>
 
     <a href="prof_msg_index.php">retour</a>
-    <h2>nouveau message</h2>
     <form method="POST" action="msgprof.php" enctype="multipart/form-data">
+    <h2>nouveau message</h2>
 
     <label for="recipient_type">à:</label>
         <select name="recipient_type[]" id="recipient_select" class="js-example-basic-multiple" multiple required >
@@ -190,6 +190,13 @@ function getAllStudentNames()
         <button type="submit" name="submit" id="submit">Envoyer un message</button>
 
     </form>
+
+
+
+
+
+
+
 </body>
 
 </html>

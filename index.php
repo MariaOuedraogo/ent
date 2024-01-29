@@ -43,15 +43,16 @@ session_start();
 
             <a href='index.php'><img src='home.png' alt='lien vers la l'accueil'></a>
             <a href='prof_abs_index.php'>absences</a>
+            
+            <a href='profil.php' class='profil_prof'><img src='" . $_SESSION['photo_profil'] . "' alt='' class='profil_img'></img></a>
             <a href='prof_msg_index.php' ><iconify-icon icon='ion:mail-outline' class='icon_mail'></iconify-icon></a>
             <a href='logout.php'><iconify-icon icon='ion:log-out-outline'></a>
 
 
-
-
             </nav>
+            
             <div id='main'>
-            <h1 class='hello'>Bienvenue sur ton tableau <br> de bord  " . $_SESSION['nom'] . " 👋</h1>
+            <h1 class='hello'>Bienvenue sur ton tableau <br> de bord , " . $_SESSION['nom'] . " 👋</h1>
             <div class='angry-grid-prof'>
             <div id='box-1' class='box-item'>&nbsp;</div>
             <a href='profil.php' id='box-2' class='box-item'>&nbsp;</a>
@@ -71,7 +72,7 @@ session_start();
             <div class='countdown'> </div>
             </div>
             <div id='box-1' class='box-item'>&nbsp;
-              <h2>dernières absences</h2>
+              <h2>dernières absences enregistrées</h2>
               <p>vous avez <br> 17 absences</p>
             </div>
           </div>
@@ -81,7 +82,7 @@ session_start();
 <div class='angry-grid-prof-desk'>
 <div id='box-0'>&nbsp;</div>
 <div id='box-1'>&nbsp;
-  <h2>dernières absences</h2>
+  <h2>dernières absences enregistrées</h2>
   <p>vous avez <br> 17 absences</p>
 </div>
 <a href='profil.php' id='box-2'>&nbsp;</a>
@@ -123,9 +124,10 @@ session_start();
     <a href='#'>notes </a>
     <a href='cours.php'> ressources pédagogiques</a>
     <a href='outil.php'> mes outils</a>
+    <a href='documents.php' class='docu'>mes documents</a>
+
                    </div>
-                    <a href='documents.php'>mes documents</a>
-                    <a href='mention.pdf' target='_blank'>mentions légales</a>
+                    <a href='mention.pdf' target='_blank' >mentions légales</a>
                     <a href='#'>politique de confidentialité</a>
 
 
@@ -156,7 +158,7 @@ session_start();
     <li><a href='outil.php'> mes outils</a></li>
     </ul>
 </div>
-                               <a href='documents.php'>mes documents</a>
+                               <a href='documents.php ' class='docs'>mes documents</a>
 
                                <a href='profil.php' class='img_profil_desk'><img src='" . $_SESSION['photo_profil'] . "' alt='' class='profil_img'></img></a>
                                <a href='eleve_msg_index.php'  class='msg'><iconify-icon icon='ion:mail-outline'></iconify-icon></a>
@@ -167,7 +169,7 @@ session_start();
 
          
   <div id='main'>
-  <h1 class='hello'>Bienvenue sur ton tableau <br> de bord  " . $_SESSION['nom'] . " 👋</h1>
+  <h1 class='hello'>Bienvenue sur ton tableau <br> de bord,  " . $_SESSION['nom'] . " 👋</h1>
   <div class='angry-grid'>
   <div id='item-0'>&nbsp;
    <a href='eleve_abs_index.php'>  <h2>absences à justifier</h2> </a>
@@ -296,15 +298,15 @@ session_start();
      <div id='main'>
      <h1 class='hello'>Bonjour " . $_SESSION['nom'] . " ✌️</h1>
      <div class='angry-grid-admin'>
-     <div id='adm-box-0'><a href='#'>gestion de profil</a></div>
-     <div id='adm-box-1'><a href='#'>assignation de matière</a></div>
+     <div id='adm-box-0'><a href='admin.php'>gestion de profil</a></div>
+     <div id='adm-box-1'><a href='matiereprof.php'>assignation de matière</a></div>
    </div>
      </div>
 
      
 <div class='angry-grid-admin-desk'>
-<div id='adm-box-0'><a href='#'>assignation de matière</a></div>
-<div id='adm-box-1'><a href='#'>gestion de profil</a></div>
+<div id='adm-box-0'><a href='admin.php'>assignation de matière</a></div>
+<div id='adm-box-1'><a href='matiereprof.php'>gestion de profil</a></div>
 </div>
             ";
         }

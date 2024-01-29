@@ -108,11 +108,10 @@ try {
 </style>
 
     <a href="index.php">Retour</a>
-    <h2>Visualiser les Absences</h2>
-
-    <a href="prof_abs_form.php">Entrer des absences</a>
+    <h2 class='visualize'>Visualiser les Absences</h2>
 
     <a href="prof_abs_form.php" class='btn_abs'>Entrer des absences</a>
+
     <br>
     <div class='filtre_abs'>
     <form method="post">
@@ -120,8 +119,7 @@ try {
         <input type="date" id="selected_date" name="selected_date" value="<?php echo $selectedDate; ?>" required>
         <button type="submit">Filtrer</button>
     </form>
-    </div>
-
+  
     <form method="post">
         <button type="submit" name="showAll">Voir toutes les absences</button>
     </form>
